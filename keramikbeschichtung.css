@@ -1,0 +1,279 @@
+.ceramic-page {
+  --ceramic-bg: var(--color-bg, #d9d9d9);
+  --ceramic-white: var(--color-white, #ffffff);
+  --ceramic-text: var(--color-text, #111111);
+  --ceramic-green: var(--color-green, #2f7d56);
+  --ceramic-dark: #333333;
+  --ceramic-placeholder: #a9a9a9;
+  --ceramic-radius: var(--radius-card, 0.35rem);
+  --ceramic-page-space: var(--space-page, clamp(1.5rem, 6vw, 6rem));
+
+  padding: 0 var(--ceramic-page-space) 5rem;
+  background-color: var(--ceramic-bg);
+  color: var(--ceramic-text);
+}
+
+/* Hero-Bereich */
+
+.ceramic-hero {
+  display: grid;
+  grid-template-columns: 1.2fr 0.95fr 0.7fr;
+  gap: 1rem;
+  align-items: stretch;
+  padding-top: 1rem;
+}
+
+.ceramic-intro {
+  padding-top: 1rem;
+}
+
+.ceramic-eyebrow {
+  margin: 0 0 0.75rem;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.ceramic-intro h1 {
+  max-width: 520px;
+  margin: 0 0 1rem;
+  font-size: clamp(2rem, 3vw, 3.2rem);
+  line-height: 1.08;
+}
+
+.ceramic-intro p {
+  max-width: 430px;
+  margin: 0;
+  font-weight: 600;
+}
+
+/* Bildplatzhalter */
+
+.ceramic-image {
+  min-height: 320px;
+  background-color: var(--ceramic-placeholder);
+  border: 1px solid #4d4d4d;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.ceramic-image::before,
+.ceramic-image::after {
+  content: "";
+  position: absolute;
+  width: 1px;
+  height: 140%;
+  top: -20%;
+  left: 50%;
+  background-color: #4d4d4d;
+}
+
+.ceramic-image::before {
+  transform: rotate(42deg);
+}
+
+.ceramic-image::after {
+  transform: rotate(-42deg);
+}
+
+.ceramic-image span {
+  position: relative;
+  z-index: 1;
+  padding: 0.4rem 0.75rem;
+  background-color: rgba(255, 255, 255, 0.7);
+  font-weight: 600;
+}
+
+/* Überblick rechts */
+
+.ceramic-overview {
+  padding: 1rem;
+  background-color: var(--ceramic-placeholder);
+}
+
+.ceramic-overview h2 {
+  margin: 0 0 1rem;
+  font-size: 1rem;
+}
+
+.ceramic-overview ul {
+  margin: 0;
+  padding-left: 1.2rem;
+}
+
+.ceramic-overview li {
+  margin-bottom: 0.75rem;
+  font-weight: 600;
+}
+
+/* Bewertung */
+
+.ceramic-rating {
+  margin-top: 2rem;
+}
+
+.ceramic-rating h2 {
+  margin: 0 0 1rem;
+  font-size: 1rem;
+}
+
+.ceramic-rating-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.75rem;
+}
+
+.ceramic-rating-card {
+  min-height: 150px;
+  padding: 1.5rem;
+  background-color: var(--ceramic-white);
+  border-radius: var(--ceramic-radius);
+  text-align: center;
+}
+
+.ceramic-rating-card h3 {
+  margin: 0 0 1.5rem;
+  font-size: 1rem;
+}
+
+.ceramic-stars {
+  margin: 0;
+  font-size: 1.6rem;
+  letter-spacing: 0.15rem;
+  color: var(--ceramic-dark);
+}
+
+.ceramic-stars span {
+  color: #b8b8b8;
+}
+
+/* Textbereich */
+
+.ceramic-report {
+  min-height: 330px;
+  margin-top: 1.25rem;
+  padding: 3rem;
+  background-color: var(--ceramic-white);
+  border-radius: var(--ceramic-radius);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.ceramic-report h2 {
+  margin: 0 0 1.5rem;
+  text-align: center;
+}
+
+.ceramic-report p {
+  max-width: 850px;
+  margin: 0 auto 1rem;
+  font-weight: 600;
+  line-height: 1.7;
+}
+
+/* Vorteile und Nachteile */
+
+.ceramic-pros-cons {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.75rem;
+  margin-top: 1.25rem;
+}
+
+.ceramic-pros,
+.ceramic-cons {
+  padding: 2rem 2.5rem;
+  background-color: var(--ceramic-white);
+  border-radius: var(--ceramic-radius);
+}
+
+.ceramic-pros h2,
+.ceramic-cons h2 {
+  margin: 0 0 1.5rem;
+  font-size: 1rem;
+}
+
+.ceramic-pros ul,
+.ceramic-cons ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.ceramic-pros li,
+.ceramic-cons li {
+  position: relative;
+  margin-bottom: 1rem;
+  padding-left: 2.5rem;
+  font-weight: 600;
+}
+
+.ceramic-pros li::before,
+.ceramic-cons li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.15rem;
+  width: 1.25rem;
+  height: 1.25rem;
+  border-radius: 50%;
+  background-color: var(--ceramic-dark);
+}
+
+/* Barrierefreiheit */
+
+.ceramic-page a:focus-visible {
+  outline: 3px solid var(--ceramic-green);
+  outline-offset: 4px;
+}
+
+/* Responsive */
+
+@media (max-width: 1100px) {
+  .ceramic-hero {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .ceramic-overview {
+    grid-column: 1 / -1;
+  }
+
+  .ceramic-rating-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 700px) {
+  .ceramic-page {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .ceramic-hero {
+    grid-template-columns: 1fr;
+  }
+
+  .ceramic-image {
+    min-height: 240px;
+  }
+
+  .ceramic-rating-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .ceramic-report {
+    padding: 1.5rem;
+  }
+
+  .ceramic-pros-cons {
+    grid-template-columns: 1fr;
+  }
+
+  .ceramic-pros,
+  .ceramic-cons {
+    padding: 1.5rem;
+  }
+}
