@@ -298,8 +298,8 @@ main {
 
 .site-footer {
   padding: 2rem 0;
-  background: var(--green-900, #0d2f24);
-  color: var(--white, #ffffff);
+  background: var(--color-green-900);
+  color: var(--color-white);
 }
 
 .footer-inner {
@@ -336,7 +336,7 @@ main {
 
 .footer-nav a:hover {
   background: rgba(255, 255, 255, 0.12);
-  color: var(--white, #ffffff);
+  color: var(--color-white);
 }
 
 .visually-hidden {
