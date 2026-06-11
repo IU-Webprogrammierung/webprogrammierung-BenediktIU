@@ -1,11 +1,10 @@
 Mein Air Fryer – Produktbewertungs-Webseite
 
-Projektbeschreibung
+### Projektbeschreibung
 
 Geplant ist eine persönliche Produktbewertungsseite zur Cosori Air Fryer Turbo Tower mit Keramikbeschichtung. Das Ziel ist es, das Gerät ausführlich und aus meiner nutzerorientierten Perspektive zu bewerten, anstatt es nur kurz vorzustellen. Der Webauftritt umfasst acht Seiten, die alle verlinkt sind: Startseite, Bewertung, Technik, Keramikbeschichtung, Vergleich, favorisierte Rezepte, FAQ und Kontakt/Impressum
 
-
-Inhalt der Webseite
+### Inhalt der Webseite
 
 Die Webseite besteht aus mehreren verlinkten Seiten:
 
@@ -20,7 +19,36 @@ Die Webseite besteht aus mehreren verlinkten Seiten:
 - datenschutz.html - Datenschutz informationen
 - kontakt.html - Kontaktschnittstelle
 
-Projektstruktur
+## Responsive-Design-Strategie
+
+### Breakpoints
+
+| Gerät | Bildschirmbreite |
+|---|---|
+| Smartphones | ≤ 700px |
+| Tablets und kleine Laptops | 701px – 1100px |
+| Desktops | ≥ 1101px |
+
+
+### Vorgehensweise
+
+Bei der Umsetzung wurde eine Desktop-First-Strategie verfolgt. Die Desktop-Version nutzt den verfügbaren Platz durch mehrspaltige Layouts, große Hero-Bereiche und übersichtliche Inhaltskarten.
+
+Für kleinere Bildschirmgrößen werden die Layouts mithilfe von Media Queries angepasst. Mehrspaltige Bereiche werden auf Tablets und Smartphones schrittweise in einspaltige Layouts umgewandelt. Dadurch bleiben Inhalte auch auf mobilen Geräten gut lesbar und bedienbar.
+
+Für das Layout wurden vor allem **CSS Grid** und **Flexbox** eingesetzt. Größere Unterseiten besitzen eigene CSS-Dateien, damit das Styling modular, übersichtlich und wartbar bleibt.
+
+Besonders berücksichtigt wurden:
+
+- gut lesbare Schriftgrößen
+- klare Abstände zwischen den Bereichen
+- sichtbare Fokuszustände für Tastaturnavigation
+- aktive Navigation mit `aria-current`
+- semantische HTML-Struktur
+- ausreichend große Klick- und Tippflächen
+- responsive Karten, Tabellen und Inhaltsbereiche
+
+## Projektstruktur
 
 ```text
 mein-air-fryer/
@@ -32,6 +60,9 @@ mein-air-fryer/
 ├── vergleich.html
 ├── rezepte.html
 ├── faq.html
+├── impressum.html
+├── datenschutz.html
+├── kontakt.html
 │
 ├── style.css
 ├── bewertung.css
@@ -39,6 +70,9 @@ mein-air-fryer/
 ├── keramikbeschichtung.css
 ├── vergleich.css
 ├── rezepte.css
+├── faq.css
+├── impressum.css
+├── datenschutz.css
+├── kontakt.css
 │
 └── README.md
-```
