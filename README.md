@@ -16,3 +16,22 @@ Die Webseite besteht aus mehreren verlinkten Seiten:
 - vergleich.html – Vergleich mit anderen Air Fryern
 - rezepte.html – Rezeptideen
 - faq.html – Häufige Fragen
+
+Projektstruktur
+
+mein-air-fryer/
+│
+├── index.html
+├── bewertung.html
+├── technik.html
+├── keramikbeschichtung.html
+├── vergleich.html
+├── rezepte.html
+├── faq.html
+│
+├── style.css
+├── bewertung.css
+├── technik.css
+├── keramikbeschichtung.css
+│
+└── README.md
