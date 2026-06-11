@@ -20,18 +20,18 @@ Die Webseite besteht aus mehreren verlinkten Seiten:
 Projektstruktur
 
 mein-air-fryer/
-│
-├── index.html
-├── bewertung.html
-├── technik.html
-├── keramikbeschichtung.html
-├── vergleich.html
-├── rezepte.html
-├── faq.html
-│
-├── style.css
-├── bewertung.css
-├── technik.css
-├── keramikbeschichtung.css
-│
-└── README.md
+
+|-- index.html
+|-- bewertung.html
+|-- technik.html
+|-- keramikbeschichtung.html
+|-- vergleich.html
+|-- rezepte.html
+|-- faq.html
+|
+|-- style.css
+|-- bewertung.css
+|-- technik.css
+|-- keramikbeschichtung.css
+|
+|__ README.md
