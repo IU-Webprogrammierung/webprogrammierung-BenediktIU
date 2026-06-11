@@ -37,6 +37,13 @@ body {
   line-height: 1.5;
 }
 
+h1,
+h2,
+h3 {
+  font-weight: 800;
+  letter-spacing: -0.03em;
+}
+
 a {
   color: inherit;
   text-decoration: none;
@@ -46,6 +53,11 @@ a:focus-visible,
 button:focus-visible {
   outline: 3px solid var(--color-green);
   outline-offset: 4px;
+}
+
+.container {
+  width: min(calc(100% - 2rem), 1180px);
+  margin-inline: auto;
 }
 
 .site-header {
@@ -283,22 +295,46 @@ main {
 }
 
 .site-footer {
-  padding: 2rem var(--space-page);
-  background-color: var(--color-surface);
-  border-top: 1px solid var(--color-border);
+  padding: 2rem 0;
+  background: var(--green-900, #0d2f24);
+  color: var(--white, #ffffff);
 }
 
-.site-footer ul {
+.footer-inner {
   display: flex;
-  justify-content: flex-end;
-  gap: 2.5rem;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.footer-inner p {
+  margin: 0;
+  font-weight: 700;
+}
+
+.footer-nav ul {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
-.site-footer a:hover {
-  color: var(--color-green);
+.footer-nav a {
+  display: inline-flex;
+  min-height: 44px;
+  align-items: center;
+  padding: 0.4rem 0.65rem;
+  color: rgba(255, 255, 255, 0.86);
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.footer-nav a:hover {
+  background: rgba(255, 255, 255, 0.12);
+  color: var(--white, #ffffff);
 }
 
 .visually-hidden {
