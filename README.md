@@ -36,7 +36,7 @@ Bei der Umsetzung wurde eine Desktop-First-Strategie verfolgt. Die Desktop-Versi
 
 Für kleinere Bildschirmgrößen werden die Layouts mithilfe von Media Queries angepasst. Mehrspaltige Bereiche werden auf Tablets und Smartphones schrittweise in einspaltige Layouts umgewandelt. Dadurch bleiben Inhalte auch auf mobilen Geräten gut lesbar und bedienbar.
 
-Für das Layout wurden vor allem **CSS Grid** und **Flexbox** eingesetzt. Größere Unterseiten besitzen eigene CSS-Dateien, damit das Styling modular, übersichtlich und wartbar bleibt.
+Für das Layout wurden vor allem **CSS Grid** und **Flexbox** eingesetzt. Größere Unterseiten besitzen eigene CSS-Dateien, damit das Styling modular, übersichtlich und wartbar bleibt. Alle erstellten HTML und CSS-Dateien sind in der **Projektsturkur** sichtbar.
 
 Besonders berücksichtigt wurden:
 
