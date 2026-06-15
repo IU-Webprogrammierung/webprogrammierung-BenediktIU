@@ -195,7 +195,105 @@ main {
   box-shadow: inset 0 0 0 2px var(--color-green);
 }
 
-.hero-image,
+.hero-image {
+  position: relative;
+  min-width: 0;
+  min-height: 560px;
+  margin: 0;
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 2.5rem;
+  background:
+    radial-gradient(
+      circle at 50% 38%,
+      rgba(202, 219, 209, 0.95) 0%,
+      rgba(231, 236, 228, 0.90) 48%,
+      rgba(246, 241, 234, 1) 100%
+    );
+}
+
+.hero-image-panel {
+  width: min(100%, 720px);
+  min-height: 480px;
+  padding: 2.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.85);
+  border-radius: 2.5rem;
+  background-color: rgba(255, 255, 255, 0.72);
+  box-shadow:
+    0 30px 80px rgba(23, 32, 25, 0.13),
+    inset 0 1px 0 rgba(255, 255, 255, 0.80);
+  backdrop-filter: blur(8px);
+}
+
+.hero-image-panel img {
+  width: min(88%, 520px);
+  height: auto;
+  max-height: 430px;
+  display: block;
+  object-fit: contain;
+  transform: scale(1.18);
+  filter: drop-shadow(0 28px 35px rgba(13, 47, 36, 0.28));
+}
+
+.hero-badge {
+  position: absolute;
+  z-index: 2;
+  min-width: 210px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  margin: 0;
+  padding: 1.25rem 1.5rem;
+  border: 1px solid rgba(23, 32, 25, 0.05);
+  border-radius: 1.5rem;
+  background-color: rgba(255, 255, 255, 0.96);
+  box-shadow: 0 18px 40px rgba(23, 32, 25, 0.12);
+}
+
+.hero-badge strong {
+  color: var(--color-green-900);
+  font-size: 1.35rem;
+  line-height: 1.2;
+}
+
+.hero-badge span {
+  color: var(--color-muted);
+  font-size: 0.95rem;
+  font-weight: 700;
+}
+
+.hero-badge-top {
+  top: 3rem;
+  left: 0.75rem;
+}
+
+.hero-badge-bottom {
+  right: 0.75rem;
+  bottom: 3rem;
+}
+
+.image-source {
+  position: absolute;
+  right: 2rem;
+  bottom: 0.55rem;
+  z-index: 3;
+  margin: 0;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.45rem;
+  background-color: rgba(255, 255, 255, 0.78);
+  color: var(--color-muted);
+  font-size: 0.68rem;
+  line-height: 1.2;
+  white-space: nowrap;
+}
+
 .topic-image {
   min-height: 310px;
   margin: 0;
@@ -209,8 +307,6 @@ main {
   overflow: hidden;
 }
 
-.hero-image::before,
-.hero-image::after,
 .topic-image::before,
 .topic-image::after {
   content: "";
@@ -222,17 +318,14 @@ main {
   left: 50%;
 }
 
-.hero-image::before,
 .topic-image::before {
   transform: rotate(57deg);
 }
 
-.hero-image::after,
 .topic-image::after {
   transform: rotate(-57deg);
 }
 
-.hero-image span,
 .topic-image span {
   position: relative;
   z-index: 1;
@@ -467,6 +560,35 @@ main {
     background-color: var(--color-green-soft);
     color: var(--color-green-900);
   }
+
+  .hero-image {
+    min-height: 500px;
+    padding: 1.75rem;
+  }
+
+  .hero-image-panel {
+    min-height: 430px;
+    padding: 1.75rem;
+  }
+
+  .hero-image-panel img {
+    width: min(86%, 430px);
+    max-height: 380px;
+  }
+
+  .hero-badge-top {
+    top: 1rem;
+    left: 0.5rem;
+  }
+
+  .hero-badge-bottom {
+    right: 0.5rem;
+    bottom: 2.25rem;
+  }
+
+  .image-source {
+    right: 1.5rem;
+  }
 }
 
 @media (max-width: 650px) {
@@ -487,6 +609,58 @@ main {
 
   .hero {
     padding-top: 2rem;
+  }
+
+  .hero-image {
+    min-height: 410px;
+    padding: 1rem;
+    border-radius: 1.75rem;
+  }
+
+  .hero-image-panel {
+    width: 100%;
+    min-height: 360px;
+    padding: 1rem;
+    border-radius: 1.75rem;
+  }
+
+  .hero-image-panel img {
+    width: min(88%, 300px);
+    max-height: 300px;
+    transform: scale(1.08);
+  }
+
+  .hero-badge {
+    min-width: auto;
+    padding: 0.75rem 0.9rem;
+    border-radius: 1rem;
+  }
+
+  .hero-badge strong {
+    font-size: 0.95rem;
+  }
+
+  .hero-badge span {
+    font-size: 0.75rem;
+  }
+
+  .hero-badge-top {
+    top: 0.6rem;
+    left: 0.4rem;
+  }
+
+  .hero-badge-bottom {
+    right: 0.4rem;
+    bottom: 1.6rem;
+  }
+
+  .image-source {
+    right: 0.75rem;
+    bottom: 0.35rem;
+    max-width: calc(100% - 1.5rem);
+    overflow: hidden;
+    font-size: 0.58rem;
+    text-overflow: ellipsis;
   }
 
   .facts {

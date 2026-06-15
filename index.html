@@ -13,6 +13,7 @@
   <link rel="stylesheet" href="style.css" />
 
   <script
+    defer
     src="https://cdn.jsdelivr.net/npm/htmx.org@2.0.10/dist/htmx.min.js"
     integrity="sha384-H5SrcfygHmAuTDZphMHqBJLc3FhssKjG7w/CeCpFReSfwBWDTKpkzPP8c+cLsK+V"
     crossorigin="anonymous"
@@ -20,10 +21,11 @@
 </head>
 
 <body>
-  <header
-    hx-get="komponenten/header.html"
+  <div
+    hx-get="./komponenten/header.html"
     hx-trigger="load"
-  ></header>
+    hx-swap="outerHTML"
+  ></div>
 
   <main>
     <section class="hero" aria-labelledby="hero-title">
@@ -50,8 +52,27 @@
         </nav>
       </article>
 
-      <figure class="hero-image" aria-label="Bild des Air Fryers">
-        <span>Bild – Air Fryer</span>
+      <figure class="hero-image">
+        <div class="hero-image-panel">
+          <img
+            src="bilder/cosori-turbo-tower.PNG"
+            alt="Cosori Air Fryer Turbo Tower mit Keramikbeschichtung"
+          />
+        </div>
+
+        <div class="hero-badge hero-badge-top">
+          <strong>4,6 / 5</strong>
+          <span>Gesamtbewertung</span>
+        </div>
+
+        <div class="hero-badge hero-badge-bottom">
+          <strong>10,8 Liter</strong>
+          <span>Fassungsvermögen</span>
+        </div>
+
+        <figcaption class="image-source">
+          Produktabbildung: eigene Darstellung
+        </figcaption>
       </figure>
     </section>
 
@@ -136,9 +157,10 @@
     </section>
   </main>
 
-  <footer
-    hx-get="komponenten/footer.html"
+  <div
+    hx-get="./komponenten/footer.html"
     hx-trigger="load"
-  ></footer>
+    hx-swap="outerHTML"
+  ></div>
 </body>
 </html>
