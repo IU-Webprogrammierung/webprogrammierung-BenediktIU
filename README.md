@@ -4,6 +4,10 @@ Mein Air Fryer – Produktbewertungs-Webseite
 
 Geplant ist eine persönliche Produktbewertungsseite zur Cosori Air Fryer Turbo Tower mit Keramikbeschichtung. Das Ziel ist es, das Gerät ausführlich und aus meiner nutzerorientierten Perspektive zu bewerten, anstatt es nur kurz vorzustellen. Der Webauftritt umfasst acht Seiten, die alle verlinkt sind: Startseite, Bewertung, Technik, Keramikbeschichtung, Vergleich, favorisierte Rezepte, FAQ und Kontakt/Impressum
 
+## Live-Demo
+
+[![Live Demo](https://img.shields.io/badge/Live--Demo-Webseite%20öffnen-2f7d56?style=for-the-badge)](https://iu-webprogrammierung.github.io/webprogrammierung-BenediktIU/)
+
 ### Inhalt der Webseite
 
 Die Webseite besteht aus mehreren verlinkten Seiten:
