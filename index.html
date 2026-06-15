@@ -3,10 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <meta
     name="description"
     content="Unabhängiger Test des Cosori Air Fryer Turbo Tower mit Keramikbeschichtung."
   />
+
   <title>Mein Air Fryer | Startseite</title>
   <link rel="stylesheet" href="style.css" />
 </head>
@@ -14,44 +16,43 @@
 <body>
   <header class="site-header">
     <div class="container header-inner">
-        <a class="logo" href="index.html" aria-label="Mein Air Fryer Startseite">
-        <span class="logo-text">
-            <span>Mein</span>
-            <span>Air Fryer</span>
-        </span>
-        </a>
+      <a class="logo" href="index.html" aria-label="Mein Air Fryer Startseite">
+        <span class="logo-text">Mein<br />Air Fryer</span>
+      </a>
 
-        <nav class="desktop-nav" aria-label="Hauptnavigation">
+      <nav class="desktop-nav" aria-label="Hauptnavigation">
         <ul>
-            <li><a href="index.html" aria-current="page">Startseite</a></li>
-            <li><a href="bewertung.html">Bewertung</a></li>
-            <li><a href="technik.html">Technik</a></li>
-            <li><a href="keramikbeschichtung.html">Keramikbeschichtung</a></li>
-            <li><a href="vergleich.html">Vergleich</a></li>
-            <li><a href="rezepte.html">Rezepte</a></li>
-            <li><a href="faq.html">FAQ</a></li>
+          <li><a href="index.html" aria-current="page">Startseite</a></li>
+          <li><a href="bewertung.html">Bewertung</a></li>
+          <li><a href="technik.html">Technik</a></li>
+          <li>
+            <a href="keramikbeschichtung.html">Keramikbeschichtung</a>
+          </li>
+          <li><a href="vergleich.html">Vergleich</a></li>
+          <li><a href="rezepte.html">Rezepte</a></li>
+          <li><a href="faq.html">FAQ</a></li>
         </ul>
-        </nav>
+      </nav>
 
-        <details class="mobile-menu">
+      <details class="mobile-menu">
         <summary>Menü</summary>
 
         <nav class="mobile-nav" aria-label="Mobile Navigation">
-            <a href="index.html" aria-current="page">Startseite</a>
-            <a href="bewertung.html">Bewertung</a>
-            <a href="technik.html">Technik</a>
-            <a href="keramikbeschichtung.html">Keramikbeschichtung</a>
-            <a href="vergleich.html">Vergleich</a>
-            <a href="rezepte.html">Rezepte</a>
-            <a href="faq.html">FAQ</a>
+          <a href="index.html" aria-current="page">Startseite</a>
+          <a href="bewertung.html">Bewertung</a>
+          <a href="technik.html">Technik</a>
+          <a href="keramikbeschichtung.html">Keramikbeschichtung</a>
+          <a href="vergleich.html">Vergleich</a>
+          <a href="rezepte.html">Rezepte</a>
+          <a href="faq.html">FAQ</a>
         </nav>
-        </details>
+      </details>
     </div>
   </header>
 
   <main>
     <section class="hero" aria-labelledby="hero-title">
-      <div class="hero-text">
+      <article class="hero-text">
         <h1 id="hero-title">
           Cosori Air Fryer<br />
           Turbo Tower mit<br />
@@ -63,113 +64,114 @@
           was du vor dem Kauf wissen musst.
         </p>
 
-        <div class="hero-buttons">
-          <a class="button button-primary" href="bewertung.html">Zum Test</a>
-          <a class="button button-secondary" href="vergleich.html">Zum Vergleich</a>
-        </div>
-      </div>
+        <nav class="hero-buttons" aria-label="Weiterführende Inhalte">
+          <a class="button button-primary" href="bewertung.html">
+            Zum Test
+          </a>
 
-      <div class="hero-image" aria-label="Bild des Air Fryers">
+          <a class="button button-secondary" href="vergleich.html">
+            Zum Vergleich
+          </a>
+        </nav>
+      </article>
+
+      <figure class="hero-image" aria-label="Bild des Air Fryers">
         <span>Bild – Air Fryer</span>
-      </div>
+      </figure>
     </section>
 
     <section class="facts" aria-labelledby="facts-title">
-      <h2 id="facts-title" class="visually-hidden">Air Fryer Fakten</h2>
+      <h2 id="facts-title" class="visually-hidden">
+        Wichtige Produktdaten
+      </h2>
 
       <article class="fact">
-        <span class="fact-icon">★</span>
-        <div>
-          <strong>4,6 / 5</strong>
-          <p>Gesamtbewertung</p>
-        </div>
+        <span class="fact-icon" aria-hidden="true">★</span>
+        <strong>4,6 / 5</strong>
+        <p>Gesamtbewertung</p>
       </article>
 
       <article class="fact">
-        <span class="fact-icon"></span>
-        <div>
-          <strong>10,8 Liter</strong>
-          <p>Fassungsvermögen</p>
-        </div>
+        <span class="fact-icon" aria-hidden="true">L</span>
+        <strong>10,8 Liter</strong>
+        <p>Fassungsvermögen</p>
       </article>
 
       <article class="fact">
-        <span class="fact-icon"></span>
-        <div>
-          <strong>2600 Watt</strong>
-          <p>Leistung</p>
-        </div>
+        <span class="fact-icon" aria-hidden="true">W</span>
+        <strong>2600 Watt</strong>
+        <p>Leistung</p>
       </article>
 
       <article class="fact">
-        <span class="fact-icon"></span>
-        <div>
-          <strong>Keramikbeschichtung</strong>
-          <p>PFAS-frei & langlebig</p>
-        </div>
+        <span class="fact-icon" aria-hidden="true">K</span>
+        <strong>Keramikbeschichtung</strong>
+        <p>PFAS-frei und langlebig</p>
       </article>
     </section>
 
     <section class="topics" aria-labelledby="topics-title">
-      <h2 id="topics-title" class="visually-hidden">Themenübersicht</h2>
+      <h2 id="topics-title" class="visually-hidden">
+        Themenübersicht
+      </h2>
 
-      <div class="topic-column">
-        <article class="topic-card">
+      <ul class="topic-column" aria-label="Produkttest und Anwendung">
+        <li class="topic-card">
           <h3>Bewertung</h3>
-          <p>Meine ausführliche Bewertung mit Pro & Contra.</p>
-          <a href="bewertung.html">→ Mehr erfahren</a>
-        </article>
+          <p>Meine ausführliche Bewertung mit Pro und Contra.</p>
+          <a href="bewertung.html">Mehr erfahren →</a>
+        </li>
 
-        <article class="topic-card">
+        <li class="topic-card">
           <h3>Vergleich</h3>
-          <p>Vergleich mit anderen beliebten Air Fryer Modellen.</p>
-          <a href="vergleich.html">→ Mehr erfahren</a>
-        </article>
+          <p>Vergleich mit anderen beliebten Air-Fryer-Modellen.</p>
+          <a href="vergleich.html">Mehr erfahren →</a>
+        </li>
 
-        <article class="topic-card">
+        <li class="topic-card">
           <h3>Rezepte</h3>
           <p>Einfache Rezeptideen für den Alltag.</p>
-          <a href="rezepte.html">→ Mehr erfahren</a>
-        </article>
-      </div>
+          <a href="rezepte.html">Mehr erfahren →</a>
+        </li>
+      </ul>
 
-      <div class="topic-image" aria-label="Zentrales Produktbild">
+      <figure class="topic-image" aria-label="Zentrales Produktbild">
         <span>Bild – Air Fryer</span>
-      </div>
+      </figure>
 
-      <div class="topic-column">
-        <article class="topic-card">
+      <ul class="topic-column" aria-label="Technik und Informationen">
+        <li class="topic-card">
           <h3>Technik</h3>
           <p>Leistung, Programme und Ausstattung im Überblick.</p>
-          <a href="technik.html">→ Mehr erfahren</a>
-        </article>
+          <a href="technik.html">Mehr erfahren →</a>
+        </li>
 
-        <article class="topic-card">
+        <li class="topic-card">
           <h3>Keramikbeschichtung</h3>
           <p>Informationen zur Beschichtung und Reinigung.</p>
-          <a href="keramikbeschichtung.html">→ Mehr erfahren</a>
-        </article>
+          <a href="keramikbeschichtung.html">Mehr erfahren →</a>
+        </li>
 
-        <article class="topic-card">
+        <li class="topic-card">
           <h3>FAQ</h3>
           <p>Antworten auf häufige Fragen vor dem Kauf.</p>
-          <a href="faq.html">→ Mehr erfahren</a>
-        </article>
-      </div>
+          <a href="faq.html">Mehr erfahren →</a>
+        </li>
+      </ul>
     </section>
   </main>
 
   <footer class="site-footer">
     <div class="container footer-inner">
-        <p>© 2026 Mein Air Fryer</p>
+      <p>© 2026 Mein Air Fryer</p>
 
-        <nav class="footer-nav" aria-label="Fußnavigation">
+      <nav class="footer-nav" aria-label="Fußnavigation">
         <ul>
-            <li><a href="impressum.html">Impressum</a></li>
-            <li><a href="datenschutz.html">Datenschutz</a></li>
-            <li><a href="kontakt.html">Kontakt</a></li>
+          <li><a href="impressum.html">Impressum</a></li>
+          <li><a href="datenschutz.html">Datenschutz</a></li>
+          <li><a href="kontakt.html">Kontakt</a></li>
         </ul>
-        </nav>
+      </nav>
     </div>
   </footer>
 </body>
