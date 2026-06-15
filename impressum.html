@@ -13,27 +13,20 @@
 
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="impressum.css" />
+
+  <script
+    src="https://cdn.jsdelivr.net/npm/htmx.org@2.0.10/dist/htmx.min.js"
+    integrity="sha384-H5SrcfygHmAuTDZphMHqBJLc3FhssKjG7w/CeCpFReSfwBWDTKpkzPP8c+cLsK+V"
+    crossorigin="anonymous"
+  ></script>
+
 </head>
 
 <body>
-  <header class="site-header">
-    <a class="logo" href="index.html" aria-label="Zur Startseite">
-      Mein<br />
-      Air Fryer
-    </a>
-
-    <nav class="main-nav" aria-label="Hauptnavigation">
-      <ul>
-        <li><a href="index.html">Startseite</a></li>
-        <li><a href="bewertung.html">Bewertung</a></li>
-        <li><a href="technik.html">Technik</a></li>
-        <li><a href="keramikbeschichtung.html">Keramikbeschichtung</a></li>
-        <li><a href="vergleich.html">Vergleich</a></li>
-        <li><a href="rezepte.html">Rezepte</a></li>
-        <li><a href="faq.html">FAQ</a></li>
-      </ul>
-    </nav>
-  </header>
+  <header
+    hx-get="komponenten/header.html"
+    hx-trigger="load"
+  ></header>
 
   <main class="legal-page">
     <section class="legal-hero" aria-labelledby="impressum-title">
@@ -108,14 +101,9 @@
     </section>
   </main>
 
-  <footer class="site-footer">
-    <nav aria-label="Footer Navigation">
-      <ul>
-        <li><a href="impressum.html" aria-current="page">Impressum</a></li>
-        <li><a href="datenschutz.html">Datenschutz</a></li>
-        <li><a href="kontakt.html">Kontakt</a></li>
-      </ul>
-    </nav>
-  </footer>
+  <footer
+    hx-get="komponenten/footer.html"
+    hx-trigger="load"
+  ></footer>
 </body>
 </html>

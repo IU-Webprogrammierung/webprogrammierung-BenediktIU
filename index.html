@@ -11,44 +11,19 @@
 
   <title>Mein Air Fryer | Startseite</title>
   <link rel="stylesheet" href="style.css" />
+
+  <script
+    src="https://cdn.jsdelivr.net/npm/htmx.org@2.0.10/dist/htmx.min.js"
+    integrity="sha384-H5SrcfygHmAuTDZphMHqBJLc3FhssKjG7w/CeCpFReSfwBWDTKpkzPP8c+cLsK+V"
+    crossorigin="anonymous"
+  ></script>
 </head>
 
 <body>
-  <header class="site-header">
-    <div class="container header-inner">
-      <a class="logo" href="index.html" aria-label="Mein Air Fryer Startseite">
-        <span class="logo-text">Mein<br />Air Fryer</span>
-      </a>
-
-      <nav class="desktop-nav" aria-label="Hauptnavigation">
-        <ul>
-          <li><a href="index.html" aria-current="page">Startseite</a></li>
-          <li><a href="bewertung.html">Bewertung</a></li>
-          <li><a href="technik.html">Technik</a></li>
-          <li>
-            <a href="keramikbeschichtung.html">Keramikbeschichtung</a>
-          </li>
-          <li><a href="vergleich.html">Vergleich</a></li>
-          <li><a href="rezepte.html">Rezepte</a></li>
-          <li><a href="faq.html">FAQ</a></li>
-        </ul>
-      </nav>
-
-      <details class="mobile-menu">
-        <summary>Menü</summary>
-
-        <nav class="mobile-nav" aria-label="Mobile Navigation">
-          <a href="index.html" aria-current="page">Startseite</a>
-          <a href="bewertung.html">Bewertung</a>
-          <a href="technik.html">Technik</a>
-          <a href="keramikbeschichtung.html">Keramikbeschichtung</a>
-          <a href="vergleich.html">Vergleich</a>
-          <a href="rezepte.html">Rezepte</a>
-          <a href="faq.html">FAQ</a>
-        </nav>
-      </details>
-    </div>
-  </header>
+  <header
+    hx-get="komponenten/header.html"
+    hx-trigger="load"
+  ></header>
 
   <main>
     <section class="hero" aria-labelledby="hero-title">
@@ -161,18 +136,9 @@
     </section>
   </main>
 
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <p>© 2026 Mein Air Fryer</p>
-
-      <nav class="footer-nav" aria-label="Fußnavigation">
-        <ul>
-          <li><a href="impressum.html">Impressum</a></li>
-          <li><a href="datenschutz.html">Datenschutz</a></li>
-          <li><a href="kontakt.html">Kontakt</a></li>
-        </ul>
-      </nav>
-    </div>
-  </footer>
+  <footer
+    hx-get="komponenten/footer.html"
+    hx-trigger="load"
+  ></footer>
 </body>
 </html>
