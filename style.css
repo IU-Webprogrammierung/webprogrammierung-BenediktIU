@@ -129,11 +129,11 @@ main {
 }
 
 .hero {
-  min-height: 720px;
-  padding: 4.5rem var(--space-page) 3rem;
+  min-height: 650px;
+  padding: 2rem var(--space-page) 3rem;
   display: grid;
   grid-template-columns: minmax(0, 0.95fr) minmax(520px, 1.05fr);
-  align-items: center;
+  align-items: start;
   gap: clamp(2.5rem, 5vw, 5rem);
 }
 
