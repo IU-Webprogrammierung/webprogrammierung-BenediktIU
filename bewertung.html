@@ -3,15 +3,19 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <meta
     name="description"
     content="Bewertung des Cosori Turbo Tower Air Fryers mit Keramikbeschichtung."
   />
+
   <title>Bewertung | Mein Air Fryer</title>
+
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="bewertung.css" />
 
   <script
+    defer
     src="https://cdn.jsdelivr.net/npm/htmx.org@2.0.10/dist/htmx.min.js"
     integrity="sha384-H5SrcfygHmAuTDZphMHqBJLc3FhssKjG7w/CeCpFReSfwBWDTKpkzPP8c+cLsK+V"
     crossorigin="anonymous"
@@ -19,85 +23,165 @@
 </head>
 
 <body>
-  <header
-    hx-get="komponenten/header.html"
+  <div
+    hx-get="./komponenten/header.html"
     hx-trigger="load"
-  ></header>
+    hx-swap="outerHTML"
+  ></div>
 
   <main class="review-page">
     <section class="review-hero" aria-labelledby="review-title">
-      <div class="review-intro">
-        <p class="eyebrow">Bewertung</p>
+      <article class="review-intro">
+        <p class="review-kicker">
+          <span aria-hidden="true">●</span>
+          Bewertung
+        </p>
 
         <h1 id="review-title">
           Cosori Turbo Tower mit Keramikbeschichtung
         </h1>
 
-        <p>
+        <p class="review-lead">
           Mein persönlicher Testbericht mit Gesamtbewertung,
           Detailbewertung sowie den wichtigsten Vor- und Nachteilen.
         </p>
+      </article>
+
+      <div class="review-visual">
+        <figure class="review-image">
+          <div class="review-image-panel">
+            <img
+              src="bilder/cosori-turbo-tower.PNG"
+              alt="Cosori Air Fryer Turbo Tower mit Keramikbeschichtung"
+              width="620"
+              height="640"
+              loading="eager"
+              fetchpriority="high"
+            />
+          </div>
+
+          <figcaption class="visually-hidden">
+            Produktabbildung: eigene Darstellung
+          </figcaption>
+        </figure>
+
+        <aside class="rating-summary" aria-labelledby="rating-title">
+          <p class="rating-kicker" id="rating-title">
+            Gesamtbewertung
+          </p>
+
+          <div class="review-stars" aria-label="4,6 von 5 Sternen">
+            ★ ★ ★ ★ <span class="star-muted">★</span>
+          </div>
+
+          <p class="rating-number">
+            <strong>4,6</strong>
+            <span>/ 5</span>
+          </p>
+
+          <p class="rating-label">Sehr gut</p>
+        </aside>
       </div>
-
-      <div class="review-image" aria-label="Produktbild des Air Fryers">
-        <span>Bild – Air Fryer</span>
-      </div>
-
-      <aside class="rating-summary" aria-labelledby="rating-title">
-        <h2 id="rating-title">Gesamtbewertung</h2>
-
-        <div class="stars" aria-label="4,5 von 5 Sternen">
-          ★ ★ ★ ★ <span>★</span>
-        </div>
-
-        <p class="rating-number">
-          <strong>4,5</strong> / 5
-        </p>
-
-        <p class="rating-label">Sehr gut</p>
-      </aside>
     </section>
 
     <section class="detail-rating" aria-labelledby="detail-title">
-      <h2 id="detail-title">Bewertung im Detail</h2>
+      <div class="review-section-header">
+        <p class="review-section-kicker">Einzelwertung</p>
+
+        <h2 id="detail-title">Bewertung im Detail</h2>
+
+        <p>
+          Die wichtigsten Kriterien für den täglichen Einsatz
+          übersichtlich zusammengefasst.
+        </p>
+      </div>
 
       <div class="detail-grid">
         <article class="rating-card">
           <h3>Garleistung</h3>
-          <p class="stars" aria-label="4 von 5 Sternen">★ ★ ★ ★ <span>★</span></p>
+          <p class="rating-card-number">4,5 / 5</p>
+          <p class="review-stars" aria-label="4,5 von 5 Sternen">
+            ★ ★ ★ ★ <span class="star-muted">★</span>
+          </p>
         </article>
 
         <article class="rating-card">
           <h3>Bedienung</h3>
-          <p class="stars" aria-label="5 von 5 Sternen">★ ★ ★ ★ ★</p>
+          <p class="rating-card-number">4,8 / 5</p>
+          <p class="review-stars" aria-label="4,8 von 5 Sternen">
+            ★ ★ ★ ★ ★
+          </p>
         </article>
 
         <article class="rating-card">
           <h3>Ausstattung</h3>
-          <p class="stars" aria-label="4 von 5 Sternen">★ ★ ★ ★ <span>★</span></p>
+          <p class="rating-card-number">4,6 / 5</p>
+          <p class="review-stars" aria-label="4,6 von 5 Sternen">
+            ★ ★ ★ ★ <span class="star-muted">★</span>
+          </p>
         </article>
 
         <article class="rating-card">
           <h3>Preis-Leistung</h3>
-          <p class="stars" aria-label="4 von 5 Sternen">★ ★ ★ ★ <span>★</span></p>
+          <p class="rating-card-number">4,5 / 5</p>
+          <p class="review-stars" aria-label="4,5 von 5 Sternen">
+            ★ ★ ★ ★ <span class="star-muted">★</span>
+          </p>
         </article>
       </div>
     </section>
 
     <section class="review-report" aria-labelledby="report-title">
-      <h2 id="report-title">Testbericht</h2>
+      <div class="review-report-heading">
+        <p class="review-section-kicker">Praxiseindruck</p>
+        <h2 id="report-title">Testbericht</h2>
+      </div>
 
-      <p>
-        Text
-      </p>
+      <div class="review-report-content">
+        <p>
+          Ich habe nun ein paar Wochen mit dem Cosori Turbo Tower Air Fryer in der Küche experimentiert. Zum Auspacken: Ja, der Air Fryer ist ein bisschen größer als man es erwartet. 
+          Das Gehäuse ist doppelt so hoch wie bei einem herkömmlichen Air Fryer, die Kabinen sind aber nicht nebeneinander, sondern übereinander angeordnet. Vorteil: Die Breite ist geringer, was meiner Meinung nach in einer kleinen Küche besser passt. 
+          Dennoch würde ich den Platzbedarf vorher überprüfen, wenn man z. B. niedrig angebrachte Schränke hat. Insgesamt wirkt der Air Fryer aber modern. Das Design wirkt hochwertig, das Gehäuse passt meiner Meinung nach sehr gut in eine moderne Küche. 
+          Die Bedienung über das Display ist intuitiv, Fingerabdrücke sind aufgrund der Farbgestaltung sichtbar, wirken sich aber nicht stärker auf das Gerät aus, als bei einem herkömmlichen Air Fryer. 
+          Die Schubladen lassen sich problemlos herausziehen und einlegen, worauf ich einen großen Wert lege.
+        </p>
 
-      <p>
-        Text
-      </p>
+        <p>
+          Man benötigt natürlich erst ein paar Versuche, ehe man sich mit der Bedienung vertraut gemacht hat. Ich hatte mir zu Beginn die Presets und die Bedienung erst mal angeschaut. 
+          Nach ein paar Anwendungen hat man das dann drin. Man kann fast alles individuell einstellen, also Temperaturen, Garzeiten und Presets. Was ich cool finde, Fans werden es garantiert auch. 
+          Man kann nämlich 2 Gerichte gleichzeitig zubereiten. Mein Highlight, das man im Alltag wirklich gut nutzen kann. Mir ist das quasi auf den Leib geschnitten. Ich kann mir in einem Garbereich zum Beispiel Beilagen zubereiten, während in dem anderen Bereich Gemüse, Fleisch oder Fisch gegart werden. 
+          In der Praxis gelingt es mir, dass die Beilage und das Hauptgericht fast zeitgleich fertig werden. Mit der Zeit lernt man dann auch, welche Lebensmittel mehr und welche weniger Zeit benötigen. Ok, es klappt nicht bei jeder Kombination auf Anhieb, aber in der Regel hat man eine Hauptspeise und ein Gericht, die man auch relativ zeitnah essen möchte.
+          Besonders gut funktionierte die Zubereitung von Pommes, Kartoffelecken und sonstigem Tiefkühlgut. Das Ergebnis waren außen knusprige und innen nicht zu trockene Speisen. Die Speisen benötigen kein oder kaum Öl, aber ohne Schütteln oder Wenden ging bei mir noch nichts. Vor allem bei größeren Mengen muss man das Gargut während der Zubereitung mehrmals wenden, damit alle Bereiche eine gleichmäßige Bräunung erhalten.
+        </p>
+
+        <p>
+          Ich hatte auch sehr gute Erfahrungen bei der Zubereitung von Gemüse gemacht. Paprika, Zucchini, Brokkoli und Karotten lassen sich schnell zubereiten und das Gemüse erhält eine festere Konsistenz, als wenn man es über einen längeren Zeitraum im Backofen zubereitet. 
+          Man sollte allerdings empirisch ausloten, ob die eingestellten Temperature und Garzeiten für empfindlicheres Gargut zu hoch sind. Gerade zu Beginn hatte ich ein paar Mal die Speisen zu lange im Gerät, aber aufgrund der Leistung des Gerätes ist die Zubereitung in wenigen Minuten erledigt.
+          Die Zubereitung von Fleisch und Hähnchen im Gerät ist in der Regel unproblematisch, sofern die Portionsgröße nicht zu groß ausfällt und die Stücke möglichst gleichmäßig verteilt werden. 
+          Das Braten von Hähnchen in dem Gerät gelingt mir am besten, wobei alle Hähnchenteile eine gleichmäßige Bräunung aufweisen. Dicke Fleischstücke entnehme ich dennoch immer mal wieder, um die Kerntemperatur zu überprüfen. 
+          Anschließend müssen sie sich nicht mehr aufwändig um die eigentliche Zubereitung kümmern, aber sie müssen trotzdem folglich den Garvorgang selbst steuern. 10,8 Liter Füllvolumen scheinen sich für mich im Alltag als ausreichend herausgestellt zu haben. Im Vergleich zu einem herkömmlichen Air Fryer mit nur einem Korb bietet der Cosori Turbo Tower Air Fryer ausreichend Platz für gleich mehrere Personen oder grössere Portionen. Dennoch sollte man sich bewusst sein, dass man nicht jeden Garraum vollständig befüllen kann und trotzdem ein knuspriges Ergebnis erhält. Gleichmäßige Ergebnisse werden erzielt, wenn die Heißluft aus allen Winkeln erreicht wird.
+        </p>
+
+        <p>
+          Sehr gut gefällt mir auch die Keramikbeschichtung. Ich hatte das Gefühl, dass sich die Lebensmittel gut von der Oberfläche lösten und auch die Reinigung nach der Zubereitung gut funktionierte. Derzeit spüle ich die Einsätze und Schwinge mit warmen Wasser mit etwas Spülmittel und einem weichen Schwamm. Kratzende Reinigungsmittel sollte man vermeiden, da man so die Beschichtung schädigen kann. In der Regel reicht es aus, das Gerät direkt nach der Nutzung zu reinigen.
+          Für mich persönlich ist der Cosori Turbo Tower Air Fryer auch eine Variante, um zu vermeiden, dass sich die Küche beim Backen zu sehr aufheizt. Insbesondere für kleinere Portionen ist der Air Fryer eine gute Alternative zum Backofen. Deshalb ist der Air Fryer auch nach dem Backen von fertig gegarten Speisen, wie z. B. Pommes oder Pizza immer eine gute Wahl, da die Zutaten nicht matschig werden.
+          Selten, aber doch, auch ein wenig laut: Der Luftfritteusen betrieb ist, wie man sich vorstellen kann, mit einem gewissen Geräuschpegel verbunden. Das Gebläse ist hörbar, aber so laut, wie ich es von einer starken Luftfritteuse erwartet hätte. Ich finde es nicht störend, es hört sich nur ein bisschen wie beim Staubsaugen an. In einer offenen Küche und sogar nebenbei kann man sich noch unterhalten.
+          Ich finde den Air Fryer zu massiv gebaut. Ein Umlegen von einem Schrank nach dem anderen ist kaum möglich, da das Gerät ziemlich schwer ist. Für Ein-Personen-Haushalte könnten Air Fryer zu groß sein. Geeignet ist das Gerät allerdings für Familien und alle, die sehr gerne mit der Heißluftfritteuse kochen und deshalb mehrere Garabschnitte benötigen.
+        </p>
+
+        <p>
+          Die Preise für den Cosori Turbo Tower auf den ersten Blick geringer, wie ich anfangs erwartet hatte. Im Vergleich zu einem normalen Modell mit weniger Körpervolutionen, einer niedrigeren Leistung und einem kleineren Fassungsvermögen, zahlt man aber auch mehr. Zusatzfunktionen kommen damit zurecht. Wer nur selten eine kleine Portion Pommes zubereitet, benötigt den Air Fryer nicht unbedingt. Unabhängig vom Kaufpreis halte ich den Air Fryer aber für all jene interessant, die den Air Fryer laufend als Alternative zum Backofen verwenden.
+          Es benötigt einige Experimente, bis man die besten Ergebnisse beim Kochen erzielt. Man kann zwar beide Garbereiche gleichzeitig nutzen, aber ich habe einige Versuche gemacht, bis ich gelernt habe, wie lange es dauert, bis etwas knusprig ist. Trotz der etwas längeren Einarbeitungszeit. Cosori Turbo Tower Air Fryer funktionsfähig, Zeitersparnis im Alltag: Ich finde es toll, dass ich eine Mahlzeit in einem Bruchteil der Zeit zubereiten kann.
+        <p>
+          Ja, für meine Bedürfnisse überwiegt der Cosori Turbo Tower Air Fryer eine Reihe von Vorteilen. Er ist geräumig, leistungsstark, einfach zu bedienen und somit für mich eine interessante Alternative zum herkömmlichen Backofen. Die Reinigung ist ebenfalls unkompliziert. Das Ergebnis, die Dauer der Zubereitung und das Aufwärmen von bereits zubereiteten Speisen funktioniert einwandfrei. Ein großer Nachteil ist der Platzbedarf, den der Air Fryer benötigt. 
+          Es wird Geduld benötigt, um die Bedienung zu lernen, aber mit der Zeit entsteht eine schmackhafte Mahlzeit in nahezu jedem Haushalt, egal wie groß er ist.
+        </p>
+      </div>
     </section>
 
     <section class="pros-cons" aria-label="Vorteile und Nachteile">
       <article class="pros-card">
+        <p class="card-kicker">Stärken</p>
         <h2>Vorteile</h2>
 
         <ul>
@@ -111,6 +195,7 @@
       </article>
 
       <article class="cons-card">
+        <p class="card-kicker">Zu beachten</p>
         <h2>Nachteile</h2>
 
         <ul>
@@ -125,9 +210,10 @@
     </section>
   </main>
 
-  <footer
-    hx-get="komponenten/footer.html"
+  <div
+    hx-get="./komponenten/footer.html"
     hx-trigger="load"
-  ></footer>
+    hx-swap="outerHTML"
+  ></div>
 </body>
 </html>
