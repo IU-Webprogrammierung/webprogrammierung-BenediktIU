@@ -136,161 +136,273 @@
 
 .tech-overview {
   display: grid;
-  grid-template-columns: 2fr 1fr;
-  gap: 0.75rem;
-  margin-top: 1rem;
+  grid-template-columns: minmax(0, 1.35fr) minmax(320px, 0.65fr);
+  gap: 1rem;
+}
+
+.tech-table-card,
+.equipment-card,
+.tech-side-nav,
+.process-card {
+  border: 1px solid var(--color-border);
+  border-radius: 2rem;
+  background-color: rgba(255, 255, 255, 0.86);
+  box-shadow: 0 16px 38px rgba(13, 47, 36, 0.07);
 }
 
 .tech-table-card,
 .equipment-card {
   min-height: 395px;
-  padding: 1.5rem;
-  background-color: var(--tech-white);
-  border-radius: var(--tech-radius);
+  padding: clamp(1.75rem, 4vw, 2.75rem);
+}
+
+.section-kicker {
+  margin: 0 0 0.55rem;
+  color: var(--color-green);
+  font-size: 0.82rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
 }
 
 .tech-table-card h2,
-.equipment-card h2 {
-  margin: 0 0 1.5rem;
-  font-size: 1.05rem;
-  line-height: 1.1;
+.equipment-card h2,
+.zone-text h2,
+.process-header h2 {
+  margin: 0;
+  font-size: clamp(1.8rem, 3vw, 2.7rem);
+  line-height: 1.05;
 }
 
 .tech-table-card table {
   width: 100%;
-  border-collapse: collapse;
   margin-top: 2rem;
+  border-collapse: collapse;
 }
 
 .tech-table-card th,
 .tech-table-card td {
-  padding: 0.9rem 0;
-  border-bottom: 1px solid #d7d7d7;
+  padding: 1rem 0;
+  border-bottom: 1px solid rgba(23, 32, 25, 0.12);
   text-align: left;
   vertical-align: top;
 }
 
 .tech-table-card th {
   width: 45%;
+  color: var(--color-green-900);
   font-weight: 800;
 }
 
 .tech-table-card td {
+  color: #404642;
   font-weight: 600;
+}
+
+.equipment-card {
+  color: var(--color-white);
+  background:
+    linear-gradient(
+      135deg,
+      var(--color-green-900) 0%,
+      #124b38 58%,
+      #176047 100%
+    );
+  box-shadow: 0 20px 45px rgba(13, 47, 36, 0.18);
+}
+
+.equipment-card h2,
+.equipment-card .section-kicker {
+  color: var(--color-white);
+}
+
+.equipment-card .section-kicker {
+  opacity: 0.72;
 }
 
 .equipment-card ul {
-  margin: 2rem 0 0;
-  padding-left: 1.2rem;
+  display: grid;
+  gap: 0.9rem;
+  margin: 1.75rem 0 0;
+  padding: 0;
+  list-style: none;
 }
 
 .equipment-card li {
-  margin-bottom: 1rem;
+  position: relative;
+  padding-left: 2rem;
   font-weight: 600;
+  line-height: 1.5;
+}
+
+.equipment-card li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  top: 0.05rem;
+  width: 1.3rem;
+  height: 1.3rem;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  color: var(--color-green-900);
+  background-color: rgba(255, 255, 255, 0.88);
+  font-size: 0.8rem;
+  font-weight: 900;
 }
 
 /* Garzonen-Bereich */
 
 .zone-section {
   display: grid;
-  grid-template-columns: 0.75fr 1fr 1.55fr;
-  gap: 1.5rem;
-  align-items: start;
-  margin-top: 0.75rem;
+  grid-template-columns: 0.75fr minmax(0, 1fr) minmax(320px, 1fr);
+  gap: 1rem;
+  align-items: stretch;
+  margin-top: 1.25rem;
 }
 
 .tech-side-nav {
-  min-height: 250px;
   padding: 1.5rem;
-  background-color: var(--tech-white);
-  border-radius: var(--tech-radius);
 }
 
 .tech-side-nav ul {
+  display: grid;
+  gap: 0.85rem;
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
-.tech-side-nav li {
-  margin-bottom: 1.75rem;
-}
-
 .tech-side-nav a {
-  font-weight: 700;
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  padding: 0.7rem 0.9rem;
+  border-radius: 999px;
+  color: var(--color-text);
+  font-weight: 800;
 }
 
 .tech-side-nav a:hover,
 .tech-side-nav a[aria-current="true"] {
-  color: var(--tech-green);
+  color: var(--color-green-900);
+  background-color: var(--color-green-soft);
+}
+
+.zone-text,
+.zone-highlight {
+  min-height: 310px;
+  padding: clamp(1.75rem, 4vw, 2.5rem);
+  border-radius: 2rem;
 }
 
 .zone-text {
-  padding-top: 0.5rem;
+  border: 1px solid var(--color-border);
+  background-color: rgba(255, 255, 255, 0.86);
+  box-shadow: 0 16px 38px rgba(13, 47, 36, 0.07);
 }
 
-.zone-text h2 {
-  margin: 0 0 6rem;
-  font-size: clamp(2rem, 3vw, 3.1rem);
-  line-height: 1.08;
+.zone-text p:last-child {
+  max-width: 520px;
+  margin: 1.25rem 0 0;
+  color: #404642;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  font-weight: 500;
 }
 
-.zone-text p {
+.zone-highlight {
+  position: relative;
+  overflow: hidden;
+  color: var(--color-white);
+  background:
+    linear-gradient(
+      135deg,
+      var(--color-green-900) 0%,
+      #124b38 58%,
+      #176047 100%
+    );
+  box-shadow: 0 20px 45px rgba(13, 47, 36, 0.18);
+}
+
+.zone-highlight::before {
+  content: "";
+  position: absolute;
+  top: -5rem;
+  left: -4rem;
+  width: 260px;
+  height: 260px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 50%;
+}
+
+.zone-highlight h3,
+.zone-highlight p {
+  position: relative;
+  z-index: 1;
+}
+
+.zone-highlight h3 {
   max-width: 420px;
-  margin: 0 auto;
-  text-align: center;
-  font-weight: 600;
+  margin: 0 0 1.25rem;
+  color: var(--color-white);
+  font-size: clamp(1.8rem, 3vw, 2.6rem);
+  line-height: 1.05;
 }
 
-.zone-image {
-  min-height: 370px;
+.zone-highlight p {
+  max-width: 420px;
+  margin: 0;
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 1.05rem;
+  line-height: 1.65;
+  font-weight: 500;
 }
 
 /* Prozess-Bereich */
 
 .process-section {
-  margin-top: 1rem;
+  margin-top: 1.25rem;
 }
 
-.process-section h2 {
-  margin: 0 0 1rem;
-  font-size: 1.1rem;
+.process-header {
+  max-width: 720px;
+  margin-bottom: 1.5rem;
 }
 
 .process-grid {
   display: grid;
-  grid-template-columns: 1fr auto 1fr auto 1fr;
-  gap: clamp(1.5rem, 4vw, 4rem);
-  align-items: center;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
 }
 
 .process-card {
-  min-height: 250px;
+  min-height: 230px;
   padding: 1.5rem;
-  background-color: var(--tech-white);
-  border-radius: var(--tech-radius);
+}
+
+.process-card span {
+  width: 44px;
+  height: 44px;
+  display: inline-grid;
+  place-items: center;
+  margin-bottom: 1.5rem;
+  border-radius: 999px;
+  color: var(--color-white);
+  background-color: var(--color-green);
+  font-weight: 900;
 }
 
 .process-card h3 {
   margin: 0 0 1rem;
-  font-size: 1.1rem;
+  font-size: 1.15rem;
 }
 
 .process-card p {
   margin: 0;
+  color: #404642;
   font-weight: 600;
-}
-
-.process-arrow {
-  font-size: 2.5rem;
-  line-height: 1;
-}
-
-/* Barrierefreiheit */
-
-.tech-page a:focus-visible {
-  outline: 3px solid var(--tech-green);
-  outline-offset: 4px;
+  line-height: 1.55;
 }
 
 /* Responsive */
