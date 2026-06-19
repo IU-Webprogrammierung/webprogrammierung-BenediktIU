@@ -257,56 +257,136 @@
   font-weight: 500;
 }
 
+/* Bewertung */
+
+.ceramic-rating {
+  padding-top: 1.25rem;
+}
+
+.ceramic-section-header {
+  max-width: 760px;
+  margin-bottom: 1.5rem;
+}
+
+.ceramic-section-header > p:last-child {
+  max-width: 620px;
+  margin: 0.75rem 0 0;
+  color: var(--color-muted);
+  font-size: 1.05rem;
+}
+
+.ceramic-rating-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.ceramic-rating-card {
+  min-height: 180px;
+  padding: 1.5rem;
+}
+
+.ceramic-rating-card h3 {
+  margin: 0 0 1.5rem;
+  font-size: 1.05rem;
+}
+
+.rating-number {
+  margin: 0 0 0.65rem;
+  color: var(--color-green-900);
+  font-size: 1.65rem;
+  font-weight: 900;
+}
+
+.ceramic-stars {
+  margin: 0;
+  color: var(--color-accent);
+  font-size: 1.35rem;
+  letter-spacing: 0.08rem;
+  line-height: 1;
+}
+
+.ceramic-stars span {
+  color: #d6d8d6;
+}
+
 /* Textbereich */
 
 .ceramic-report {
-  min-height: 330px;
   margin-top: 1.25rem;
-  padding: 3rem;
-  background-color: var(--ceramic-white);
-  border-radius: var(--ceramic-radius);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  padding: clamp(2rem, 4vw, 3.5rem);
+  display: grid;
+  grid-template-columns: minmax(220px, 0.55fr) minmax(0, 1fr);
+  gap: clamp(2rem, 5vw, 5rem);
+  align-items: start;
+  border: 1px solid var(--color-border);
+  border-radius: 2rem;
+  background-color: rgba(255, 255, 255, 0.86);
+  box-shadow: 0 16px 40px rgba(13, 47, 36, 0.08);
 }
 
-.ceramic-report h2 {
-  margin: 0 0 1.5rem;
-  text-align: center;
+.ceramic-report-content {
+  max-width: 780px;
 }
 
-.ceramic-report p {
-  max-width: 850px;
-  margin: 0 auto 1rem;
-  font-weight: 600;
-  line-height: 1.7;
+.ceramic-report-content p {
+  margin: 0;
+  color: #404642;
+  font-size: 1.05rem;
+  line-height: 1.75;
+}
+
+.ceramic-report-content p + p {
+  margin-top: 1rem;
 }
 
 /* Vorteile und Nachteile */
 
 .ceramic-pros-cons {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 0.75rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
   margin-top: 1.25rem;
 }
 
 .ceramic-pros,
 .ceramic-cons {
-  padding: 2rem 2.5rem;
-  background-color: var(--ceramic-white);
-  border-radius: var(--ceramic-radius);
+  padding: clamp(1.75rem, 4vw, 2.75rem);
+  border-radius: 2rem;
+}
+
+.ceramic-pros {
+  color: var(--color-white);
+  background:
+    linear-gradient(
+      135deg,
+      var(--color-green-900) 0%,
+      #124b38 58%,
+      #176047 100%
+    );
+  box-shadow: 0 20px 45px rgba(13, 47, 36, 0.18);
 }
 
 .ceramic-pros h2,
-.ceramic-cons h2 {
-  margin: 0 0 1.5rem;
-  font-size: 1rem;
+.ceramic-pros .card-kicker {
+  color: var(--color-white);
+}
+
+.ceramic-pros .card-kicker {
+  opacity: 0.72;
+}
+
+.ceramic-cons {
+  border: 1px solid var(--color-border);
+  background-color: rgba(255, 255, 255, 0.86);
+  box-shadow: 0 16px 38px rgba(13, 47, 36, 0.07);
 }
 
 .ceramic-pros ul,
 .ceramic-cons ul {
-  margin: 0;
+  display: grid;
+  gap: 0.9rem;
+  margin: 1.5rem 0 0;
   padding: 0;
   list-style: none;
 }
@@ -314,74 +394,36 @@
 .ceramic-pros li,
 .ceramic-cons li {
   position: relative;
-  margin-bottom: 1rem;
-  padding-left: 2.5rem;
+  padding-left: 2rem;
   font-weight: 600;
+  line-height: 1.5;
 }
 
 .ceramic-pros li::before,
 .ceramic-cons li::before {
-  content: "";
   position: absolute;
   left: 0;
-  top: 0.15rem;
-  width: 1.25rem;
-  height: 1.25rem;
+  top: 0.05rem;
+  width: 1.3rem;
+  height: 1.3rem;
+  display: grid;
+  place-items: center;
   border-radius: 50%;
-  background-color: var(--ceramic-dark);
+  font-size: 0.8rem;
+  font-weight: 900;
 }
 
-/* Barrierefreiheit */
-
-.ceramic-page a:focus-visible {
-  outline: 3px solid var(--ceramic-green);
-  outline-offset: 4px;
+.ceramic-pros li::before {
+  content: "✓";
+  color: var(--color-green-900);
+  background-color: rgba(255, 255, 255, 0.88);
 }
 
-/* Responsive */
-
-@media (max-width: 1100px) {
-  .ceramic-hero {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .ceramic-overview {
-    grid-column: 1 / -1;
-  }
-
-  .ceramic-rating-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
+.ceramic-cons li::before {
+  content: "–";
+  color: var(--color-white);
+  background-color: var(--color-accent);
 }
 
-@media (max-width: 700px) {
-  .ceramic-page {
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
+/* Responsive Design */
 
-  .ceramic-hero {
-    grid-template-columns: 1fr;
-  }
-
-  .ceramic-image {
-    min-height: 240px;
-  }
-
-  .ceramic-rating-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .ceramic-report {
-    padding: 1.5rem;
-  }
-
-  .ceramic-pros-cons {
-    grid-template-columns: 1fr;
-  }
-
-  .ceramic-pros,
-  .ceramic-cons {
-    padding: 1.5rem;
-  }
-}
