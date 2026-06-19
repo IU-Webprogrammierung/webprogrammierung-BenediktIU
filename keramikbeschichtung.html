@@ -15,6 +15,7 @@
   <link rel="stylesheet" href="keramikbeschichtung.css" />
 
   <script
+    defer
     src="https://cdn.jsdelivr.net/npm/htmx.org@2.0.10/dist/htmx.min.js"
     integrity="sha384-H5SrcfygHmAuTDZphMHqBJLc3FhssKjG7w/CeCpFReSfwBWDTKpkzPP8c+cLsK+V"
     crossorigin="anonymous"
@@ -22,71 +23,158 @@
 </head>
 
 <body>
-  <header
-    hx-get="komponenten/header.html"
+  <div
+    hx-get="./komponenten/header.html"
     hx-trigger="load"
-  ></header>
+    hx-swap="outerHTML"
+  ></div>
 
   <main class="ceramic-page">
     <section class="ceramic-hero" aria-labelledby="ceramic-title">
-      <div class="ceramic-intro">
-        <p class="ceramic-eyebrow">Keramikbeschichtung</p>
+      <article class="ceramic-intro">
+        <p class="ceramic-kicker">
+          <span aria-hidden="true">●</span>
+          Keramikbeschichtung
+        </p>
 
         <h1 id="ceramic-title">
-          Keramikbeschichtung im Überblick
+          Pflegeleichte Beschichtung für den Alltag
         </h1>
 
-        <p>
-          Die Keramikbeschichtung ist ein zentrales Merkmal des Cosori Turbo
-          Tower. Sie soll pflegeleicht, langlebig und frei von klassischen
-          PFAS-Beschichtungen sein.
+        <p class="ceramic-lead">
+          Die Keramikbeschichtung ist ein wichtiges Merkmal des Cosori
+          Turbo Tower. Sie soll die Reinigung erleichtern, das Anhaften
+          von Speisen reduzieren und im Alltag langlebig bleiben.
         </p>
-      </div>
+      </article>
 
-      <div class="ceramic-image" aria-label="Bild des Air Fryers">
-        <span>Bild – Air Fryer</span>
-      </div>
+      <figure class="ceramic-image">
+        <div class="ceramic-image-panel">
+          <img
+            src="bilder/cosori-turbo-tower.PNG"
+            alt="Cosori Air Fryer Turbo Tower mit Keramikbeschichtung"
+            width="620"
+            height="640"
+            loading="eager"
+            fetchpriority="high"
+          />
+        </div>
 
-      <aside class="ceramic-overview" aria-labelledby="overview-title">
-        <h2 id="overview-title">Auf einen Blick</h2>
+        <div class="ceramic-badge ceramic-badge-top">
+          <strong>PFAS-frei</strong>
+          <span>Beschichtung</span>
+        </div>
+
+        <div class="ceramic-badge ceramic-badge-bottom">
+          <strong>Leicht zu reinigen</strong>
+          <span>im Alltag</span>
+        </div>
+
+        <figcaption class="visually-hidden">
+          Produktabbildung: eigene Darstellung
+        </figcaption>
+      </figure>
+    </section>
+
+    <section
+      class="ceramic-overview-section"
+      aria-label="Eigenschaften der Keramikbeschichtung"
+    >
+      <article class="ceramic-overview">
+        <p class="section-kicker">
+          Auf einen Blick
+        </p>
+
+        <h2>
+          Was die Beschichtung ausmacht
+        </h2>
 
         <ul>
           <li>PFAS-freie Beschichtung</li>
-          <li>leichte Reinigung</li>
-          <li>für hohe Temperaturen geeignet</li>
-          <li>robuste Oberfläche</li>
+          <li>leichte Reinigung nach dem Kochen</li>
+          <li>geeignet für hohe Temperaturen</li>
+          <li>robuste Oberfläche bei richtiger Pflege</li>
         </ul>
-      </aside>
+      </article>
+
+      <article class="ceramic-care-card">
+        <p class="section-kicker">
+          Pflegehinweis
+        </p>
+
+        <h2>
+          Schonend reinigen
+        </h2>
+
+        <p>
+          Damit die Beschichtung möglichst lange gut bleibt, sollten keine
+          Metallutensilien, harten Bürsten oder stark scheuernden Reiniger
+          verwendet werden.
+        </p>
+      </article>
     </section>
 
     <section class="ceramic-rating" aria-labelledby="ceramic-rating-title">
-      <h2 id="ceramic-rating-title">Bewertung der Keramikbeschichtung</h2>
+      <div class="ceramic-section-header">
+        <p class="section-kicker">
+          Bewertung
+        </p>
+
+        <h2 id="ceramic-rating-title">
+          Eindruck der Keramikbeschichtung
+        </h2>
+
+        <p>
+          Die wichtigsten Punkte zur Beschichtung werden hier übersichtlich
+          bewertet.
+        </p>
+      </div>
 
       <div class="ceramic-rating-grid">
         <article class="ceramic-rating-card">
-          <h3>PFAS-Frei</h3>
-          <p class="ceramic-stars" aria-label="4 von 5 Sternen">
+          <h3>PFAS-frei</h3>
+
+          <p class="rating-number">
+            4,5 / 5
+          </p>
+
+          <p class="ceramic-stars" aria-label="4,5 von 5 Sternen">
             ★ ★ ★ ★ <span>★</span>
           </p>
         </article>
 
         <article class="ceramic-rating-card">
           <h3>Reinigung</h3>
-          <p class="ceramic-stars" aria-label="5 von 5 Sternen">
+
+          <p class="rating-number">
+            4,8 / 5
+          </p>
+
+          <p class="ceramic-stars" aria-label="4,8 von 5 Sternen">
             ★ ★ ★ ★ ★
           </p>
         </article>
 
         <article class="ceramic-rating-card">
           <h3>Langlebigkeit</h3>
-          <p class="ceramic-stars" aria-label="4 von 5 Sternen">
+
+          <p class="rating-number">
+            4,4 / 5
+          </p>
+
+          <p class="ceramic-stars" aria-label="4,4 von 5 Sternen">
             ★ ★ ★ ★ <span>★</span>
           </p>
         </article>
 
         <article class="ceramic-rating-card">
           <h3>Alltagstauglichkeit</h3>
-          <p class="ceramic-stars" aria-label="4 von 5 Sternen">
+
+          <p class="rating-number">
+            4,6 / 5
+          </p>
+
+          <p class="ceramic-stars" aria-label="4,6 von 5 Sternen">
             ★ ★ ★ ★ <span>★</span>
           </p>
         </article>
@@ -94,16 +182,39 @@
     </section>
 
     <section class="ceramic-report" aria-labelledby="ceramic-report-title">
-      <h2 id="ceramic-report-title">Text über die Keramikbeschichtung</h2>
+      <div class="ceramic-report-heading">
+        <p class="section-kicker">
+          Praxiseindruck
+        </p>
 
-      <p>
-        Text
-      </p>
+        <h2 id="ceramic-report-title">
+          Keramikbeschichtung im Alltag
+        </h2>
+      </div>
+
+      <div class="ceramic-report-content">
+        <p>
+          Text
+        </p>
+
+        <p>
+          Text
+        </p>
+      </div>
     </section>
 
-    <section class="ceramic-pros-cons" aria-label="Vorteile und Nachteile der Keramikbeschichtung">
+    <section
+      class="ceramic-pros-cons"
+      aria-label="Vorteile und Nachteile der Keramikbeschichtung"
+    >
       <article class="ceramic-pros">
-        <h2>Vorteile</h2>
+        <p class="card-kicker">
+          Stärken
+        </p>
+
+        <h2>
+          Vorteile
+        </h2>
 
         <ul>
           <li>PFAS-freie Alternative zu klassischen Antihaftbeschichtungen</li>
@@ -116,7 +227,13 @@
       </article>
 
       <article class="ceramic-cons">
-        <h2>Nachteile</h2>
+        <p class="card-kicker">
+          Zu beachten
+        </p>
+
+        <h2>
+          Nachteile
+        </h2>
 
         <ul>
           <li>Beschichtung kann bei falscher Reinigung beschädigt werden</li>
@@ -130,9 +247,10 @@
     </section>
   </main>
 
-  <footer
-    hx-get="komponenten/footer.html"
+  <div
+    hx-get="./komponenten/footer.html"
     hx-trigger="load"
-  ></footer>
+    hx-swap="outerHTML"
+  ></div>
 </body>
 </html>

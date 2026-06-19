@@ -1,89 +1,139 @@
-.ceramic-page {
-  --ceramic-bg: var(--color-bg, #d9d9d9);
-  --ceramic-white: var(--color-white, #ffffff);
-  --ceramic-text: var(--color-text, #111111);
-  --ceramic-green: var(--color-green, #2f7d56);
-  --ceramic-dark: #333333;
-  --ceramic-placeholder: #a9a9a9;
-  --ceramic-radius: var(--radius-card, 0.35rem);
-  --ceramic-page-space: var(--space-page, clamp(1.5rem, 6vw, 6rem));
+/* Seitenlayout */
 
-  padding: 0 var(--ceramic-page-space) 5rem;
-  background-color: var(--ceramic-bg);
-  color: var(--ceramic-text);
+.ceramic-page {
+  padding: 2rem var(--space-page) 5rem;
+  color: var(--color-text);
+}
+
+.ceramic-page h1,
+.ceramic-page h2,
+.ceramic-page h3 {
+  color: var(--color-green-900);
 }
 
 /* Hero-Bereich */
 
 .ceramic-hero {
+  min-height: 650px;
   display: grid;
-  grid-template-columns: 1.2fr 0.95fr 0.7fr;
-  gap: 1rem;
-  align-items: stretch;
-  padding-top: 1rem;
+  grid-template-columns: minmax(0, 0.9fr) minmax(520px, 1.1fr);
+  align-items: start;
+  gap: clamp(2.5rem, 5vw, 5rem);
 }
 
 .ceramic-intro {
+  max-width: 760px;
   padding-top: 1rem;
 }
 
-.ceramic-eyebrow {
-  margin: 0 0 0.75rem;
-  font-size: 0.9rem;
-  font-weight: 700;
+.ceramic-kicker {
+  width: fit-content;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.7rem;
+  margin: 0 0 2rem;
+  padding: 0.85rem 1.25rem;
+  border: 1px solid #b7d0c4;
+  border-radius: 999px;
+  background-color: rgba(219, 238, 228, 0.55);
+  color: var(--color-green-900);
+  font-size: 0.95rem;
+  font-weight: 800;
+}
+
+.ceramic-kicker span {
+  color: var(--color-green);
 }
 
 .ceramic-intro h1 {
-  max-width: 520px;
-  margin: 0 0 1rem;
-  font-size: clamp(2rem, 3vw, 3.2rem);
+  max-width: 760px;
+  margin: 0 0 1.75rem;
+  font-size: clamp(2rem, 3.4vw, 3.2rem);
   line-height: 1.08;
+  letter-spacing: -0.035em;
 }
 
-.ceramic-intro p {
-  max-width: 430px;
+.ceramic-lead {
+  max-width: 650px;
   margin: 0;
-  font-weight: 600;
+  color: #404642;
+  font-size: clamp(1.05rem, 1.45vw, 1.3rem);
+  line-height: 1.65;
+  font-weight: 500;
 }
-
-/* Bildplatzhalter */
 
 .ceramic-image {
-  min-height: 320px;
-  background-color: var(--ceramic-placeholder);
-  border: 1px solid #4d4d4d;
   position: relative;
+  min-width: 0;
+  min-height: 650px;
+  margin: 0;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.ceramic-image-panel {
+  width: min(100%, 760px);
+  min-height: 580px;
+  padding: 2rem 2rem 0;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
   overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.85);
+  border-radius: 2.75rem;
+  background-color: rgba(255, 255, 255, 0.72);
+  box-shadow:
+    0 28px 70px rgba(23, 32, 25, 0.10),
+    inset 0 1px 0 rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(8px);
 }
 
-.ceramic-image::before,
-.ceramic-image::after {
-  content: "";
+.ceramic-image-panel img {
+  width: min(96%, 590px);
+  height: auto;
+  max-height: 560px;
+  display: block;
+  object-fit: contain;
+  transform: scale(1.06);
+  transform-origin: center bottom;
+  filter: drop-shadow(0 30px 38px rgba(13, 47, 36, 0.18));
+}
+
+.ceramic-badge {
   position: absolute;
-  width: 1px;
-  height: 140%;
-  top: -20%;
-  left: 50%;
-  background-color: #4d4d4d;
+  z-index: 2;
+  min-width: 220px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  padding: 1.25rem 1.45rem;
+  border: 1px solid rgba(23, 32, 25, 0.06);
+  border-radius: 1.5rem;
+  background-color: rgba(255, 255, 255, 0.96);
+  box-shadow: 0 18px 40px rgba(23, 32, 25, 0.10);
 }
 
-.ceramic-image::before {
-  transform: rotate(42deg);
+.ceramic-badge strong {
+  color: var(--color-green-900);
+  font-size: 1.25rem;
+  line-height: 1.2;
 }
 
-.ceramic-image::after {
-  transform: rotate(-42deg);
+.ceramic-badge span {
+  color: var(--color-muted);
+  font-size: 0.95rem;
+  font-weight: 700;
 }
 
-.ceramic-image span {
-  position: relative;
-  z-index: 1;
-  padding: 0.4rem 0.75rem;
-  background-color: rgba(255, 255, 255, 0.7);
-  font-weight: 600;
+.ceramic-badge-top {
+  top: 6rem;
+  left: -1rem;
+}
+
+.ceramic-badge-bottom {
+  right: -1rem;
+  bottom: 4rem;
 }
 
 /* Überblick rechts */
