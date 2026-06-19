@@ -15,6 +15,7 @@
   <link rel="stylesheet" href="technik.css" />
 
   <script
+    defer
     src="https://cdn.jsdelivr.net/npm/htmx.org@2.0.10/dist/htmx.min.js"
     integrity="sha384-H5SrcfygHmAuTDZphMHqBJLc3FhssKjG7w/CeCpFReSfwBWDTKpkzPP8c+cLsK+V"
     crossorigin="anonymous"
@@ -22,35 +23,64 @@
 </head>
 
 <body>
-  <header
-    hx-get="komponenten/header.html"
+  <div
+    hx-get="./komponenten/header.html"
     hx-trigger="load"
-  ></header>
+    hx-swap="outerHTML"
+  ></div>
 
   <main class="tech-page">
     <section class="tech-hero" aria-labelledby="tech-title">
-      <div class="tech-intro">
-        <p class="tech-eyebrow">TECHNIK</p>
+      <article class="tech-intro">
+        <p class="tech-kicker">
+          <span aria-hidden="true">●</span>
+          Technik
+        </p>
 
         <h1 id="tech-title">
           Technische Daten und Ausstattung im Überblick
         </h1>
 
-        <p>
-          Hier findest du alle wichtigen technischen Daten, Funktionen und
-          Ausstattungsmerkmale der Cosori Turbo Tower mit Keramikbeschichtung
-          auf einen Blick.
+        <p class="tech-lead">
+          Hier findest du die wichtigsten technischen Eigenschaften,
+          Funktionen und Ausstattungsmerkmale des Cosori Turbo Tower
+          mit Keramikbeschichtung.
         </p>
-      </div>
+      </article>
 
-      <div class="tech-image" aria-label="Bild des Air Fryers">
-        <span>Bild – Air Fryer</span>
-      </div>
+      <figure class="tech-image">
+        <div class="tech-image-panel">
+          <img
+            src="bilder/cosori-turbo-tower.PNG"
+            alt="Cosori Air Fryer Turbo Tower mit Keramikbeschichtung"
+            width="620"
+            height="640"
+            loading="eager"
+            fetchpriority="high"
+          />
+        </div>
+
+        <div class="tech-badge tech-badge-top">
+          <strong>2600 Watt</strong>
+          <span>Leistung</span>
+        </div>
+
+        <div class="tech-badge tech-badge-bottom">
+          <strong>2 Garzonen</strong>
+          <span>flexibel nutzbar</span>
+        </div>
+
+        <figcaption class="visually-hidden">
+          Produktabbildung: eigene Darstellung
+        </figcaption>
+      </figure>
     </section>
 
     <section class="tech-overview" aria-label="Technische Übersicht">
       <article class="tech-table-card">
-        <h2>Technische<br />Daten</h2>
+        <p class="section-kicker">Datenblatt</p>
+
+        <h2>Technische Daten</h2>
 
         <table>
           <tbody>
@@ -79,7 +109,9 @@
       </article>
 
       <article class="equipment-card">
-        <h2>Ausstattung im Überblick</h2>
+        <p class="section-kicker">Ausstattung</p>
+
+        <h2>Praktisch für den Alltag</h2>
 
         <ul>
           <li>Zwei getrennte Garbereiche</li>
@@ -96,53 +128,69 @@
         <ul>
           <li><a href="#garzonen" aria-current="true">Garzonen</a></li>
           <li><a href="#programme">Temperatur & Programme</a></li>
-          <li><a href="#app">Bedienung & App</a></li>
+          <li><a href="#bedienung">Bedienung</a></li>
           <li><a href="#lieferumfang">Lieferumfang</a></li>
         </ul>
       </nav>
 
-      <div class="zone-text" id="garzonen">
-        <h2 id="zone-title">Zwei Garzonen für maximale Flexibilität</h2>
+      <article class="zone-text" id="garzonen">
+        <p class="section-kicker">Flexibilität</p>
+
+        <h2 id="zone-title">
+          Zwei Garzonen für mehr Möglichkeiten
+        </h2>
 
         <p>
-          Text
+          Durch die zwei getrennten Garbereiche können unterschiedliche
+          Speisen parallel zubereitet werden. So lassen sich zum Beispiel
+          Beilage und Hauptgericht zeitgleich planen.
         </p>
-      </div>
+      </article>
 
-      <div class="zone-image" aria-label="Darstellung der zwei Garzonen">
-        <span>Bild – Garzonen</span>
-      </div>
+      <article class="zone-highlight" aria-label="Vorteile der zwei Garzonen">
+        <h3>Warum das praktisch ist</h3>
+
+        <p>
+          Die getrennten Ebenen sparen Zeit und machen den Cosori besonders
+          interessant, wenn regelmäßig mehrere Bestandteile einer Mahlzeit
+          gleichzeitig zubereitet werden sollen.
+        </p>
+      </article>
     </section>
 
     <section class="process-section" aria-labelledby="process-title">
-      <h2 id="process-title">So funktioniert es</h2>
+      <div class="process-header">
+        <p class="section-kicker">Ablauf</p>
+
+        <h2 id="process-title">So funktioniert es</h2>
+      </div>
 
       <div class="process-grid">
         <article class="process-card">
-          <h3>1. Speisen einlegen</h3>
+          <span aria-hidden="true">1</span>
+          <h3>Speisen einlegen</h3>
           <p>Lebensmittel werden in die jeweilige Garzone gelegt.</p>
         </article>
 
-        <span class="process-arrow" aria-hidden="true">→</span>
-
         <article class="process-card">
-          <h3>2. Programm wählen</h3>
+          <span aria-hidden="true">2</span>
+          <h3>Programm wählen</h3>
           <p>Temperatur, Zeit oder Automatikprogramm auswählen.</p>
         </article>
 
-        <span class="process-arrow" aria-hidden="true">→</span>
-
         <article class="process-card">
-          <h3>3. Garen lassen</h3>
+          <span aria-hidden="true">3</span>
+          <h3>Garen lassen</h3>
           <p>Der Air Fryer bereitet die Speisen mit heißer Luft zu.</p>
         </article>
       </div>
     </section>
   </main>
 
-  <footer
-    hx-get="komponenten/footer.html"
+  <div
+    hx-get="./komponenten/footer.html"
     hx-trigger="load"
-  ></footer>
+    hx-swap="outerHTML"
+  ></div>
 </body>
 </html>
