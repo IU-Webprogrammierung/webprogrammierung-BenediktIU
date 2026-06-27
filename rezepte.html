@@ -25,23 +25,27 @@
   <header
     hx-get="komponenten/header.html"
     hx-trigger="load"
+    hx-swap="outerHTML"
   ></header>
 
   <main class="recipes-page">
     <section class="recipes-hero" aria-labelledby="recipes-title">
-      <div class="recipes-intro">
-        <p class="recipes-eyebrow">Rezepte</p>
+      <article class="recipes-intro">
+        <p class="recipes-kicker">
+          <span aria-hidden="true">●</span>
+          Rezepte
+        </p>
 
         <h1 id="recipes-title">
-          Meine Lieblingsgerichte mit dem Air Fryer
+          Lieblingsgerichte aus dem Air Fryer
         </h1>
 
-        <p>
-          Hier findest du einfache Rezeptideen für den Alltag. Die Gerichte
-          sind schnell vorbereitet und eignen sich besonders gut für die
-          Zubereitung im Air Fryer.
+        <p class="recipes-lead">
+          Einfache Rezeptideen für den Alltag: schnell vorbereitet,
+          übersichtlich erklärt und passend für die Zubereitung
+          im Cosori Turbo Tower.
         </p>
-      </div>
+      </article>
 
       <div class="recipes-image" aria-label="Bild mit Air Fryer Gerichten">
         <span>Bild – Air Fryer</span>
