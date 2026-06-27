@@ -93,56 +93,115 @@
       </a>
     </nav>
 
-    <section class="recipe-grid" id="alle-rezepte" aria-labelledby="recipe-grid-title">
-      <h2 id="recipe-grid-title" class="visually-hidden">Alle Rezepte</h2>
+    <section
+      class="recipe-collection"
+      id="alle-rezepte"
+      aria-labelledby="recipe-grid-title"
+    >
+      <div class="recipes-section-header">
+        <p class="recipes-section-kicker">
+          Rezeptideen
+        </p>
 
-      <article class="recipe-card" id="hauptgerichte">
-        <h3>Knusprige Hähnchenstreifen</h3>
-        <p>Ein schnelles Hauptgericht mit wenig Öl und kurzer Garzeit.</p>
-        <a href="#">Rezept ansehen</a>
-      </article>
+        <h2 id="recipe-grid-title">
+          Einfach, schnell und alltagstauglich
+        </h2>
 
-      <article class="recipe-card">
-        <h3>Air-Fryer-Pommes</h3>
-        <p>Klassische Pommes aus dem Air Fryer mit knusprigem Ergebnis.</p>
-        <a href="#">Rezept ansehen</a>
-      </article>
+        <p>
+          Die Rezeptideen sind bewusst unkompliziert gehalten und eignen sich
+          gut für die schnelle Zubereitung im Air Fryer.
+        </p>
+      </div>
 
-      <article class="recipe-card">
-        <h3>Gemüse-Mix</h3>
-        <p>Zucchini, Paprika und Kartoffeln als einfache Beilage.</p>
-        <a href="#">Rezept ansehen</a>
-      </article>
+      <div class="recipe-grid">
+        <article class="recipe-card recipe-card-featured" id="hauptgerichte">
+          <p class="recipe-card-kicker">Hauptgericht</p>
+          <h3>Knusprige Hähnchenstreifen</h3>
+          <p>Ein schnelles Hauptgericht mit wenig Öl und kurzer Garzeit.</p>
 
-      <article class="recipe-card" id="snacks">
-        <h3>Mozzarella-Sticks</h3>
-        <p>Ein schneller Snack mit knuspriger Panade.</p>
-        <a href="#">Rezept ansehen</a>
-      </article>
+          <p class="recipe-card-meta">
+            <span>20 Minuten</span>
+            <span>Einfach</span>
+          </p>
+        </article>
 
-      <article class="recipe-card">
-        <h3>Gefüllte Paprika</h3>
-        <p>Praktisch für größere Portionen und gut für zwei Garzonen geeignet.</p>
-        <a href="#">Rezept ansehen</a>
-      </article>
+        <article class="recipe-card">
+          <p class="recipe-card-kicker">Hauptgericht</p>
+          <h3>Gefüllte Paprika</h3>
+          <p>Praktisch für größere Portionen und passend für zwei Garzonen.</p>
 
-      <article class="recipe-card">
-        <h3>Knusprige Kartoffelecken</h3>
-        <p>Ideal als Beilage zu Fleisch, Fisch oder Gemüse.</p>
-        <a href="#">Rezept ansehen</a>
-      </article>
+          <p class="recipe-card-meta">
+            <span>30 Minuten</span>
+            <span>Mittel</span>
+          </p>
+        </article>
 
-      <article class="recipe-card" id="desserts">
-        <h3>Apfel-Zimt-Stücke</h3>
-        <p>Ein einfaches Dessert mit Apfel, Zimt und kurzer Backzeit.</p>
-        <a href="#">Rezept ansehen</a>
-      </article>
+        <article class="recipe-card">
+          <p class="recipe-card-kicker">Hauptgericht</p>
+          <h3>Gemüse-Mix</h3>
+          <p>Zucchini, Paprika und Kartoffeln als einfache Beilage oder Mahlzeit.</p>
 
-      <article class="recipe-card">
-        <h3>Mini-Schokokuchen</h3>
-        <p>Kleines Dessert für den Air Fryer mit kurzer Zubereitungszeit.</p>
-        <a href="#">Rezept ansehen</a>
-      </article>
+          <p class="recipe-card-meta">
+            <span>20 Minuten</span>
+            <span>Einfach</span>
+          </p>
+        </article>
+
+        <article class="recipe-card" id="snacks">
+          <p class="recipe-card-kicker">Snack</p>
+          <h3>Air-Fryer-Pommes</h3>
+          <p>Klassische Pommes mit knusprigem Ergebnis und wenig zusätzlichem Öl.</p>
+
+          <p class="recipe-card-meta">
+            <span>25 Minuten</span>
+            <span>Einfach</span>
+          </p>
+        </article>
+
+        <article class="recipe-card">
+          <p class="recipe-card-kicker">Snack</p>
+          <h3>Mozzarella-Sticks</h3>
+          <p>Ein schneller Snack mit knuspriger Panade für zwischendurch.</p>
+
+          <p class="recipe-card-meta">
+            <span>10 Minuten</span>
+            <span>Einfach</span>
+          </p>
+        </article>
+
+        <article class="recipe-card">
+          <p class="recipe-card-kicker">Snack</p>
+          <h3>Knusprige Kartoffelecken</h3>
+          <p>Eine vielseitige Beilage zu Fleisch, Fisch oder Gemüse.</p>
+
+          <p class="recipe-card-meta">
+            <span>25 Minuten</span>
+            <span>Einfach</span>
+          </p>
+        </article>
+
+        <article class="recipe-card" id="desserts">
+          <p class="recipe-card-kicker">Dessert</p>
+          <h3>Apfel-Zimt-Stücke</h3>
+          <p>Ein einfaches Dessert mit Apfel, Zimt und kurzer Backzeit.</p>
+
+          <p class="recipe-card-meta">
+            <span>15 Minuten</span>
+            <span>Einfach</span>
+          </p>
+        </article>
+
+        <article class="recipe-card">
+          <p class="recipe-card-kicker">Dessert</p>
+          <h3>Mini-Schokokuchen</h3>
+          <p>Kleines Dessert für den Air Fryer mit kurzer Zubereitungszeit.</p>
+
+          <p class="recipe-card-meta">
+            <span>18 Minuten</span>
+            <span>Mittel</span>
+          </p>
+        </article>
+      </div>
     </section>
   </main>
 
