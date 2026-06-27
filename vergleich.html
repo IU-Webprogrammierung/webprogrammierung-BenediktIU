@@ -15,6 +15,7 @@
   <link rel="stylesheet" href="vergleich.css" />
 
   <script
+    defer
     src="https://cdn.jsdelivr.net/npm/htmx.org@2.0.10/dist/htmx.min.js"
     integrity="sha384-H5SrcfygHmAuTDZphMHqBJLc3FhssKjG7w/CeCpFReSfwBWDTKpkzPP8c+cLsK+V"
     crossorigin="anonymous"
@@ -25,6 +26,7 @@
   <header
     hx-get="komponenten/header.html"
     hx-trigger="load"
+    hx-swap="outerHTML"
   ></header>
 
   <main class="compare-page">
@@ -152,6 +154,7 @@
   <footer
     hx-get="komponenten/footer.html"
     hx-trigger="load"
+    hx-swap="outerHTML"
   ></footer>
 </body>
 </html>
