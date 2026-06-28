@@ -189,6 +189,60 @@
   color: rgba(255, 255, 255, 0.82);
 }
 
+/* Haftungshinweise */
+
+.legal-liability {
+  margin-top: 1.25rem;
+}
+
+.legal-liability-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.legal-links-card {
+  position: relative;
+  overflow: hidden;
+  color: var(--color-white);
+  border-color: transparent;
+  background:
+    linear-gradient(
+      135deg,
+      var(--color-green-900) 0%,
+      #124b38 58%,
+      #176047 100%
+    );
+  box-shadow: 0 20px 45px rgba(13, 47, 36, 0.18);
+}
+
+.legal-links-card::before {
+  content: "";
+  position: absolute;
+  right: -5rem;
+  bottom: -6rem;
+  width: 270px;
+  height: 270px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 50%;
+}
+
+.legal-links-card h2,
+.legal-links-card p,
+.legal-links-card .legal-card-kicker {
+  position: relative;
+  z-index: 1;
+  color: var(--color-white);
+}
+
+.legal-links-card .legal-card-kicker {
+  opacity: 0.72;
+}
+
+.legal-links-card p {
+  color: rgba(255, 255, 255, 0.82);
+}
+
 /* Barrierefreiheit */
 
 .legal-page a:focus-visible {
