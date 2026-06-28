@@ -45,6 +45,82 @@
           Mein persönlicher Testbericht mit Gesamtbewertung,
           Detailbewertung sowie den wichtigsten Vor- und Nachteilen.
         </p>
+
+        <section class="review-insight" aria-labelledby="review-insight-title">
+          <p class="review-insight-kicker">
+            Mein Eindruck
+          </p>
+
+          <h2 id="review-insight-title">
+            Was im Alltag besonders auffällt
+          </h2>
+
+          <div
+            class="review-insight-tabs"
+            role="tablist"
+            aria-label="Bewertungsschwerpunkte"
+          >
+            <button
+              class="review-insight-tab is-active"
+              type="button"
+              id="review-tab-leistung"
+              role="tab"
+              aria-selected="true"
+              aria-controls="review-insight-panel"
+              data-insight="leistung"
+            >
+              Leistung
+            </button>
+
+            <button
+              class="review-insight-tab"
+              type="button"
+              id="review-tab-bedienung"
+              role="tab"
+              aria-selected="false"
+              aria-controls="review-insight-panel"
+              tabindex="-1"
+              data-insight="bedienung"
+            >
+              Bedienung
+            </button>
+
+            <button
+              class="review-insight-tab"
+              type="button"
+              id="review-tab-reinigung"
+              role="tab"
+              aria-selected="false"
+              aria-controls="review-insight-panel"
+              tabindex="-1"
+              data-insight="reinigung"
+            >
+              Reinigung
+            </button>
+          </div>
+
+          <div
+            class="review-insight-panel"
+            id="review-insight-panel"
+            role="tabpanel"
+            aria-labelledby="review-tab-leistung"
+            aria-live="polite"
+          >
+            <strong id="review-insight-headline">
+              Viel Leistung für größere Portionen
+            </strong>
+
+            <p id="review-insight-text">
+              Der Cosori Turbo Tower bietet viel Platz und ist besonders praktisch,
+              wenn mehrere Bestandteile einer Mahlzeit gleichzeitig zubereitet
+              werden sollen.
+            </p>
+
+            <span id="review-insight-fact">
+              2600 Watt Leistung
+            </span>
+          </div>
+        </section>
       </article>
 
       <div class="review-visual">
