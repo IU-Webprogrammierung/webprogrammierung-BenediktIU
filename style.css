@@ -139,6 +139,7 @@ main {
 
 .hero-text {
   max-width: 760px;
+  padding-top: 1rem;
 }
 
 .hero-kicker {
@@ -228,7 +229,7 @@ main {
 .hero-image {
   position: relative;
   min-width: 0;
-  min-height: 640px;
+  min-height: 650px;
   margin: 0;
   display: flex;
   align-items: center;
@@ -528,16 +529,16 @@ main {
   }
 
   .hero-image {
-    min-height: 620px;
+    min-height: 600px;
   }
 
   .hero-image-panel {
-    min-height: 540px;
+    min-height: 530px;
   }
 
   .hero-image-panel img {
-    width: min(94%, 540px);
-    max-height: 520px;
+    width: min(94%, 520px);
+    max-height: 500px;
     transform: scale(1.05);
   }
 
