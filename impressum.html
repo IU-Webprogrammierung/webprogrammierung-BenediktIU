@@ -48,71 +48,50 @@
       </article>
     </section>
 
-    <section class="legal-card" aria-labelledby="provider-title">
-      <h2 id="provider-title">Angaben zum Anbieter</h2>
+    <section class="legal-details" aria-label="Anbieter und Kontakt">
+    <article class="legal-card" aria-labelledby="provider-title">
+      <p class="legal-card-kicker">
+        Anbieter
+      </p>
 
-      <p>
+      <h2 id="provider-title">
+        Angaben zum Anbieter
+      </h2>
+
+      <address>
         Max Mustermann<br />
         Musterstraße 12<br />
         12345 Musterstadt<br />
         Deutschland
+      </address>
+    </article>
+
+    <article class="legal-card" aria-labelledby="contact-title">
+      <p class="legal-card-kicker">
+        Kontakt
       </p>
-    </section>
 
-    <section class="legal-card" aria-labelledby="contact-title">
-      <h2 id="contact-title">Kontakt</h2>
+      <h2 id="contact-title">
+        So erreichst du mich
+      </h2>
 
-      <p>
-        Telefon: 0123456789 <br />
+      <address>
+        Telefon:
+        <a href="tel:0123456789">0123456789</a><br />
+
         E-Mail:
-        <a href="mailto:kontakt@example.de">kontakt@example.de</a>
-      </p>
-    </section>
-
-    <section class="legal-card" aria-labelledby="content-title">
-      <h2 id="content-title">Verantwortlich für den Inhalt</h2>
-
-      <p>
-        Max Mustermann<br />
-        Musterstraße 12<br />
-        12345 Musterstadt
-      </p>
-    </section>
-
-    <section class="legal-card" aria-labelledby="disclaimer-title">
-      <h2 id="disclaimer-title">Hinweis zum Inhalt</h2>
-
-      <p>
-        Die Inhalte dieser Webseite wurden im Rahmen eines Studienprojekts
-        erstellt. Die Produktinformationen und Bewertungen dienen der
-        beispielhaften Darstellung einer Produktbewertungsseite.
-      </p>
-    </section>
-
-    <section class="legal-card" aria-labelledby="liability-title">
-      <h2 id="liability-title">Haftung für Inhalte</h2>
-
-      <p>
-        Die Inhalte dieser Webseite wurden mit größter Sorgfalt erstellt.
-        Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte wird
-        jedoch keine Gewähr übernommen.
-      </p>
-    </section>
-
-    <section class="legal-card" aria-labelledby="links-title">
-      <h2 id="links-title">Haftung für Links</h2>
-
-      <p>
-        Diese Webseite kann Verweise auf externe Webseiten enthalten.
-        Für die Inhalte externer Seiten sind ausschließlich deren Betreiber
-        verantwortlich.
-      </p>
-    </section>
+        <a href="mailto:kontakt@example.de">
+          kontakt@example.de
+        </a>
+      </address>
+    </article>
+  </section>
   </main>
 
   <footer
     hx-get="komponenten/footer.html"
     hx-trigger="load"
+    hx-swap="outerHTML"
   ></footer>
 </body>
 </html>
