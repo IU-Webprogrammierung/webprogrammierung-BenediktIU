@@ -138,48 +138,62 @@
   outline-offset: 4px;
 }
 
-/* Inhaltskarten */
+/* Datenverarbeitung */
 
-.privacy-card {
-  max-width: 950px;
-  margin-bottom: 1rem;
-  padding: 2rem;
-  background-color: var(--privacy-white);
-  border-radius: var(--privacy-radius);
+.privacy-processing {
+  margin-top: 1.25rem;
 }
 
-.privacy-card h2 {
-  margin: 0 0 1rem;
-  font-size: 1.25rem;
+.privacy-processing-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
 }
 
-.privacy-card p {
-  margin: 0 0 1rem;
-  font-weight: 600;
-  line-height: 1.7;
+.privacy-log-card {
+  grid-column: 1 / -1;
 }
 
-.privacy-card p:last-child {
-  margin-bottom: 0;
+.privacy-tracking-card {
+  position: relative;
+  overflow: hidden;
+  color: var(--color-white);
+  border-color: transparent;
+  background:
+    linear-gradient(
+      135deg,
+      var(--color-green-900) 0%,
+      #124b38 58%,
+      #176047 100%
+    );
+  box-shadow: 0 20px 45px rgba(13, 47, 36, 0.18);
 }
 
-.privacy-card ul {
-  margin: 0;
-  padding-left: 1.25rem;
+.privacy-tracking-card::before {
+  content: "";
+  position: absolute;
+  top: -5rem;
+  left: -4rem;
+  width: 260px;
+  height: 260px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 50%;
 }
 
-.privacy-card li {
-  margin-bottom: 0.75rem;
-  font-weight: 600;
+.privacy-tracking-card h2,
+.privacy-tracking-card p,
+.privacy-tracking-card .privacy-card-kicker {
+  position: relative;
+  z-index: 1;
+  color: var(--color-white);
 }
 
-.privacy-card a {
-  color: var(--privacy-green);
-  font-weight: 800;
+.privacy-tracking-card .privacy-card-kicker {
+  opacity: 0.72;
 }
 
-.privacy-card a:hover {
-  text-decoration: underline;
+.privacy-tracking-card p {
+  color: rgba(255, 255, 255, 0.82);
 }
 
 /* Barrierefreiheit */
