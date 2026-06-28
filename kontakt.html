@@ -15,6 +15,7 @@
   <link rel="stylesheet" href="kontakt.css" />
 
   <script
+    defer
     src="https://cdn.jsdelivr.net/npm/htmx.org@2.0.10/dist/htmx.min.js"
     integrity="sha384-H5SrcfygHmAuTDZphMHqBJLc3FhssKjG7w/CeCpFReSfwBWDTKpkzPP8c+cLsK+V"
     crossorigin="anonymous"
@@ -25,19 +26,27 @@
   <header
     hx-get="komponenten/header.html"
     hx-trigger="load"
+    hx-swap="outerHTML"
   ></header>
 
   <main class="contact-page">
     <section class="contact-hero" aria-labelledby="contact-title">
-      <p class="contact-eyebrow">Kontakt</p>
+      <article class="contact-intro">
+        <p class="contact-kicker">
+          <span aria-hidden="true">●</span>
+          Kontakt
+        </p>
 
-      <h1 id="contact-title">Kontakt aufnehmen</h1>
+        <h1 id="contact-title">
+          Kontakt aufnehmen
+        </h1>
 
-      <p>
-        Du hast Fragen zur Webseite, zum Projekt oder zum dargestellten
-        Air Fryer? Dann kannst du über die unten angegebene E-Mail-Adresse
-        Kontakt aufnehmen.
-      </p>
+        <p class="contact-lead">
+          Du hast Fragen zur Webseite, zum Studienprojekt oder zum
+          dargestellten Air Fryer? Dann kannst du über die angegebene
+          E-Mail-Adresse Kontakt aufnehmen.
+        </p>
+      </article>
     </section>
 
     <section class="contact-grid" aria-label="Kontaktinformationen">
