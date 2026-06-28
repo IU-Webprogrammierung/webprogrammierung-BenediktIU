@@ -140,28 +140,43 @@
 
 /* FAQ-Kategorien */
 
+/* FAQ-Kategorien */
+
 .faq-categories {
   display: flex;
   flex-wrap: wrap;
   gap: 0.75rem;
   margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
 }
 
 .faq-category {
-  min-width: 160px;
-  padding: 0.85rem 1.25rem;
-  border-radius: var(--faq-radius);
-  background-color: var(--faq-white);
-  color: var(--faq-green);
-  text-align: center;
-  font-weight: 700;
+  min-height: 50px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.8rem 1.2rem;
+  border: 1px solid var(--color-border);
+  border-radius: 999px;
+  background-color: rgba(255, 255, 255, 0.78);
+  color: var(--color-green-900);
+  font-weight: 800;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease;
 }
 
-.faq-category:hover,
-.faq-category:focus-visible,
+.faq-category:hover {
+  color: var(--color-white);
+  background-color: var(--color-green);
+  transform: translateY(-1px);
+}
+
 .faq-category-active {
-  background-color: var(--faq-green);
-  color: var(--faq-white);
+  color: var(--color-white);
+  background-color: var(--color-green-900);
+  box-shadow: 0 10px 22px rgba(13, 47, 36, 0.15);
 }
 
 /* FAQ-Akkordion */
