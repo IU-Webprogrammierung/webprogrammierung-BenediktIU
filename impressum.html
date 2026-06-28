@@ -26,17 +26,26 @@
   <header
     hx-get="komponenten/header.html"
     hx-trigger="load"
+    hx-swap="outerHTML"
   ></header>
 
   <main class="legal-page">
     <section class="legal-hero" aria-labelledby="impressum-title">
-      <p class="legal-eyebrow">Rechtliches</p>
+      <article class="legal-intro">
+        <p class="legal-kicker">
+          <span aria-hidden="true">●</span>
+          Rechtliches
+        </p>
 
-      <h1 id="impressum-title">Impressum</h1>
+        <h1 id="impressum-title">
+          Impressum
+        </h1>
 
-      <p>
-        Angaben gemäß § 5 DDG.
-      </p>
+        <p class="legal-lead">
+          Angaben gemäß § 5 DDG sowie Hinweise zu den Inhalten
+          dieser Webseite.
+        </p>
+      </article>
     </section>
 
     <section class="legal-card" aria-labelledby="provider-title">
