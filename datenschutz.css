@@ -196,6 +196,97 @@
   color: rgba(255, 255, 255, 0.82);
 }
 
+/* Betroffenenrechte */
+
+.privacy-rights {
+  margin-top: 1.25rem;
+}
+
+.privacy-rights-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.privacy-rights-card {
+  grid-column: 1 / -1;
+}
+
+.privacy-rights-card ul {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.8rem 1rem;
+  margin: 1.5rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.privacy-rights-card li {
+  position: relative;
+  padding-left: 1.75rem;
+  color: #404642;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+.privacy-rights-card li::before {
+  content: "✓";
+  position: absolute;
+  top: 0.05rem;
+  left: 0;
+  width: 1.2rem;
+  height: 1.2rem;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  color: var(--color-white);
+  background-color: var(--color-green);
+  font-size: 0.75rem;
+  font-weight: 900;
+}
+
+.privacy-changes-card {
+  position: relative;
+  overflow: hidden;
+  color: var(--color-white);
+  border-color: transparent;
+  background:
+    linear-gradient(
+      135deg,
+      var(--color-green-900) 0%,
+      #124b38 58%,
+      #176047 100%
+    );
+  box-shadow: 0 20px 45px rgba(13, 47, 36, 0.18);
+}
+
+.privacy-changes-card::before {
+  content: "";
+  position: absolute;
+  right: -5rem;
+  bottom: -6rem;
+  width: 270px;
+  height: 270px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 50%;
+}
+
+.privacy-changes-card h2,
+.privacy-changes-card p,
+.privacy-changes-card .privacy-card-kicker {
+  position: relative;
+  z-index: 1;
+  color: var(--color-white);
+}
+
+.privacy-changes-card .privacy-card-kicker {
+  opacity: 0.72;
+}
+
+.privacy-changes-card p {
+  color: rgba(255, 255, 255, 0.82);
+}
+
 /* Barrierefreiheit */
 
 .privacy-page a:focus-visible {
