@@ -25,18 +25,26 @@
   <header
     hx-get="komponenten/header.html"
     hx-trigger="load"
+    hx-swap="outerHTML"
   ></header>
 
   <main class="privacy-page">
     <section class="privacy-hero" aria-labelledby="privacy-title">
-      <p class="privacy-eyebrow">Rechtliches</p>
+      <article class="privacy-intro">
+        <p class="privacy-kicker">
+          <span aria-hidden="true">●</span>
+          Rechtliches
+        </p>
 
-      <h1 id="privacy-title">Datenschutzerklärung</h1>
+        <h1 id="privacy-title">
+          Datenschutzerklärung
+        </h1>
 
-      <p>
-        Diese Datenschutzerklärung informiert darüber, welche personenbezogenen
-        Daten beim Besuch dieser Webseite verarbeitet werden.
-      </p>
+        <p class="privacy-lead">
+          Informationen darüber, welche personenbezogenen Daten beim Besuch
+          dieser Webseite verarbeitet werden können.
+        </p>
+      </article>
     </section>
 
     <section class="privacy-card" aria-labelledby="controller-title">
@@ -172,6 +180,7 @@
   <footer
     hx-get="komponenten/footer.html"
     hx-trigger="load"
+    hx-swap="outerHTML"
   ></footer>
 </body>
 </html>
