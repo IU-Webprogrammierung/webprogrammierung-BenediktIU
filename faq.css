@@ -1,50 +1,65 @@
-.faq-page {
-  --faq-bg: var(--color-bg, #d9d9d9);
-  --faq-white: var(--color-white, #ffffff);
-  --faq-text: var(--color-text, #111111);
-  --faq-green: var(--color-green, #2f7d56);
-  --faq-green-dark: var(--color-green-dark, #245f42);
-  --faq-placeholder: #a9a9a9;
-  --faq-radius: var(--radius-card, 0.35rem);
-  --faq-page-space: var(--space-page, clamp(1.5rem, 6vw, 6rem));
+/* Seitenlayout */
 
-  padding: 0 var(--faq-page-space) 5rem;
-  background-color: var(--faq-bg);
-  color: var(--faq-text);
+.faq-page {
+  padding: 2rem var(--space-page) 5rem;
+  color: var(--color-text);
+}
+
+.faq-page h1,
+.faq-page h2,
+.faq-page h3 {
+  color: var(--color-green-900);
 }
 
 /* Hero-Bereich */
 
 .faq-hero {
+  min-height: 650px;
   display: grid;
-  grid-template-columns: 0.9fr 1.35fr;
-  gap: clamp(2rem, 6vw, 6rem);
+  grid-template-columns: minmax(0, 0.9fr) minmax(520px, 1.1fr);
   align-items: start;
-  padding-top: 1.5rem;
+  gap: clamp(2.5rem, 5vw, 5rem);
 }
 
 .faq-intro {
-  max-width: 460px;
+  max-width: 760px;
   padding-top: 1rem;
 }
 
-.faq-eyebrow {
-  margin: 0 0 1rem;
-  font-size: 1rem;
+.faq-kicker {
+  width: fit-content;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.7rem;
+  margin: 0 0 2rem;
+  padding: 0.85rem 1.25rem;
+  border: 1px solid #b7d0c4;
+  border-radius: 999px;
+  background-color: rgba(219, 238, 228, 0.55);
+  color: var(--color-green-900);
+  font-size: 0.95rem;
   font-weight: 800;
 }
 
-.faq-intro h1 {
-  margin: 0 0 1.5rem;
-  font-size: clamp(2rem, 3.3vw, 3.4rem);
-  line-height: 1.08;
+.faq-kicker span {
+  color: var(--color-green);
 }
 
-.faq-intro p {
+.faq-intro h1 {
+  max-width: 760px;
+  margin: 0 0 1.75rem;
+  font-size: clamp(2rem, 3.4vw, 3.2rem);
+  line-height: 1.08;
+  letter-spacing: -0.035em;
+}
+
+.faq-lead {
+  max-width: 650px;
   margin: 0;
-  font-size: 1.05rem;
-  font-weight: 600;
-  line-height: 1.45;
+  color: #404642;
+  font-size: clamp(1.05rem, 1.45vw, 1.3rem);
+  line-height: 1.65;
+  font-weight: 500;
 }
 
 /* Bildplatzhalter */
