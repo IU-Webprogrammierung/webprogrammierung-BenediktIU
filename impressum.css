@@ -1,38 +1,60 @@
-.legal-page {
-  --legal-bg: var(--color-bg, #d9d9d9);
-  --legal-white: var(--color-white, #ffffff);
-  --legal-text: var(--color-text, #111111);
-  --legal-green: var(--color-green, #2f7d56);
-  --legal-radius: var(--radius-card, 0.35rem);
-  --legal-page-space: var(--space-page, clamp(1.5rem, 6vw, 6rem));
+/* Seitenlayout */
 
-  padding: 3rem var(--legal-page-space) 5rem;
-  background-color: var(--legal-bg);
-  color: var(--legal-text);
+.legal-page {
+  padding: 2rem var(--space-page) 5rem;
+  color: var(--color-text);
 }
 
-/* Einleitung */
+.legal-page h1,
+.legal-page h2,
+.legal-page h3 {
+  color: var(--color-green-900);
+}
+
+/* Hero-Bereich */
 
 .legal-hero {
-  max-width: 760px;
+  max-width: 780px;
   margin-bottom: 2rem;
 }
 
-.legal-eyebrow {
-  margin: 0 0 1rem;
-  font-size: 1rem;
+.legal-intro {
+  padding-top: 1rem;
+}
+
+.legal-kicker {
+  width: fit-content;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.7rem;
+  margin: 0 0 2rem;
+  padding: 0.85rem 1.25rem;
+  border: 1px solid #b7d0c4;
+  border-radius: 999px;
+  background-color: rgba(219, 238, 228, 0.55);
+  color: var(--color-green-900);
+  font-size: 0.95rem;
   font-weight: 800;
 }
 
-.legal-hero h1 {
-  margin: 0 0 1rem;
-  font-size: clamp(2.2rem, 4vw, 4rem);
-  line-height: 1.05;
+.legal-kicker span {
+  color: var(--color-green);
 }
 
-.legal-hero p {
+.legal-intro h1 {
+  margin: 0 0 1.25rem;
+  font-size: clamp(2.2rem, 4vw, 4rem);
+  line-height: 1.05;
+  letter-spacing: -0.04em;
+}
+
+.legal-lead {
+  max-width: 620px;
   margin: 0;
-  font-weight: 600;
+  color: #404642;
+  font-size: clamp(1.05rem, 1.45vw, 1.25rem);
+  line-height: 1.65;
+  font-weight: 500;
 }
 
 /* Inhaltskarten */
