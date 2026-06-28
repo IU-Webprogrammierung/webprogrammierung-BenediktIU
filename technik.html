@@ -124,33 +124,98 @@
     </section>
 
     <section class="zone-section" aria-labelledby="zone-title">
-      <nav class="tech-side-nav" aria-label="Technikbereiche">
-        <ul>
-          <li><a href="#garzonen" aria-current="true">Garzonen</a></li>
-          <li><a href="#programme">Temperatur & Programme</a></li>
-          <li><a href="#bedienung">Bedienung</a></li>
-          <li><a href="#lieferumfang">Lieferumfang</a></li>
-        </ul>
-      </nav>
+      <div class="tech-side-nav">
+        <div
+          class="tech-tab-list"
+          role="tablist"
+          aria-label="Technikbereiche"
+        >
+          <button
+            class="tech-tab is-active"
+            type="button"
+            id="tab-garzonen"
+            role="tab"
+            aria-selected="true"
+            aria-controls="tech-detail"
+            data-topic="garzonen"
+          >
+            Garzonen
+          </button>
 
-      <article class="zone-text" id="garzonen">
-        <p class="section-kicker">Flexibilität</p>
+          <button
+            class="tech-tab"
+            type="button"
+            id="tab-programme"
+            role="tab"
+            aria-selected="false"
+            aria-controls="tech-detail"
+            tabindex="-1"
+            data-topic="programme"
+          >
+            Temperatur &amp; Programme
+          </button>
+
+          <button
+            class="tech-tab"
+            type="button"
+            id="tab-bedienung"
+            role="tab"
+            aria-selected="false"
+            aria-controls="tech-detail"
+            tabindex="-1"
+            data-topic="bedienung"
+          >
+            Bedienung
+          </button>
+
+          <button
+            class="tech-tab"
+            type="button"
+            id="tab-lieferumfang"
+            role="tab"
+            aria-selected="false"
+            aria-controls="tech-detail"
+            tabindex="-1"
+            data-topic="lieferumfang"
+          >
+            Lieferumfang
+          </button>
+        </div>
+      </div>
+
+      <article
+        class="zone-text"
+        id="tech-detail"
+        role="tabpanel"
+        aria-labelledby="tab-garzonen"
+        aria-live="polite"
+        tabindex="-1"
+      >
+        <p class="section-kicker" id="tech-detail-kicker">
+          Flexibilität
+        </p>
 
         <h2 id="zone-title">
           Zwei Garzonen für mehr Möglichkeiten
         </h2>
 
-        <p>
+        <p id="tech-detail-text">
           Durch die zwei getrennten Garbereiche können unterschiedliche
           Speisen parallel zubereitet werden. So lassen sich zum Beispiel
           Beilage und Hauptgericht zeitgleich planen.
         </p>
       </article>
 
-      <article class="zone-highlight" aria-label="Vorteile der zwei Garzonen">
-        <h3>Warum das praktisch ist</h3>
+      <article
+        class="zone-highlight"
+        aria-live="polite"
+        aria-label="Zusätzliche Informationen"
+      >
+        <h3 id="tech-highlight-title">
+          Warum das praktisch ist
+        </h3>
 
-        <p>
+        <p id="tech-highlight-text">
           Die getrennten Ebenen sparen Zeit und machen den Cosori besonders
           interessant, wenn regelmäßig mehrere Bestandteile einer Mahlzeit
           gleichzeitig zubereitet werden sollen.
