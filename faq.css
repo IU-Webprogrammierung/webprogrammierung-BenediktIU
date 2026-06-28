@@ -295,6 +295,110 @@
   line-height: 1.7;
 }
 
+/* Praxishinweise */
+
+.faq-guidance {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(320px, 0.85fr);
+  gap: 1rem;
+  margin-top: 1.25rem;
+}
+
+.faq-guidance-card,
+.faq-tip-card {
+  min-height: 300px;
+  padding: clamp(1.75rem, 4vw, 2.75rem);
+  border-radius: 2rem;
+}
+
+.faq-guidance-card {
+  border: 1px solid var(--color-border);
+  background-color: rgba(255, 255, 255, 0.86);
+  box-shadow: 0 16px 38px rgba(13, 47, 36, 0.07);
+}
+
+.faq-guidance-card > p:last-of-type {
+  max-width: 580px;
+  margin: 1.25rem 0 0;
+  color: #404642;
+  font-size: 1.05rem;
+  line-height: 1.65;
+}
+
+.faq-guidance-card ul {
+  display: grid;
+  gap: 0.75rem;
+  margin: 1.5rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.faq-guidance-card li {
+  position: relative;
+  padding-left: 1.8rem;
+  font-weight: 700;
+}
+
+.faq-guidance-card li::before {
+  content: "✓";
+  position: absolute;
+  top: 0.05rem;
+  left: 0;
+  width: 1.2rem;
+  height: 1.2rem;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  color: var(--color-white);
+  background-color: var(--color-green);
+  font-size: 0.75rem;
+}
+
+.faq-tip-card {
+  position: relative;
+  overflow: hidden;
+  color: var(--color-white);
+  background:
+    linear-gradient(
+      135deg,
+      var(--color-green-900) 0%,
+      #124b38 58%,
+      #176047 100%
+    );
+  box-shadow: 0 20px 45px rgba(13, 47, 36, 0.18);
+}
+
+.faq-tip-card::before {
+  content: "";
+  position: absolute;
+  top: -5rem;
+  left: -4rem;
+  width: 260px;
+  height: 260px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 50%;
+}
+
+.faq-tip-card h2,
+.faq-tip-card p,
+.faq-tip-card .faq-guidance-kicker {
+  position: relative;
+  z-index: 1;
+  color: var(--color-white);
+}
+
+.faq-tip-card .faq-guidance-kicker {
+  opacity: 0.72;
+}
+
+.faq-tip-card p {
+  max-width: 420px;
+  margin: 1.25rem 0 0;
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 1.05rem;
+  line-height: 1.65;
+}
+
 /* Barrierefreiheit */
 
 .faq-page a:focus-visible,
