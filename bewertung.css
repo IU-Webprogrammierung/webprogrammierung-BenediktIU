@@ -61,6 +61,127 @@
   font-weight: 500;
 }
 
+/* Interaktiver Praxiseindruck */
+
+.review-insight {
+  max-width: 650px;
+  margin-top: 3rem;
+  padding: 1.5rem 1.75rem;
+  border: 1px solid var(--color-border);
+  border-radius: 1.5rem;
+  background-color: rgba(255, 255, 255, 0.72);
+  box-shadow: 0 14px 32px rgba(13, 47, 36, 0.06);
+}
+
+.review-insight-kicker {
+  margin: 0 0 0.55rem;
+  color: var(--color-green);
+  font-size: 0.82rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.review-insight h2 {
+  margin: 0;
+  color: var(--color-green-900);
+  font-size: clamp(1.35rem, 2.2vw, 1.8rem);
+  line-height: 1.15;
+}
+
+.review-insight-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-top: 1.35rem;
+}
+
+.review-insight-tab {
+  min-height: 40px;
+  padding: 0.55rem 0.85rem;
+  border: 1px solid var(--color-border);
+  border-radius: 999px;
+  color: var(--color-green-900);
+  background-color: rgba(255, 255, 255, 0.75);
+  font: inherit;
+  font-size: 0.9rem;
+  font-weight: 800;
+  cursor: pointer;
+  transition:
+    color 0.2s ease,
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.review-insight-tab:hover {
+  color: var(--color-white);
+  border-color: var(--color-green);
+  background-color: var(--color-green);
+  transform: translateY(-1px);
+}
+
+.review-insight-tab.is-active,
+.review-insight-tab[aria-selected="true"] {
+  color: var(--color-white);
+  border-color: var(--color-green-900);
+  background-color: var(--color-green-900);
+}
+
+.review-insight-tab:focus-visible {
+  outline: 3px solid var(--color-green);
+  outline-offset: 3px;
+}
+
+.review-insight-panel {
+  min-height: 150px;
+  margin-top: 1.15rem;
+  padding: 1.15rem;
+  border-radius: 1rem;
+  background-color: var(--color-green-soft);
+  transition:
+    opacity 0.18s ease,
+    transform 0.18s ease;
+}
+
+.review-insight-panel strong {
+  display: block;
+  color: var(--color-green-900);
+  font-size: 1.05rem;
+}
+
+.review-insight-panel p {
+  margin: 0.65rem 0 0;
+  color: #404642;
+  font-size: 0.98rem;
+  line-height: 1.6;
+  font-weight: 500;
+}
+
+.review-insight-panel span {
+  width: fit-content;
+  display: inline-flex;
+  margin-top: 1rem;
+  padding: 0.4rem 0.7rem;
+  border-radius: 999px;
+  color: var(--color-white);
+  background-color: var(--color-green);
+  font-size: 0.82rem;
+  font-weight: 800;
+}
+
+.review-insight-panel.is-changing {
+  opacity: 0;
+  transform: translateY(8px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .review-insight-tab,
+  .review-insight-panel {
+    transition: none;
+  }
+}
+
 .review-visual {
   position: relative;
   min-height: 650px;
@@ -417,6 +538,23 @@
   .review-lead {
     font-size: 1rem;
     line-height: 1.6;
+  }
+
+    .review-insight {
+    margin-top: 2rem;
+    padding: 1.5rem;
+  }
+
+  .review-insight-tabs {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .review-insight-tab {
+    padding-right: 0.45rem;
+    padding-left: 0.45rem;
+    font-size: 0.82rem;
+    text-align: center;
   }
 
   .review-visual {
