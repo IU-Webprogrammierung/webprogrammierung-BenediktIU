@@ -296,13 +296,54 @@
 
 /* Responsive Design */
 
+@media (max-width: 900px) {
+  .privacy-basics-grid,
+  .privacy-processing-grid,
+  .privacy-rights-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .privacy-log-card,
+  .privacy-rights-card {
+    grid-column: auto;
+  }
+}
+
 @media (max-width: 700px) {
   .privacy-page {
-    padding-left: 1rem;
     padding-right: 1rem;
+    padding-left: 1rem;
+  }
+
+  .privacy-kicker {
+    margin-bottom: 1.5rem;
+    font-size: 0.88rem;
+  }
+
+  .privacy-intro h1 {
+    font-size: clamp(2.3rem, 11vw, 3.4rem);
+  }
+
+  .privacy-lead {
+    font-size: 1rem;
+    line-height: 1.6;
   }
 
   .privacy-card {
+    min-height: auto;
     padding: 1.5rem;
+    border-radius: 1.5rem;
+  }
+
+  .privacy-card h2 {
+    font-size: 1.4rem;
+  }
+
+  .privacy-section-header h2 {
+    font-size: 2rem;
+  }
+
+  .privacy-rights-card ul {
+    grid-template-columns: 1fr;
   }
 }
