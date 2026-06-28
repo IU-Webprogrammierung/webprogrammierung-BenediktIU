@@ -15,6 +15,7 @@
   <link rel="stylesheet" href="faq.css" />
 
   <script
+    defer
     src="https://cdn.jsdelivr.net/npm/htmx.org@2.0.10/dist/htmx.min.js"
     integrity="sha384-H5SrcfygHmAuTDZphMHqBJLc3FhssKjG7w/CeCpFReSfwBWDTKpkzPP8c+cLsK+V"
     crossorigin="anonymous"
@@ -25,22 +26,26 @@
   <header
     hx-get="komponenten/header.html"
     hx-trigger="load"
+    hx-swap="outerHTML"
   ></header>
 
   <main class="faq-page">
     <section class="faq-hero" aria-labelledby="faq-title">
-      <div class="faq-intro">
-        <p class="faq-eyebrow">FAQ</p>
+      <article class="faq-intro">
+        <p class="faq-kicker">
+          <span aria-hidden="true">●</span>
+          FAQ
+        </p>
 
         <h1 id="faq-title">
-          Häufige Fragen zum Air Fryer
+          Häufige Fragen zum Cosori Turbo Tower
         </h1>
 
-        <p>
-          Hier findest du die wichtigsten Antworten zum Cosori Turbo Tower,
-          zur Keramikbeschichtung, Reinigung, Nutzung und Kaufentscheidung.
+        <p class="faq-lead">
+          Antworten zu Nutzung, Garzonen, Reinigung und Kaufentscheidung –
+          übersichtlich zusammengefasst für den Alltag mit dem Air Fryer.
         </p>
-      </div>
+      </article>
 
       <div class="faq-image" aria-label="Bild des Air Fryers">
         <span>Bild – Air Fryer</span>
