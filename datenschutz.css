@@ -57,6 +57,87 @@
   font-weight: 500;
 }
 
+/* Grundlagen */
+
+.privacy-basics {
+  margin-top: 1.25rem;
+}
+
+.privacy-section-header {
+  max-width: 760px;
+  margin-bottom: 1.5rem;
+}
+
+.privacy-section-kicker,
+.privacy-card-kicker {
+  margin: 0 0 0.55rem;
+  color: var(--color-green);
+  font-size: 0.82rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.privacy-section-header h2 {
+  margin: 0;
+  font-size: clamp(1.8rem, 3vw, 2.7rem);
+  line-height: 1.05;
+}
+
+.privacy-section-header > p:last-child {
+  max-width: 620px;
+  margin: 0.75rem 0 0;
+  color: var(--color-muted);
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+.privacy-basics-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.privacy-card {
+  min-height: 270px;
+  padding: clamp(1.75rem, 4vw, 2.75rem);
+  border: 1px solid var(--color-border);
+  border-radius: 2rem;
+  background-color: rgba(255, 255, 255, 0.86);
+  box-shadow: 0 16px 38px rgba(13, 47, 36, 0.07);
+}
+
+.privacy-card h2 {
+  margin: 0;
+  font-size: clamp(1.35rem, 2.3vw, 2rem);
+  line-height: 1.15;
+}
+
+.privacy-card p,
+.privacy-card address {
+  margin: 1.25rem 0 0;
+  color: #404642;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.7;
+}
+
+.privacy-card a {
+  color: var(--color-green);
+  font-weight: 800;
+  text-decoration: underline;
+  text-underline-offset: 0.2rem;
+}
+
+.privacy-card a:hover {
+  color: var(--color-green-dark);
+}
+
+.privacy-page a:focus-visible {
+  outline: 3px solid var(--color-green);
+  outline-offset: 4px;
+}
+
 /* Inhaltskarten */
 
 .privacy-card {
