@@ -115,6 +115,80 @@
   outline-offset: 4px;
 }
 
+/* Verantwortlichkeit und Projektkontext */
+
+.legal-information {
+  margin-top: 1.25rem;
+}
+
+.legal-section-header {
+  max-width: 760px;
+  margin-bottom: 1.5rem;
+}
+
+.legal-section-header h2 {
+  margin: 0;
+  font-size: clamp(1.8rem, 3vw, 2.7rem);
+  line-height: 1.05;
+}
+
+.legal-section-header > p:last-child {
+  max-width: 620px;
+  margin: 0.75rem 0 0;
+  color: var(--color-muted);
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+.legal-information-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(320px, 0.85fr);
+  gap: 1rem;
+}
+
+.legal-project-card {
+  position: relative;
+  overflow: hidden;
+  color: var(--color-white);
+  border-color: transparent;
+  background:
+    linear-gradient(
+      135deg,
+      var(--color-green-900) 0%,
+      #124b38 58%,
+      #176047 100%
+    );
+  box-shadow: 0 20px 45px rgba(13, 47, 36, 0.18);
+}
+
+.legal-project-card::before {
+  content: "";
+  position: absolute;
+  top: -5rem;
+  left: -4rem;
+  width: 260px;
+  height: 260px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 50%;
+}
+
+.legal-project-card h2,
+.legal-project-card p,
+.legal-project-card .legal-card-kicker {
+  position: relative;
+  z-index: 1;
+  color: var(--color-white);
+}
+
+.legal-project-card .legal-card-kicker {
+  opacity: 0.72;
+}
+
+.legal-project-card p {
+  max-width: 460px;
+  color: rgba(255, 255, 255, 0.82);
+}
+
 /* Barrierefreiheit */
 
 .legal-page a:focus-visible {
