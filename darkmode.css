@@ -1,0 +1,23 @@
+:root {
+  color-scheme: light;
+}
+
+html[data-theme="dark"] {
+  color-scheme: dark;
+
+  --color-text: #f4f1ec;
+  --color-muted: #c5c0b8;
+  --color-bg: #151816;
+  --color-surface: #222622;
+  --color-white: #ffffff;
+
+  --color-green: #70bd94;
+  --color-green-dark: #96d2b1;
+  --color-green-soft: #293d33;
+  --color-green-900: #d8f2e3;
+
+  --color-accent: #f3b35b;
+  --color-border: rgba(230, 240, 233, 0.16);
+
+  --shadow-soft: 0 18px 45px rgba(0, 0, 0, 0.32);
+}
