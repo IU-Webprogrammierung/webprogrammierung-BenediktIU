@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <meta
     name="description"
     content="Rezeptideen für den Cosori Air Fryer Turbo Tower mit Keramikbeschichtung."
-  />
+  >
 
   <title>Rezepte | Mein Air Fryer</title>
 
-  <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="rezepte.css" />
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="rezepte.css">
 
   <script
     src="https://cdn.jsdelivr.net/npm/htmx.org@2.0.10/dist/htmx.min.js"
@@ -56,7 +56,7 @@
             height="640"
             loading="eager"
             fetchpriority="high"
-          />
+          >
         </div>
 
         <div class="recipes-badge recipes-badge-top">
@@ -246,6 +246,7 @@
   <footer
     hx-get="komponenten/footer.html"
     hx-trigger="load"
+    hx-swap="outerHTML"
   ></footer>
 </body>
 </html>
