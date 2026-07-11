@@ -1,7 +1,8 @@
 <header class="site-header">
   <div class="container header-inner">
+
     <a class="logo" href="index.html" aria-label="Mein Air Fryer Startseite">
-      <span class="logo-text">Mein<br />Air Fryer</span>
+      <span class="logo-text">Mein<br></span>Air Fryer
     </a>
 
     <nav class="desktop-nav" aria-label="Hauptnavigation">
@@ -16,6 +17,22 @@
       </ul>
     </nav>
 
+    <button
+      class="theme-toggle"
+      type="button"
+      data-theme-toggle
+      aria-label="Zum dunklen Modus wechseln"
+      aria-pressed="false"
+    >
+      <span
+        class="theme-toggle__icon"
+        data-theme-icon
+        aria-hidden="true"
+      >☾</span>
+
+      <span data-theme-text>Dunkel</span>
+    </button>
+
     <details class="mobile-menu">
       <summary>Menü</summary>
 
@@ -29,5 +46,6 @@
         <a href="faq.html">FAQ</a>
       </nav>
     </details>
+
   </div>
 </header>
