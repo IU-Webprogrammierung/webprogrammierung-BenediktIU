@@ -152,7 +152,7 @@ summary:focus-visible {
 .theme-toggle:hover {
   color: var(--color-green);
   background-color: var(--color-green-soft);
-  transform: translateY(-2px);
+  transform: translateY(-1px);
 
   box-shadow:
     0 12px 26px rgba(23, 32, 25, 0.12),
@@ -547,14 +547,19 @@ html[data-theme="dark"] main {
 
 .site-footer {
   padding: 2rem 0;
-  color: var(--color-white);
-  background-color: var(--color-green-900);
+  background-color: color-mix(
+    in srgb,
+    var(--color-surface) 90%,
+    transparent
+  );
+
+  backdrop-filter: blur(18px);
   border-top: 1px solid var(--color-border);
 }
 
 .footer-inner p {
   margin: 0;
-  color: var(--color-white);
+  color: var(--color-text);
   font-weight: 700;
 }
 
@@ -564,18 +569,13 @@ html[data-theme="dark"] main {
   align-items: center;
   padding: 0.4rem 0.65rem;
   border-radius: 999px;
-  color: rgba(255, 255, 255, 0.86);
+  color: var(--color-text);
   font-weight: 700;
 }
 
 .footer-nav a:hover {
-  color: var(--color-white);
-  background-color: rgba(255, 255, 255, 0.12);
-}
-
-.footer-nav a:hover {
-  color: var(--color-white);
-  background: rgba(255, 255, 255, 0.12);
+  color: var(--color-green-900);
+  background-color: var(--color-green-soft);
 }
 
 .visually-hidden {
@@ -587,10 +587,23 @@ html[data-theme="dark"] main {
   white-space: nowrap;
 }
 
+.footer-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.footer-nav {
+  margin-left: auto;
+}
+
+
 /* Übergänge für den Theme-Wechsel */
 
 body,
 .site-header,
+.site-footer,
 main,
 .hero-image-panel,
 .hero-badge,
@@ -598,10 +611,10 @@ main,
 .button-secondary,
 .mobile-menu summary,
 .mobile-nav {
-  transition:
-    background-color 0.2s ease,
-    color 0.2s ease,
-    border-color 0.2s ease;
+    transition:
+        background-color .2s ease,
+        color .2s ease,
+        border-color .2s ease;
 }
 
 @media (max-width: 1100px) {
@@ -826,15 +839,23 @@ main,
     gap: 1rem;
   }
 
+  .footer-nav {
+    width: 100%;
+    margin-left: 0;
+    justify-self: start;
+  }
+
   .footer-nav ul {
     flex-direction: column;
     align-items: flex-start;
     gap: 1rem;
   }
+}
 
-  @media (prefers-reduced-motion: reduce) {
+@media (prefers-reduced-motion: reduce) {
   body,
   .site-header,
+  .site-footer,
   main,
   .hero-image-panel,
   .hero-badge,
@@ -845,4 +866,4 @@ main,
     transition: none;
   }
 }
-}
+
