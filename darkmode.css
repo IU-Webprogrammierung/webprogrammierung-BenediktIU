@@ -21,3 +21,67 @@ html[data-theme="dark"] {
 
   --shadow-soft: 0 18px 45px rgba(0, 0, 0, 0.32);
 }
+
+
+html[data-theme="dark"] .review-kicker {
+  border-color: var(--color-border);
+  background-color: var(--color-green-soft);
+}
+
+html[data-theme="dark"] .review-lead,
+html[data-theme="dark"] .review-insight-panel p,
+html[data-theme="dark"] .review-report-content p {
+  color: var(--color-muted);
+}
+
+html[data-theme="dark"] .review-insight,
+html[data-theme="dark"] .review-insight-tab,
+html[data-theme="dark"] .review-image-panel,
+html[data-theme="dark"] .rating-card,
+html[data-theme="dark"] .review-report,
+html[data-theme="dark"] .cons-card {
+  border-color: var(--color-border);
+  background-color: var(--color-surface);
+  box-shadow: var(--shadow-soft);
+}
+
+
+html[data-theme="dark"] .review-insight-tab:hover {
+  color: #0d2f24;
+  border-color: var(--color-green);
+  background-color: var(--color-green);
+}
+
+html[data-theme="dark"] .review-insight-tab.is-active,
+html[data-theme="dark"] .review-insight-tab[aria-selected="true"] {
+  color: #ffffff;
+  border-color: #245f42;
+  background-color: #245f42;
+}
+
+
+html[data-theme="dark"] .rating-summary,
+html[data-theme="dark"] .pros-card {
+  background:
+    linear-gradient(
+      135deg,
+      #0d2f24 0%,
+      #124b38 58%,
+      #176047 100%
+    );
+}
+
+html[data-theme="dark"] .rating-card .review-stars .star-muted {
+  color: var(--color-muted);
+  opacity: 0.45;
+}
+
+html[data-theme="dark"] .review-insight-panel span {
+  color: #0d2f24;
+}
+
+
+html[data-theme="dark"] .pros-card li::before {
+  color: #0d2f24;
+  background-color: #ffffff;
+}
