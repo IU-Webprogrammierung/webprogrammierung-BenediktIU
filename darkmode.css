@@ -22,6 +22,7 @@ html[data-theme="dark"] {
   --shadow-soft: 0 18px 45px rgba(0, 0, 0, 0.32);
 }
 
+/* Bewertungsseite */
 
 html[data-theme="dark"] .review-kicker {
   border-color: var(--color-border);
@@ -82,6 +83,69 @@ html[data-theme="dark"] .review-insight-panel span {
 
 
 html[data-theme="dark"] .pros-card li::before {
+  color: #0d2f24;
+  background-color: #ffffff;
+}
+
+/* Technikseite */
+
+html[data-theme="dark"] .tech-kicker {
+  border-color: var(--color-border);
+  background-color: var(--color-green-soft);
+}
+
+
+html[data-theme="dark"] .tech-lead,
+html[data-theme="dark"] .tech-table-card td,
+html[data-theme="dark"] .zone-text p:last-child,
+html[data-theme="dark"] .process-card p {
+  color: var(--color-muted);
+}
+
+html[data-theme="dark"] .tech-image-panel,
+html[data-theme="dark"] .tech-badge,
+html[data-theme="dark"] .tech-table-card,
+html[data-theme="dark"] .tech-side-nav,
+html[data-theme="dark"] .zone-text,
+html[data-theme="dark"] .process-card {
+  border-color: var(--color-border);
+  background-color: var(--color-surface);
+  box-shadow: var(--shadow-soft);
+}
+
+html[data-theme="dark"] .tech-table-card th,
+html[data-theme="dark"] .tech-table-card td {
+  border-bottom-color: var(--color-border);
+}
+
+html[data-theme="dark"] .tech-tab {
+  color: var(--color-text);
+}
+
+html[data-theme="dark"] .tech-tab:hover {
+  color: var(--color-green-900);
+  background-color: var(--color-green-soft);
+}
+
+html[data-theme="dark"] .tech-tab.is-active,
+html[data-theme="dark"] .tech-tab[aria-selected="true"] {
+  color: #ffffff;
+  border-color: #245f42;
+  background-color: #245f42;
+}
+
+html[data-theme="dark"] .equipment-card,
+html[data-theme="dark"] .zone-highlight {
+  background:
+    linear-gradient(
+      135deg,
+      #0d2f24 0%,
+      #124b38 65%,
+      #176047 100%
+    );
+}
+
+html[data-theme="dark"] .equipment-card li::before {
   color: #0d2f24;
   background-color: #ffffff;
 }
