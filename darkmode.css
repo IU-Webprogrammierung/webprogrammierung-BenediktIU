@@ -255,3 +255,72 @@ html[data-theme="dark"]
   > p:not(.model-card-kicker) {
   color: rgba(255, 255, 255, 0.82);
 }
+
+/* Rezeptseite */
+
+html[data-theme="dark"] .recipes-kicker {
+  border-color: var(--color-border);
+  background-color: var(--color-green-soft);
+}
+
+
+html[data-theme="dark"] .recipes-lead,
+html[data-theme="dark"]
+  .recipe-card
+  > p:not(.recipe-card-kicker):not(.recipe-card-meta),
+html[data-theme="dark"] .recipes-practice-card > p:last-of-type {
+  color: var(--color-muted);
+}
+
+html[data-theme="dark"] .recipes-image-panel,
+html[data-theme="dark"] .recipes-badge,
+html[data-theme="dark"] .filter-button,
+html[data-theme="dark"] .recipe-card:not(.recipe-card-featured),
+html[data-theme="dark"] .recipes-practice-card {
+  border-color: var(--color-border);
+  background-color: var(--color-surface);
+  box-shadow: var(--shadow-soft);
+}
+
+html[data-theme="dark"] .filter-button {
+  color: var(--color-green-900);
+}
+
+html[data-theme="dark"] .filter-button:hover {
+  color: #0d2f24;
+  border-color: var(--color-green);
+  background-color: var(--color-green);
+}
+
+html[data-theme="dark"] .filter-button-active {
+  color: #ffffff;
+  border-color: #245f42;
+  background-color: #245f42;
+}
+
+html[data-theme="dark"] .recipe-card-featured,
+html[data-theme="dark"] .recipes-zone-card {
+  background:
+    linear-gradient(
+      135deg,
+      #0d2f24 0%,
+      #124b38 58%,
+      #176047 100%
+    );
+}
+
+html[data-theme="dark"]
+  .recipe-card-featured
+  > p:not(.recipe-card-kicker):not(.recipe-card-meta) {
+  color: rgba(255, 255, 255, 0.82);
+}
+
+html[data-theme="dark"] .recipe-card-featured .recipe-card-meta span {
+  color: #0d2f24;
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+html[data-theme="dark"] .recipes-practice-card li::before {
+  color: #0d2f24;
+  background-color: var(--color-green);
+}
