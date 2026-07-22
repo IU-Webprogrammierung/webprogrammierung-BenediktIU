@@ -149,3 +149,48 @@ html[data-theme="dark"] .equipment-card li::before {
   color: #0d2f24;
   background-color: #ffffff;
 }
+
+/* Keramikbeschichtungsseite */
+
+html[data-theme="dark"] .ceramic-kicker {
+  border-color: var(--color-border);
+  background-color: var(--color-green-soft);
+}
+
+
+html[data-theme="dark"] .ceramic-lead,
+html[data-theme="dark"] .ceramic-report-content p {
+  color: var(--color-muted);
+}
+
+html[data-theme="dark"] .ceramic-image-panel,
+html[data-theme="dark"] .ceramic-badge,
+html[data-theme="dark"] .ceramic-overview,
+html[data-theme="dark"] .ceramic-rating-card,
+html[data-theme="dark"] .ceramic-report,
+html[data-theme="dark"] .ceramic-cons {
+  border-color: var(--color-border);
+  background-color: var(--color-surface);
+  box-shadow: var(--shadow-soft);
+}
+
+html[data-theme="dark"] .ceramic-care-card,
+html[data-theme="dark"] .ceramic-pros {
+  background:
+    linear-gradient(
+      135deg,
+      #0d2f24 0%,
+      #124b38 58%,
+      #176047 100%
+    );
+}
+
+html[data-theme="dark"] .ceramic-stars span {
+  color: var(--color-muted);
+  opacity: 0.45;
+}
+
+html[data-theme="dark"] .ceramic-pros li::before {
+  color: #0d2f24;
+  background-color: #ffffff;
+}
