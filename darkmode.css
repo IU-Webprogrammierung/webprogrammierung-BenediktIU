@@ -194,3 +194,64 @@ html[data-theme="dark"] .ceramic-pros li::before {
   color: #0d2f24;
   background-color: #ffffff;
 }
+
+/* Vergleichsseite */
+
+html[data-theme="dark"] .compare-kicker {
+  border-color: var(--color-border);
+  background-color: var(--color-green-soft);
+}
+
+html[data-theme="dark"] .compare-lead,
+html[data-theme="dark"] .model-card > p:not(.model-card-kicker),
+html[data-theme="dark"] .comparison-table-section td,
+html[data-theme="dark"] .compare-info-card p:last-child {
+  color: var(--color-muted);
+}
+
+
+html[data-theme="dark"] .compare-image-panel,
+html[data-theme="dark"] .compare-badge,
+html[data-theme="dark"] .model-card:not(.model-card-featured),
+html[data-theme="dark"] .comparison-table-section,
+html[data-theme="dark"] .compare-info-card {
+  border-color: var(--color-border);
+  background-color: var(--color-surface);
+  box-shadow: var(--shadow-soft);
+}
+
+
+html[data-theme="dark"] .table-wrapper {
+  border-color: var(--color-border);
+}
+
+html[data-theme="dark"] .comparison-table-section th,
+html[data-theme="dark"] .comparison-table-section td {
+  border-bottom-color: var(--color-border);
+}
+
+html[data-theme="dark"] .comparison-table-section thead {
+  background-color: var(--color-green-soft);
+}
+
+html[data-theme="dark"] .comparison-table-section tbody tr:first-child {
+  background-color: var(--color-green-soft);
+}
+
+
+html[data-theme="dark"] .model-card-featured,
+html[data-theme="dark"] .compare-conclusion-card {
+  background:
+    linear-gradient(
+      135deg,
+      #0d2f24 0%,
+      #124b38 58%,
+      #176047 100%
+    );
+}
+
+html[data-theme="dark"]
+  .model-card-featured
+  > p:not(.model-card-kicker) {
+  color: rgba(255, 255, 255, 0.82);
+}
