@@ -324,3 +324,77 @@ html[data-theme="dark"] .recipes-practice-card li::before {
   color: #0d2f24;
   background-color: var(--color-green);
 }
+
+/* FAQ-Seite */
+
+html[data-theme="dark"] .faq-kicker {
+  border-color: var(--color-border);
+  background-color: var(--color-green-soft);
+}
+
+html[data-theme="dark"] .faq-lead,
+html[data-theme="dark"] .faq-item p,
+html[data-theme="dark"] .faq-guidance-card > p:last-of-type {
+  color: var(--color-muted);
+}
+
+html[data-theme="dark"] .faq-image-panel,
+html[data-theme="dark"] .faq-badge,
+html[data-theme="dark"] .faq-category,
+html[data-theme="dark"] .faq-content,
+html[data-theme="dark"] .faq-item,
+html[data-theme="dark"] .faq-guidance-card {
+  border-color: var(--color-border);
+  background-color: var(--color-surface);
+  box-shadow: var(--shadow-soft);
+}
+
+html[data-theme="dark"] .faq-category {
+  color: var(--color-green-900);
+}
+
+html[data-theme="dark"] .faq-category:hover {
+  color: #0d2f24;
+  border-color: var(--color-green);
+  background-color: var(--color-green);
+}
+
+html[data-theme="dark"] .faq-category-active {
+  color: #ffffff;
+  border-color: #245f42;
+  background-color: #245f42;
+}
+
+html[data-theme="dark"] .faq-item[open] {
+  border-color: var(--color-border);
+  background-color: var(--color-green-soft);
+}
+
+html[data-theme="dark"] .faq-item summary::after {
+  color: #0d2f24;
+  background-color: var(--color-green);
+}
+
+html[data-theme="dark"] .faq-item[open] summary::after {
+  color: #ffffff;
+  background-color: #245f42;
+}
+
+html[data-theme="dark"] .faq-topic + .faq-topic {
+  border-top-color: var(--color-border);
+}
+
+html[data-theme="dark"] .faq-tip-card {
+  background:
+    linear-gradient(
+      135deg,
+      #0d2f24 0%,
+      #124b38 58%,
+      #176047 100%
+    );
+}
+
+html[data-theme="dark"] .faq-guidance-card li::before {
+  color: #0d2f24;
+  background-color: var(--color-green);
+}
