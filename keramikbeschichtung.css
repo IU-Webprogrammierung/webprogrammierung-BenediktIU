@@ -425,6 +425,37 @@
   background-color: var(--color-accent);
 }
 
+/* Scroll-Reveal-Animationen */
+
+.ceramic-reveal {
+  opacity: 0;
+
+  transition:
+    opacity 0.7s ease,
+    transform 0.7s cubic-bezier(0.2, 0.7, 0.2, 1);
+
+  transition-delay: var(--ceramic-delay, 0ms);
+
+  will-change: opacity, transform;
+}
+
+.ceramic-reveal-up {
+  transform: translateY(36px);
+}
+
+.ceramic-reveal-left {
+  transform: translateX(-40px);
+}
+
+.ceramic-reveal-right {
+  transform: translateX(40px);
+}
+
+.ceramic-reveal.is-visible {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
 /* Responsive Design */
 
 @media (max-width: 1100px) {
@@ -543,5 +574,28 @@
   .ceramic-cons {
     padding: 1.5rem;
     border-radius: 1.5rem;
+  }
+}
+
+@media (max-width: 700px) {
+  .ceramic-reveal-left,
+  .ceramic-reveal-right {
+    transform: translateY(24px);
+  }
+
+  .ceramic-reveal.is-visible {
+    transform: translate(0, 0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ceramic-reveal,
+  .ceramic-reveal-up,
+  .ceramic-reveal-left,
+  .ceramic-reveal-right,
+  .ceramic-reveal.is-visible {
+    opacity: 1;
+    transform: none;
+    transition: none;
   }
 }
