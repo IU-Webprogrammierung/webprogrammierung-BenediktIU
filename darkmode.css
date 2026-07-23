@@ -445,3 +445,57 @@ html[data-theme="dark"] .legal-card a {
 html[data-theme="dark"] .legal-card a:hover {
   color: var(--color-green-dark);
 }
+
+/* Datenschutzseite */
+
+html[data-theme="dark"] .privacy-kicker {
+  border-color: var(--color-border);
+  background-color: var(--color-green-soft);
+}
+
+html[data-theme="dark"] .privacy-lead,
+html[data-theme="dark"] .privacy-card p,
+html[data-theme="dark"] .privacy-card address,
+html[data-theme="dark"] .privacy-rights-card li {
+  color: var(--color-muted);
+}
+
+html[data-theme="dark"]
+  .privacy-card:not(.privacy-tracking-card):not(.privacy-changes-card) {
+  border-color: var(--color-border);
+  background-color: var(--color-surface);
+  box-shadow: var(--shadow-soft);
+}
+
+html[data-theme="dark"] .privacy-tracking-card,
+html[data-theme="dark"] .privacy-changes-card {
+  background:
+    linear-gradient(
+      135deg,
+      #0d2f24 0%,
+      #124b38 58%,
+      #176047 100%
+    );
+}
+
+html[data-theme="dark"] .privacy-tracking-card h2,
+html[data-theme="dark"] .privacy-tracking-card p,
+html[data-theme="dark"] .privacy-tracking-card .privacy-card-kicker,
+html[data-theme="dark"] .privacy-changes-card h2,
+html[data-theme="dark"] .privacy-changes-card p,
+html[data-theme="dark"] .privacy-changes-card .privacy-card-kicker {
+  color: #ffffff;
+}
+
+html[data-theme="dark"] .privacy-card a {
+  color: var(--color-green);
+}
+
+html[data-theme="dark"] .privacy-card a:hover {
+  color: var(--color-green-dark);
+}
+
+html[data-theme="dark"] .privacy-rights-card li::before {
+  color: #0d2f24;
+  background-color: var(--color-green);
+}

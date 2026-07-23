@@ -133,11 +133,6 @@
   color: var(--color-green-dark);
 }
 
-.privacy-page a:focus-visible {
-  outline: 3px solid var(--color-green);
-  outline-offset: 4px;
-}
-
 /* Datenverarbeitung */
 
 .privacy-processing {
