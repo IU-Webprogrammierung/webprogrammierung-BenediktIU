@@ -398,3 +398,50 @@ html[data-theme="dark"] .faq-guidance-card li::before {
   color: #0d2f24;
   background-color: var(--color-green);
 }
+
+/* Impressumsseite */
+
+html[data-theme="dark"] .legal-kicker {
+  border-color: var(--color-border);
+  background-color: var(--color-green-soft);
+}
+
+html[data-theme="dark"] .legal-lead,
+html[data-theme="dark"] .legal-card p,
+html[data-theme="dark"] .legal-card address {
+  color: var(--color-muted);
+}
+
+html[data-theme="dark"] .legal-card:not(.legal-project-card):not(.legal-links-card) {
+  border-color: var(--color-border);
+  background-color: var(--color-surface);
+  box-shadow: var(--shadow-soft);
+}
+
+html[data-theme="dark"] .legal-project-card,
+html[data-theme="dark"] .legal-links-card {
+  background:
+    linear-gradient(
+      135deg,
+      #0d2f24 0%,
+      #124b38 58%,
+      #176047 100%
+    );
+}
+
+html[data-theme="dark"] .legal-project-card h2,
+html[data-theme="dark"] .legal-project-card p,
+html[data-theme="dark"] .legal-project-card .legal-card-kicker,
+html[data-theme="dark"] .legal-links-card h2,
+html[data-theme="dark"] .legal-links-card p,
+html[data-theme="dark"] .legal-links-card .legal-card-kicker {
+  color: #ffffff;
+}
+
+html[data-theme="dark"] .legal-card a {
+  color: var(--color-green);
+}
+
+html[data-theme="dark"] .legal-card a:hover {
+  color: var(--color-green-dark);
+}

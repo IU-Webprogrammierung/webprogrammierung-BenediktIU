@@ -110,11 +110,6 @@
   color: var(--color-green-dark);
 }
 
-.legal-page a:focus-visible {
-  outline: 3px solid var(--color-green);
-  outline-offset: 4px;
-}
-
 /* Verantwortlichkeit und Projektkontext */
 
 .legal-information {
