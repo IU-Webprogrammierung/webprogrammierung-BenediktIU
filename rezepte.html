@@ -6,7 +6,7 @@
 
   <meta
     name="description"
-    content="Rezeptideen für den Cosori Air Fryer Turbo Tower mit Keramikbeschichtung."
+    content="Zwölf ausführliche Rezeptideen für den Cosori Air Fryer Turbo Tower mit Zutaten, Temperaturen und Zubereitungsschritten."
   >
 
   <title>Rezepte | Mein Air Fryer</title>
@@ -16,14 +16,15 @@
   <link rel="stylesheet" href="darkmode.css">
 
   <script
+    defer
     src="https://cdn.jsdelivr.net/npm/htmx.org@2.0.10/dist/htmx.min.js"
     integrity="sha384-H5SrcfygHmAuTDZphMHqBJLc3FhssKjG7w/CeCpFReSfwBWDTKpkzPP8c+cLsK+V"
     crossorigin="anonymous"
   ></script>
 
+  <script defer src="rezepte.js"></script>
   <script defer src="scroll-animation-rezepte.js"></script>
   <script defer src="darkmode.js"></script>
-
 </head>
 
 <body>
@@ -46,9 +47,8 @@
         </h1>
 
         <p class="recipes-lead">
-          Einfache Rezeptideen für den Alltag: schnell vorbereitet,
-          übersichtlich erklärt und passend für die Zubereitung
-          im Cosori Turbo Tower.
+          Zwölf einfache Rezeptideen für den Alltag – mit Zutaten,
+          Temperatur, Garzeit und einer verständlichen Schritt-für-Schritt-Anleitung.
         </p>
       </article>
 
@@ -65,8 +65,8 @@
         </div>
 
         <div class="recipes-badge recipes-badge-top">
-          <strong>8 Rezeptideen</strong>
-          <span>für den Alltag</span>
+          <strong>12 Rezeptideen</strong>
+          <span>mit Anleitung</span>
         </div>
 
         <div class="recipes-badge recipes-badge-bottom">
@@ -80,22 +80,42 @@
       </figure>
     </section>
 
-    <nav class="recipe-filter" aria-label="Rezeptkategorien">
-      <a class="filter-button filter-button-active" href="#alle-rezepte">
+    <nav class="recipe-filter" aria-label="Rezepte nach Kategorie filtern">
+      <button
+        class="filter-button filter-button-active"
+        type="button"
+        data-filter="all"
+        aria-pressed="true"
+      >
         Alle Rezepte
-      </a>
+      </button>
 
-      <a class="filter-button" href="#hauptgerichte">
+      <button
+        class="filter-button"
+        type="button"
+        data-filter="hauptgericht"
+        aria-pressed="false"
+      >
         Hauptgerichte
-      </a>
+      </button>
 
-      <a class="filter-button" href="#snacks">
+      <button
+        class="filter-button"
+        type="button"
+        data-filter="snack"
+        aria-pressed="false"
+      >
         Snacks
-      </a>
+      </button>
 
-      <a class="filter-button" href="#desserts">
+      <button
+        class="filter-button"
+        type="button"
+        data-filter="dessert"
+        aria-pressed="false"
+      >
         Desserts
-      </a>
+      </button>
     </nav>
 
     <section
@@ -113,101 +133,322 @@
         </h2>
 
         <p>
-          Die Rezeptideen sind bewusst unkompliziert gehalten und eignen sich
-          gut für die schnelle Zubereitung im Air Fryer.
+          Wähle eine Kategorie oder öffne eine Rezeptkarte. Anschließend
+          erhältst du Zutaten, Einstellungen und alle Zubereitungsschritte.
+        </p>
+
+        <p
+          class="recipe-result-count"
+          id="recipe-result-count"
+          aria-live="polite"
+        >
+          12 Rezepte angezeigt
         </p>
       </div>
 
       <div class="recipe-grid">
-        <article class="recipe-card recipe-card-featured" id="hauptgerichte">
+        <article
+          class="recipe-card recipe-card-featured"
+          data-recipe-id="haehnchenstreifen"
+          data-category="hauptgericht"
+          tabindex="0"
+          role="button"
+          aria-haspopup="dialog"
+          aria-controls="recipe-dialog"
+          aria-label="Rezept Knusprige Hähnchenstreifen öffnen"
+        >
           <p class="recipe-card-kicker">Hauptgericht</p>
           <h3>Knusprige Hähnchenstreifen</h3>
-          <p>Ein schnelles Hauptgericht mit wenig Öl und kurzer Garzeit.</p>
+          <p>Saftiges Hähnchen mit würziger, knuspriger Panade.</p>
 
           <p class="recipe-card-meta">
             <span>20 Minuten</span>
+            <span>190 °C</span>
             <span>Einfach</span>
           </p>
+
+          <span class="recipe-card-link" aria-hidden="true">
+            Rezept ansehen →
+          </span>
         </article>
 
-        <article class="recipe-card">
+        <article
+          class="recipe-card"
+          data-recipe-id="gefuellte-paprika"
+          data-category="hauptgericht"
+          tabindex="0"
+          role="button"
+          aria-haspopup="dialog"
+          aria-controls="recipe-dialog"
+          aria-label="Rezept Gefüllte Paprika öffnen"
+        >
           <p class="recipe-card-kicker">Hauptgericht</p>
           <h3>Gefüllte Paprika</h3>
-          <p>Praktisch für größere Portionen und passend für zwei Garzonen.</p>
+          <p>Herzhafte Paprika mit Reis-Hackfleisch-Füllung und Käse.</p>
 
           <p class="recipe-card-meta">
             <span>30 Minuten</span>
+            <span>180 °C</span>
             <span>Mittel</span>
           </p>
+
+          <span class="recipe-card-link" aria-hidden="true">
+            Rezept ansehen →
+          </span>
         </article>
 
-        <article class="recipe-card">
+        <article
+          class="recipe-card"
+          data-recipe-id="gemuese-mix"
+          data-category="hauptgericht"
+          tabindex="0"
+          role="button"
+          aria-haspopup="dialog"
+          aria-controls="recipe-dialog"
+          aria-label="Rezept Bunter Gemüse-Mix öffnen"
+        >
           <p class="recipe-card-kicker">Hauptgericht</p>
-          <h3>Gemüse-Mix</h3>
-          <p>Zucchini, Paprika und Kartoffeln als einfache Beilage oder Mahlzeit.</p>
+          <h3>Bunter Gemüse-Mix</h3>
+          <p>Zucchini, Paprika und Brokkoli als leichte Mahlzeit oder Beilage.</p>
 
           <p class="recipe-card-meta">
             <span>20 Minuten</span>
+            <span>185 °C</span>
             <span>Einfach</span>
           </p>
+
+          <span class="recipe-card-link" aria-hidden="true">
+            Rezept ansehen →
+          </span>
         </article>
 
-        <article class="recipe-card" id="snacks">
-          <p class="recipe-card-kicker">Snack</p>
-          <h3>Air-Fryer-Pommes</h3>
-          <p>Klassische Pommes mit knusprigem Ergebnis und wenig zusätzlichem Öl.</p>
-
-          <p class="recipe-card-meta">
-            <span>25 Minuten</span>
-            <span>Einfach</span>
-          </p>
-        </article>
-
-        <article class="recipe-card">
-          <p class="recipe-card-kicker">Snack</p>
-          <h3>Mozzarella-Sticks</h3>
-          <p>Ein schneller Snack mit knuspriger Panade für zwischendurch.</p>
-
-          <p class="recipe-card-meta">
-            <span>10 Minuten</span>
-            <span>Einfach</span>
-          </p>
-        </article>
-
-        <article class="recipe-card">
-          <p class="recipe-card-kicker">Snack</p>
-          <h3>Knusprige Kartoffelecken</h3>
-          <p>Eine vielseitige Beilage zu Fleisch, Fisch oder Gemüse.</p>
-
-          <p class="recipe-card-meta">
-            <span>25 Minuten</span>
-            <span>Einfach</span>
-          </p>
-        </article>
-
-        <article class="recipe-card" id="desserts">
-          <p class="recipe-card-kicker">Dessert</p>
-          <h3>Apfel-Zimt-Stücke</h3>
-          <p>Ein einfaches Dessert mit Apfel, Zimt und kurzer Backzeit.</p>
+        <article
+          class="recipe-card"
+          data-recipe-id="lachsfilet"
+          data-category="hauptgericht"
+          tabindex="0"
+          role="button"
+          aria-haspopup="dialog"
+          aria-controls="recipe-dialog"
+          aria-label="Rezept Zitronen-Lachsfilet öffnen"
+        >
+          <p class="recipe-card-kicker">Hauptgericht</p>
+          <h3>Zitronen-Lachsfilet</h3>
+          <p>Zartes Lachsfilet mit Zitrone, Kräutern und wenig Öl.</p>
 
           <p class="recipe-card-meta">
             <span>15 Minuten</span>
+            <span>180 °C</span>
             <span>Einfach</span>
           </p>
+
+          <span class="recipe-card-link" aria-hidden="true">
+            Rezept ansehen →
+          </span>
         </article>
 
-        <article class="recipe-card">
+        <article
+          class="recipe-card"
+          data-recipe-id="pommes"
+          data-category="snack"
+          tabindex="0"
+          role="button"
+          aria-haspopup="dialog"
+          aria-controls="recipe-dialog"
+          aria-label="Rezept Air-Fryer-Pommes öffnen"
+        >
+          <p class="recipe-card-kicker">Snack</p>
+          <h3>Air-Fryer-Pommes</h3>
+          <p>Klassische Kartoffel-Pommes mit wenig Öl und knusprigem Rand.</p>
+
+          <p class="recipe-card-meta">
+            <span>30 Minuten</span>
+            <span>190 °C</span>
+            <span>Einfach</span>
+          </p>
+
+          <span class="recipe-card-link" aria-hidden="true">
+            Rezept ansehen →
+          </span>
+        </article>
+
+        <article
+          class="recipe-card"
+          data-recipe-id="mozzarella-sticks"
+          data-category="snack"
+          tabindex="0"
+          role="button"
+          aria-haspopup="dialog"
+          aria-controls="recipe-dialog"
+          aria-label="Rezept Mozzarella-Sticks öffnen"
+        >
+          <p class="recipe-card-kicker">Snack</p>
+          <h3>Mozzarella-Sticks</h3>
+          <p>Knusprige Hülle und weicher Käsekern für einen schnellen Snack.</p>
+
+          <p class="recipe-card-meta">
+            <span>10 Minuten</span>
+            <span>180 °C</span>
+            <span>Einfach</span>
+          </p>
+
+          <span class="recipe-card-link" aria-hidden="true">
+            Rezept ansehen →
+          </span>
+        </article>
+
+        <article
+          class="recipe-card"
+          data-recipe-id="kartoffelecken"
+          data-category="snack"
+          tabindex="0"
+          role="button"
+          aria-haspopup="dialog"
+          aria-controls="recipe-dialog"
+          aria-label="Rezept Knusprige Kartoffelecken öffnen"
+        >
+          <p class="recipe-card-kicker">Snack</p>
+          <h3>Knusprige Kartoffelecken</h3>
+          <p>Würzige Wedges mit Paprika, Knoblauch und Rosmarin.</p>
+
+          <p class="recipe-card-meta">
+            <span>30 Minuten</span>
+            <span>195 °C</span>
+            <span>Einfach</span>
+          </p>
+
+          <span class="recipe-card-link" aria-hidden="true">
+            Rezept ansehen →
+          </span>
+        </article>
+
+        <article
+          class="recipe-card"
+          data-recipe-id="falafel"
+          data-category="snack"
+          tabindex="0"
+          role="button"
+          aria-haspopup="dialog"
+          aria-controls="recipe-dialog"
+          aria-label="Rezept Kräuter-Falafel öffnen"
+        >
+          <p class="recipe-card-kicker">Snack</p>
+          <h3>Kräuter-Falafel</h3>
+          <p>Würzige Kichererbsenbällchen mit Petersilie und Kreuzkümmel.</p>
+
+          <p class="recipe-card-meta">
+            <span>25 Minuten</span>
+            <span>190 °C</span>
+            <span>Mittel</span>
+          </p>
+
+          <span class="recipe-card-link" aria-hidden="true">
+            Rezept ansehen →
+          </span>
+        </article>
+
+        <article
+          class="recipe-card"
+          data-recipe-id="apfel-zimt"
+          data-category="dessert"
+          tabindex="0"
+          role="button"
+          aria-haspopup="dialog"
+          aria-controls="recipe-dialog"
+          aria-label="Rezept Apfel-Zimt-Stücke öffnen"
+        >
+          <p class="recipe-card-kicker">Dessert</p>
+          <h3>Apfel-Zimt-Stücke</h3>
+          <p>Warme Apfelstücke mit Zimt und einer leicht karamellisierten Note.</p>
+
+          <p class="recipe-card-meta">
+            <span>15 Minuten</span>
+            <span>180 °C</span>
+            <span>Einfach</span>
+          </p>
+
+          <span class="recipe-card-link" aria-hidden="true">
+            Rezept ansehen →
+          </span>
+        </article>
+
+        <article
+          class="recipe-card"
+          data-recipe-id="mini-schokokuchen"
+          data-category="dessert"
+          tabindex="0"
+          role="button"
+          aria-haspopup="dialog"
+          aria-controls="recipe-dialog"
+          aria-label="Rezept Mini-Schokokuchen öffnen"
+        >
           <p class="recipe-card-kicker">Dessert</p>
           <h3>Mini-Schokokuchen</h3>
-          <p>Kleines Dessert für den Air Fryer mit kurzer Zubereitungszeit.</p>
+          <p>Kleine Schokoladenküchlein mit weichem Kern aus dem Air Fryer.</p>
 
           <p class="recipe-card-meta">
             <span>18 Minuten</span>
+            <span>160 °C</span>
             <span>Mittel</span>
           </p>
+
+          <span class="recipe-card-link" aria-hidden="true">
+            Rezept ansehen →
+          </span>
+        </article>
+
+        <article
+          class="recipe-card"
+          data-recipe-id="bananen-muffins"
+          data-category="dessert"
+          tabindex="0"
+          role="button"
+          aria-haspopup="dialog"
+          aria-controls="recipe-dialog"
+          aria-label="Rezept Bananen-Hafer-Muffins öffnen"
+        >
+          <p class="recipe-card-kicker">Dessert</p>
+          <h3>Bananen-Hafer-Muffins</h3>
+          <p>Saftige Mini-Muffins mit Banane, Haferflocken und Zimt.</p>
+
+          <p class="recipe-card-meta">
+            <span>20 Minuten</span>
+            <span>160 °C</span>
+            <span>Einfach</span>
+          </p>
+
+          <span class="recipe-card-link" aria-hidden="true">
+            Rezept ansehen →
+          </span>
+        </article>
+
+        <article
+          class="recipe-card"
+          data-recipe-id="zimtschnecken"
+          data-category="dessert"
+          tabindex="0"
+          role="button"
+          aria-haspopup="dialog"
+          aria-controls="recipe-dialog"
+          aria-label="Rezept Blätterteig-Zimtschnecken öffnen"
+        >
+          <p class="recipe-card-kicker">Dessert</p>
+          <h3>Blätterteig-Zimtschnecken</h3>
+          <p>Schnelle Zimtschnecken aus Blätterteig mit knusprigen Rändern.</p>
+
+          <p class="recipe-card-meta">
+            <span>17 Minuten</span>
+            <span>170 °C</span>
+            <span>Einfach</span>
+          </p>
+
+          <span class="recipe-card-link" aria-hidden="true">
+            Rezept ansehen →
+          </span>
         </article>
       </div>
     </section>
+
     <section class="recipes-practice" aria-labelledby="practice-title">
       <article class="recipes-practice-card">
         <p class="recipes-practice-kicker">
@@ -219,15 +460,15 @@
         </h2>
 
         <p>
-          Viele Rezepte lassen sich besonders unkompliziert zubereiten,
-          wenn Zutaten vorher geschnitten, gewürzt und in kleinen Portionen
-          bereitgestellt werden.
+          Viele Rezepte gelingen besonders zuverlässig, wenn die Zutaten
+          gleichmäßig geschnitten und locker im Korb verteilt werden.
         </p>
 
         <ul>
-          <li>Zutaten möglichst gleichmäßig schneiden</li>
-          <li>Korb nicht zu voll beladen</li>
-          <li>Speisen zwischendurch kontrollieren</li>
+          <li>Zutaten möglichst gleich groß schneiden</li>
+          <li>Den Korb nicht vollständig überfüllen</li>
+          <li>Speisen nach der Hälfte der Zeit wenden oder schütteln</li>
+          <li>Bei neuen Rezepten einige Minuten früher kontrollieren</li>
         </ul>
       </article>
 
@@ -241,12 +482,86 @@
         </h2>
 
         <p>
-          Die getrennten Garzonen eignen sich besonders gut, um zum Beispiel
-          Hähnchenstreifen und Kartoffelecken parallel zuzubereiten.
+          Bereite beispielsweise Lachs oder Hähnchen in einer Garzone und
+          Kartoffelecken oder Gemüse in der zweiten Zone zu. Starte die
+          längere Garzeit zuerst oder nutze eine Synchronisierungsfunktion.
         </p>
       </article>
     </section>
   </main>
+
+  <dialog
+    class="recipe-dialog"
+    id="recipe-dialog"
+    aria-labelledby="recipe-dialog-title"
+  >
+    <div class="recipe-dialog-shell">
+      <button
+        class="recipe-dialog-close"
+        type="button"
+        aria-label="Rezept schließen"
+      >
+        ×
+      </button>
+
+      <header class="recipe-dialog-header">
+        <p class="recipe-dialog-kicker" id="recipe-dialog-category">
+          Rezept
+        </p>
+
+        <h2 id="recipe-dialog-title">
+          Rezepttitel
+        </h2>
+
+        <p class="recipe-dialog-lead" id="recipe-dialog-lead"></p>
+
+        <dl class="recipe-dialog-meta">
+          <div>
+            <dt>Zeit</dt>
+            <dd id="recipe-dialog-time">–</dd>
+          </div>
+
+          <div>
+            <dt>Temperatur</dt>
+            <dd id="recipe-dialog-temperature">–</dd>
+          </div>
+
+          <div>
+            <dt>Menge</dt>
+            <dd id="recipe-dialog-servings">–</dd>
+          </div>
+
+          <div>
+            <dt>Schwierigkeit</dt>
+            <dd id="recipe-dialog-difficulty">–</dd>
+          </div>
+        </dl>
+      </header>
+
+      <div class="recipe-dialog-content">
+        <section
+          class="recipe-dialog-section"
+          aria-labelledby="recipe-ingredients-title"
+        >
+          <h3 id="recipe-ingredients-title">Zutaten</h3>
+          <ul id="recipe-dialog-ingredients"></ul>
+        </section>
+
+        <section
+          class="recipe-dialog-section"
+          aria-labelledby="recipe-steps-title"
+        >
+          <h3 id="recipe-steps-title">Zubereitung</h3>
+          <ol id="recipe-dialog-steps"></ol>
+        </section>
+      </div>
+
+      <aside class="recipe-dialog-tip">
+        <strong>Tipp</strong>
+        <p id="recipe-dialog-tip"></p>
+      </aside>
+    </div>
+  </dialog>
 
   <footer
     hx-get="komponenten/footer.html"
