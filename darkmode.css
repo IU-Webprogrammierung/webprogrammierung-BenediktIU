@@ -337,6 +337,34 @@ html[data-theme="dark"] .recipes-practice-card li::before {
   background-color: var(--color-green);
 }
 
+html[data-theme="dark"] .recipes-duo-menu {
+  border-color: var(--color-border);
+  background:
+    radial-gradient(
+      circle at 92% 15%,
+      rgba(112, 189, 148, 0.12),
+      transparent 28%
+    ),
+    var(--color-surface);
+
+  box-shadow: var(--shadow-soft);
+}
+
+html[data-theme="dark"] .recipes-duo-dish {
+  border-color: var(--color-border);
+  background-color: var(--color-green-soft);
+}
+
+html[data-theme="dark"] .recipes-duo-button {
+  color: #ffffff;
+  background-color: #245f42;
+}
+
+html[data-theme="dark"] .recipes-duo-button:hover {
+  color: #0d2f24;
+  background-color: var(--color-green);
+}
+
 /* FAQ-Seite */
 
 html[data-theme="dark"] .faq-kicker {

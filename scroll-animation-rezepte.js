@@ -11,6 +11,11 @@
         delay: 0
       },
       {
+        selector: ".recipes-duo-menu",
+        effect: "recipes-reveal-up",
+        delay: 160
+      },
+      {
         selector: ".recipes-image",
         effect: "recipes-reveal-right",
         delay: 120

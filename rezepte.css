@@ -68,6 +68,273 @@
   font-weight: 500;
 }
 
+.recipes-duo-menu {
+  position: relative;
+  max-width: 680px;
+  margin-top: 2.25rem;
+  padding: 1.6rem;
+
+  overflow: hidden;
+
+  border: 1px solid var(--color-border);
+  border-radius: 1.75rem;
+
+  background:
+    radial-gradient(
+      circle at 92% 15%,
+      rgba(112, 189, 148, 0.16),
+      transparent 28%
+    ),
+    var(--color-surface);
+
+  box-shadow: 0 16px 38px rgba(13, 47, 36, 0.07);
+}
+
+.recipes-duo-menu::after {
+  content: "";
+  position: absolute;
+  top: -2.5rem;
+  right: -2rem;
+
+  width: 160px;
+  height: 160px;
+
+  border: 1px solid rgba(47, 125, 86, 0.12);
+  border-radius: 50%;
+
+  pointer-events: none;
+}
+
+.recipes-duo-kicker {
+  position: relative;
+  z-index: 1;
+
+  margin: 0 0 0.45rem;
+
+  color: var(--color-green);
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.recipes-duo-menu h2 {
+  position: relative;
+  z-index: 1;
+
+  margin: 0;
+
+  color: var(--color-green-900);
+  font-size: clamp(1.4rem, 2.1vw, 1.9rem);
+  line-height: 1.12;
+}
+
+.recipes-duo-description {
+  position: relative;
+  z-index: 1;
+
+  max-width: 560px;
+  margin: 0.75rem 0 0;
+
+  color: var(--color-muted);
+  font-size: 0.95rem;
+  font-weight: 500;
+  line-height: 1.55;
+}
+
+.recipes-duo-meta {
+  position: relative;
+  z-index: 1;
+
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+
+  margin-top: 1rem;
+}
+
+.recipes-duo-meta > span {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+
+  padding: 0.42rem 0.7rem;
+
+  border-radius: 999px;
+
+  color: var(--color-green-900);
+  background-color: var(--color-green-soft);
+
+  font-size: 0.78rem;
+  font-weight: 800;
+}
+
+.recipes-duo-dishes {
+  position: relative;
+  z-index: 1;
+
+  display: grid;
+  grid-template-columns:
+    minmax(0, 1fr)
+    auto
+    minmax(0, 1fr);
+  align-items: stretch;
+  gap: 0.65rem;
+
+  margin-top: 1.2rem;
+}
+
+.recipes-duo-dish {
+  position: relative;
+  min-width: 0;
+  min-height: 122px;
+
+  padding: 1rem 4.5rem 1rem 1rem;
+
+  border: 1px solid var(--color-border);
+  border-radius: 1.15rem;
+
+  color: var(--color-text);
+  background-color: rgba(255, 255, 255, 0.72);
+
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    transform 0.2s ease;
+}
+
+.recipes-duo-dish:hover {
+  border-color: var(--color-green);
+  box-shadow: 0 12px 25px rgba(13, 47, 36, 0.09);
+  transform: translateY(-2px);
+}
+
+.recipes-duo-dish:focus-visible {
+  outline: 3px solid var(--color-green);
+  outline-offset: 3px;
+}
+
+.recipes-duo-zone {
+  display: block;
+  margin-bottom: 0.35rem;
+
+  color: var(--color-green);
+  font-size: 0.7rem;
+  font-weight: 900;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+}
+
+.recipes-duo-dish strong {
+  display: block;
+
+  color: var(--color-green-900);
+  font-size: 0.98rem;
+}
+
+.recipes-duo-dish > span:not(
+  .recipes-duo-zone,
+  .recipes-duo-symbol
+) {
+  display: block;
+  margin-top: 0.35rem;
+
+  color: var(--color-muted);
+  font-size: 0.78rem;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.recipes-duo-symbol {
+  position: absolute;
+  right: 1rem;
+  bottom: 1rem;
+
+  font-size: 2.2rem;
+  line-height: 1;
+}
+
+.recipes-duo-plus {
+  width: 2.25rem;
+  height: 2.25rem;
+
+  align-self: center;
+  display: grid;
+  place-items: center;
+
+  border-radius: 50%;
+
+  color: var(--color-white);
+  background-color: var(--color-green-900);
+
+  font-size: 1.25rem;
+  font-weight: 800;
+}
+
+.recipes-duo-footer {
+  position: relative;
+  z-index: 1;
+
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.8rem 1rem;
+
+  margin-top: 1rem;
+}
+
+.recipes-duo-button {
+  min-height: 44px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+
+  padding: 0.68rem 1rem;
+
+  border-radius: 999px;
+
+  color: var(--color-white);
+  background-color: var(--color-green-900);
+
+  font-size: 0.86rem;
+  font-weight: 800;
+
+  transition:
+    background-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.recipes-duo-button:hover {
+  background-color: var(--color-green-dark);
+  transform: translateY(-1px);
+}
+
+.recipes-duo-footer p {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+
+  margin: 0;
+
+  color: var(--color-muted);
+  font-size: 0.76rem;
+  font-weight: 700;
+}
+
+.recipes-duo-footer p span {
+  color: var(--color-green);
+}
+
+#alle-rezepte {
+  scroll-margin-top: 7rem;
+}
+
 /* Produktbild */
 
 .recipes-image {
@@ -575,6 +842,33 @@
     padding: 1.5rem;
     border-radius: 1.5rem;
   }
+    .recipes-duo-menu {
+    margin-top: 2rem;
+    padding: 1.25rem;
+    border-radius: 1.5rem;
+  }
+
+  .recipes-duo-dishes {
+    grid-template-columns: 1fr;
+  }
+
+  .recipes-duo-plus {
+    transform: rotate(90deg);
+  }
+
+  .recipes-duo-dish {
+    min-height: 110px;
+  }
+
+  .recipes-duo-button {
+    width: 100%;
+  }
+
+  .recipes-duo-footer p {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+  }
 }
 
 @media (max-width: 700px) {
@@ -878,6 +1172,34 @@ body:has(.recipe-dialog[open]) {
   .recipe-card.recipes-reveal.is-visible:hover,
   .recipe-card.recipes-reveal.is-visible:focus-visible {
     transform: none;
+  }
+
+    .recipes-duo-menu {
+    margin-top: 2rem;
+    padding: 1.25rem;
+    border-radius: 1.5rem;
+  }
+
+  .recipes-duo-dishes {
+    grid-template-columns: 1fr;
+  }
+
+  .recipes-duo-plus {
+    transform: rotate(90deg);
+  }
+
+  .recipes-duo-dish {
+    min-height: 110px;
+  }
+
+  .recipes-duo-button {
+    width: 100%;
+  }
+
+  .recipes-duo-footer p {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
   }
 }
 

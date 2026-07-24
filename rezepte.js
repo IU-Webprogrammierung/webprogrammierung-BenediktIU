@@ -315,6 +315,7 @@
 
   function initializeRecipes() {
     const cards = [...document.querySelectorAll(".recipe-card[data-recipe-id]")];
+    const duoButtons = [...document.querySelectorAll("[data-open-recipe]")];
     const filterButtons = [...document.querySelectorAll("[data-filter]")];
     const resultCount = document.querySelector("#recipe-result-count");
     const dialog = document.querySelector("#recipe-dialog");
@@ -348,7 +349,8 @@
     }
 
     function openRecipe(card) {
-      const recipe = recipes[card.dataset.recipeId];
+        const recipeId = trigger.dataset.recipeId || trigger.dataset.openRecipe;
+        const recipe = recipes[recipeId];
 
       if (!recipe) {
         return;
@@ -398,6 +400,12 @@
         event.preventDefault();
         openRecipe(card);
       });
+    });
+
+    duoButtons.forEach((button) => {
+        button.addEventListener("click", () => {
+            openRecipe(button);
+        });
     });
 
     filterButtons.forEach((button) => {
