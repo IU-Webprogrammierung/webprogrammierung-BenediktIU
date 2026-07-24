@@ -11,6 +11,11 @@
         delay: 0
       },
       {
+        selector: ".compare-criteria",
+        effect: "compare-reveal-up",
+        delay: 160
+      },
+      {
         selector: ".compare-image",
         effect: "compare-reveal-right",
         delay: 120

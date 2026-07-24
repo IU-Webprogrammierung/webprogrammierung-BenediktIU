@@ -242,6 +242,27 @@ html[data-theme="dark"] .compare-conclusion-card {
     );
 }
 
+html[data-theme="dark"] .compare-criteria {
+  border-color: var(--color-border);
+  background-color: var(--color-surface);
+  box-shadow: var(--shadow-soft);
+}
+
+html[data-theme="dark"] .compare-criterion {
+  border-color: var(--color-border);
+  background-color: var(--color-green-soft);
+}
+
+html[data-theme="dark"] .compare-criteria-link {
+  color: #ffffff;
+  background-color: #245f42;
+}
+
+html[data-theme="dark"] .compare-criteria-link:hover {
+  color: #0d2f24;
+  background-color: var(--color-green);
+}
+
 html[data-theme="dark"]
   .model-card-featured
   > p:not(.model-card-kicker) {

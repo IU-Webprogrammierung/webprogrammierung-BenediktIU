@@ -395,6 +395,114 @@
   font-weight: 500;
 }
 
+/* Vergleichskriterien im Hero-Bereich */
+
+.compare-criteria {
+  max-width: 680px;
+  margin-top: 2.5rem;
+  padding: 1.5rem;
+
+  border: 1px solid var(--color-border);
+  border-radius: 1.75rem;
+
+  background-color: var(--color-surface);
+  box-shadow: 0 16px 38px rgba(13, 47, 36, 0.07);
+}
+
+.compare-criteria-kicker {
+  margin: 0 0 0.45rem;
+
+  color: var(--color-green);
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.compare-criteria h2 {
+  margin: 0;
+
+  color: var(--color-green-900);
+  font-size: clamp(1.35rem, 2vw, 1.8rem);
+  line-height: 1.15;
+}
+
+.compare-criteria-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.75rem;
+
+  margin-top: 1.25rem;
+}
+
+.compare-criterion {
+  min-height: 88px;
+  padding: 1rem;
+
+  border: 1px solid var(--color-border);
+  border-radius: 1rem;
+
+  background-color: var(--color-green-soft);
+}
+
+.compare-criterion strong,
+.compare-criterion span {
+  display: block;
+}
+
+.compare-criterion strong {
+  color: var(--color-green-900);
+  font-size: 0.95rem;
+}
+
+.compare-criterion span {
+  margin-top: 0.25rem;
+
+  color: var(--color-muted);
+  font-size: 0.84rem;
+  font-weight: 600;
+  line-height: 1.35;
+}
+
+.compare-criteria-link {
+  width: fit-content;
+  min-height: 46px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.55rem;
+
+  margin-top: 1.25rem;
+  padding: 0.7rem 1rem;
+
+  border-radius: 999px;
+
+  color: var(--color-white);
+  background-color: var(--color-green-900);
+
+  font-size: 0.9rem;
+  font-weight: 800;
+
+  transition:
+    background-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.compare-criteria-link:hover {
+  background-color: var(--color-green-dark);
+  transform: translateY(-1px);
+}
+
+.compare-criteria-link:focus-visible {
+  outline: 3px solid var(--color-green);
+  outline-offset: 4px;
+}
+
+#vergleichstabelle {
+  scroll-margin-top: 7rem;
+}
+
 /* Scroll-Reveal-Animationen */
 
 .compare-reveal {
@@ -547,6 +655,24 @@
   .comparison-table-section th,
   .comparison-table-section td {
     padding: 0.85rem;
+  }
+
+    .compare-criteria {
+    margin-top: 2rem;
+    padding: 1.25rem;
+    border-radius: 1.5rem;
+  }
+
+  .compare-criteria-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .compare-criterion {
+    min-height: auto;
+  }
+
+  .compare-criteria-link {
+    width: 100%;
   }
 }
 
