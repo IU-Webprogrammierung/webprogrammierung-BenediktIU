@@ -62,6 +62,146 @@
   font-weight: 500;
 }
 
+/* FAQ-Schnellcheck im Hero-Bereich */
+
+.faq-quickcheck {
+  max-width: 680px;
+  margin-top: 2.5rem;
+  padding: 1.5rem;
+
+  border: 1px solid var(--color-border);
+  border-radius: 1.75rem;
+
+  background-color: var(--color-surface);
+  box-shadow: 0 16px 38px rgba(13, 47, 36, 0.07);
+}
+
+.faq-quickcheck-kicker {
+  margin: 0 0 0.45rem;
+
+  color: var(--color-green);
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.faq-quickcheck h2 {
+  margin: 0;
+
+  color: var(--color-green-900);
+  font-size: clamp(1.35rem, 2vw, 1.8rem);
+  line-height: 1.15;
+}
+
+.faq-quickcheck-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.75rem;
+
+  margin-top: 1.25rem;
+}
+
+.faq-quickcheck-item {
+  min-height: 92px;
+
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+
+  padding: 0.9rem;
+
+  border: 1px solid var(--color-border);
+  border-radius: 1rem;
+
+  background-color: var(--color-green-soft);
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    transform 0.2s ease;
+}
+
+.faq-quickcheck-item:hover {
+  border-color: var(--color-green);
+  box-shadow: 0 10px 22px rgba(13, 47, 36, 0.08);
+  transform: translateY(-2px);
+}
+
+.faq-quickcheck-icon {
+  width: 2.3rem;
+  height: 2.3rem;
+
+  flex: 0 0 auto;
+  display: grid;
+  place-items: center;
+
+  border-radius: 50%;
+
+  color: var(--color-white);
+  background-color: var(--color-green-900);
+
+  font-size: 0.72rem;
+  font-weight: 900;
+}
+
+.faq-quickcheck-item strong,
+.faq-quickcheck-item small {
+  display: block;
+}
+
+.faq-quickcheck-item strong {
+  color: var(--color-green-900);
+  font-size: 0.92rem;
+}
+
+.faq-quickcheck-item small {
+  margin-top: 0.25rem;
+
+  color: var(--color-muted);
+  font-size: 0.76rem;
+  font-weight: 600;
+  line-height: 1.35;
+}
+
+.faq-quickcheck-button {
+  width: fit-content;
+  min-height: 46px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.55rem;
+
+  margin-top: 1.25rem;
+  padding: 0.7rem 1rem;
+
+  border-radius: 999px;
+
+  color: var(--color-white);
+  background-color: var(--color-green-900);
+
+  font-size: 0.9rem;
+  font-weight: 800;
+
+  transition:
+    background-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.faq-quickcheck-button:hover {
+  background-color: var(--color-green-dark);
+  transform: translateY(-1px);
+}
+
+#faq-content-title,
+#allgemein,
+#technik,
+#reinigung,
+#kaufentscheidung {
+  scroll-margin-top: 7rem;
+}
+
 /* Bildplatzhalter */
 
 .faq-image {
@@ -561,6 +701,24 @@
 
   .faq-item p {
     padding: 0 1rem 1rem;
+  }
+
+  .faq-quickcheck {
+    margin-top: 2rem;
+    padding: 1.25rem;
+    border-radius: 1.5rem;
+  }
+
+  .faq-quickcheck-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .faq-quickcheck-item {
+    min-height: auto;
+  }
+
+  .faq-quickcheck-button {
+    width: 100%;
   }
 }
 

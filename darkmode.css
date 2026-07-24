@@ -439,6 +439,32 @@ html[data-theme="dark"] .faq-guidance-card li::before {
   background-color: var(--color-green);
 }
 
+html[data-theme="dark"] .faq-quickcheck {
+  border-color: var(--color-border);
+  background-color: var(--color-surface);
+  box-shadow: var(--shadow-soft);
+}
+
+html[data-theme="dark"] .faq-quickcheck-item {
+  border-color: var(--color-border);
+  background-color: var(--color-green-soft);
+}
+
+html[data-theme="dark"] .faq-quickcheck-icon {
+  color: #ffffff;
+  background-color: #245f42;
+}
+
+html[data-theme="dark"] .faq-quickcheck-button {
+  color: #ffffff;
+  background-color: #245f42;
+}
+
+html[data-theme="dark"] .faq-quickcheck-button:hover {
+  color: #0d2f24;
+  background-color: var(--color-green);
+}
+
 /* Impressumsseite */
 
 html[data-theme="dark"] .legal-kicker {

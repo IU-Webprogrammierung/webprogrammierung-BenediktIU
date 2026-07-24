@@ -11,6 +11,11 @@
         delay: 0
       },
       {
+        selector: ".faq-quickcheck",
+        effect: "faq-reveal-up",
+        delay: 160
+      },
+      {
         selector: ".faq-image",
         effect: "faq-reveal-right",
         delay: 120
