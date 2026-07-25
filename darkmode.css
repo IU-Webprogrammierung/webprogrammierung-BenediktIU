@@ -5,12 +5,12 @@
 html[data-theme="dark"] {
   color-scheme: dark;
 
-  --color-text: #ffffff;
-  --color-muted: #c5c0b8;
+  --color-text: #f4f1ec;
+  --color-muted: #efefee;
   --color-bg: #151816;
   --color-surface: #222622;
   --color-white: #ffffff;
-  --color-fact-icon-bg: #2f7d56;
+
   --color-green: #70bd94;
   --color-green-dark: #96d2b1;
   --color-green-soft: #293d33;
@@ -72,7 +72,7 @@ html[data-theme="dark"] .pros-card {
 
 html[data-theme="dark"] .rating-card .review-stars .star-muted {
   color: var(--color-muted);
-  opacity: 0.45;
+  opacity: 0.95;
 }
 
 html[data-theme="dark"] .review-insight-panel span {
