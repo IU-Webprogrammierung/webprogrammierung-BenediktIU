@@ -5,12 +5,12 @@
 html[data-theme="dark"] {
   color-scheme: dark;
 
-  --color-text: #f4f1ec;
+  --color-text: #ffffff;
   --color-muted: #c5c0b8;
   --color-bg: #151816;
   --color-surface: #222622;
   --color-white: #ffffff;
-
+  --color-fact-icon-bg: #2f7d56;
   --color-green: #70bd94;
   --color-green-dark: #96d2b1;
   --color-green-soft: #293d33;
