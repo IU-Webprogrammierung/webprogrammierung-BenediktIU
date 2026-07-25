@@ -134,10 +134,9 @@ Die Einbindung erfolgt mit HTMX:
 
 ## Projektstruktur
 
-```text
 .
 ├── bilder/
-│   └── cosori-turbo-tower.PNG
+│   └── cosori-turbo-tower.png
 ├── komponenten/
 │   ├── footer.html
 │   └── header.html
@@ -151,6 +150,7 @@ Die Einbindung erfolgt mit HTMX:
 ├── kontakt.html
 ├── impressum.html
 ├── datenschutz.html
+├── 404.html
 ├── style.css
 ├── bewertung.css
 ├── technik.css
@@ -161,8 +161,19 @@ Die Einbindung erfolgt mit HTMX:
 ├── kontakt.css
 ├── impressum.css
 ├── datenschutz.css
+├── 404.css
+├── darkmode.css
 ├── technik.js
 ├── bewertung.js
+├── rezepte.js
+├── darkmode.js
+├── scroll-animation-index.js
+├── scroll-animation-technik.js
+├── scroll-animation-bewertung.js
+├── scroll-animation-keramik.js
+├── scroll-animation-vergleich.js
+├── scroll-animation-rezepte.js
+├── scroll-animation-faq.js
+├── favicon.svg
 └── README.md
-
 

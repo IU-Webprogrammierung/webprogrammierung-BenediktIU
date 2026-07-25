@@ -210,11 +210,9 @@
 /* Barrierefreiheit */
 
 .contact-page a:focus-visible {
-  outline: 3px solid var(--contact-green);
+  outline: 3px solid var(--color-green);
   outline-offset: 4px;
 }
-
-/* Responsive Design */
 
 /* Responsive Design */
 

@@ -241,7 +241,7 @@
 /* Barrierefreiheit */
 
 .legal-page a:focus-visible {
-  outline: 3px solid var(--legal-green);
+  outline: 3px solid var(--color-green);
   outline-offset: 4px;
 }
 
