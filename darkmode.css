@@ -182,7 +182,7 @@ html[data-theme="dark"] .ceramic-pros {
 
 html[data-theme="dark"] .ceramic-stars span {
   color: var(--color-muted);
-  opacity: 0.45;
+  opacity: 0.95;
 }
 
 html[data-theme="dark"] .ceramic-pros li::before {
