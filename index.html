@@ -36,7 +36,7 @@
 
   <main>
     <section class="hero" aria-labelledby="hero-title">
-      <article class="hero-text">
+      <div class="hero-text">
         <p class="hero-kicker">
           <span aria-hidden="true">●</span>
           Unabhängiger Produkttest
@@ -62,7 +62,7 @@
             Zum Vergleich
           </a>
         </nav>
-      </article>
+      </div>
 
       <figure class="hero-image">
         <div class="hero-image-panel">
@@ -97,29 +97,34 @@
         Wichtige Produktdaten
       </h2>
 
-      <article class="fact">
+      <section class="facts" aria-labelledby="facts-title">
+      <h2 id="facts-title" class="visually-hidden">
+        Wichtige Produktdaten
+      </h2>
+
+      <div class="fact">
         <span class="fact-icon" aria-hidden="true">★</span>
         <strong>4,6 / 5</strong>
         <p>Gesamtbewertung</p>
-      </article>
+      </div>
 
-      <article class="fact">
+      <div class="fact">
         <span class="fact-icon" aria-hidden="true">L</span>
         <strong>10,8 Liter</strong>
         <p>Fassungsvermögen</p>
-      </article>
+      </div>
 
-      <article class="fact">
+      <div class="fact">
         <span class="fact-icon" aria-hidden="true">W</span>
         <strong>2600 Watt</strong>
         <p>Leistung</p>
-      </article>
+      </div>
 
-      <article class="fact">
+      <div class="fact">
         <span class="fact-icon" aria-hidden="true">K</span>
         <strong>Keramikbeschichtung</strong>
         <p>PFAS-frei und langlebig</p>
-      </article>
+      </div>
     </section>
 
     <section class="topics" aria-labelledby="topics-title">
@@ -185,7 +190,7 @@
   </main>
 
   <footer
-    data-hx-get="./komponenten/header.html"
+    data-hx-get="./komponenten/footer.html"
     data-hx-trigger="load"
     data-hx-swap="outerHTML"
   ></footer>
