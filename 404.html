@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta
+    name="description"
+    content="Die aufgerufene Seite wurde auf Mein Air Fryer nicht gefunden."
+  >
+
+  <title>Seite nicht gefunden | Mein Air Fryer</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="404.css">
+  <link rel="stylesheet" href="darkmode.css">
+
+  <script
+    defer
+    src="https://cdn.jsdelivr.net/npm/htmx.org@2.0.10/dist/htmx.min.js"
+    integrity="sha384-H5SrcfygHmAuTDZphMHqBJLc3FhssKjG7w/CeCpFReSfwBWDTKpkzPP8c+cLsK+V"
+    crossorigin="anonymous"
+  ></script>
+
+  <script defer src="darkmode.js"></script>
+
+</head>
+
+<body>
+  <header
+    hx-get="komponenten/header.html"
+    hx-trigger="load"
+    hx-swap="outerHTML"
+  ></header>
+
+  <main class="notfound-page">
+    <section class="notfound-hero" aria-labelledby="notfound-title">
+      <p class="notfound-code" aria-hidden="true">404</p>
+
+      <p class="notfound-kicker">
+        <span aria-hidden="true">●</span>
+        Seite nicht gefunden
+      </p>
+
+      <h1 id="notfound-title">
+        Diese Seite ist wohl im Airfryer verschwunden.
+      </h1>
+
+      <p class="notfound-lead">
+        Der aufgerufene Link existiert nicht oder wurde verschoben.
+        Nutze die Navigation oder einen der folgenden Vorschläge,
+        um wieder zurückzufinden.
+      </p>
+
+      <nav class="notfound-buttons" aria-label="Vorschläge">
+        <a class="button button-primary" href="index.html">
+          Zur Startseite
+        </a>
+
+        <a class="button button-secondary" href="bewertung.html">
+          Zum Testbericht
+        </a>
+      </nav>
+    </section>
+  </main>
+
+  <footer
+    hx-get="komponenten/footer.html"
+    hx-trigger="load"
+    hx-swap="outerHTML"
+  ></footer>
+</body>
+</html>
