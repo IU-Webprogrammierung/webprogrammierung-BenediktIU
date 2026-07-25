@@ -349,8 +349,8 @@
     }
 
     function openRecipe(card) {
-        const recipeId = trigger.dataset.recipeId || trigger.dataset.openRecipe;
-        const recipe = recipes[recipeId];
+      const recipeId = card.dataset.recipeId || card.dataset.openRecipe;
+      const recipe = recipes[recipeId];
 
       if (!recipe) {
         return;
@@ -403,9 +403,9 @@
     });
 
     duoButtons.forEach((button) => {
-        button.addEventListener("click", () => {
-            openRecipe(button);
-        });
+      button.addEventListener("click", () => {
+          openRecipe(button);
+      });
     });
 
     filterButtons.forEach((button) => {
