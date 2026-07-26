@@ -214,6 +214,14 @@ Zusätzlich bieten sich folgende Prüfungen an:
     index.html: https://pagespeed.web.dev/analysis/https-iu-webprogrammierung-github-io-webprogrammierung-BenediktIU-index-html/9pr4ohkzlv?hl=de&form_factor=mobile
     weitere Prüfungen stehen noch aus!!!
 
+### CSS-Validierung
+
+Die Stylesheets wurden mit dem W3C CSS Validator geprüft. Dabei wurden
+keine CSS-Fehler festgestellt. Die verbleibenden Hinweise betreffen
+ausschließlich CSS Custom Properties, deren dynamische Werte vom
+Validator nicht vollständig statisch geprüft werden können.
+
+
 ## Projektstruktur
 
 .
