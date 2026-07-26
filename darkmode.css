@@ -365,6 +365,11 @@ html[data-theme="dark"] .recipes-duo-button:hover {
   background-color: var(--color-green);
 }
 
+html[data-theme="dark"] .recipes-duo-plus {
+  color: var(--color-bg);
+  background-color: var(--color-green-900);
+}
+
 /* FAQ-Seite */
 
 html[data-theme="dark"] .faq-kicker {

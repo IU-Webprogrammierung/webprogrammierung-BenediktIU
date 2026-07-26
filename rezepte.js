@@ -315,7 +315,7 @@
 
   function initializeRecipes() {
     const cards = [...document.querySelectorAll(".recipe-card[data-recipe-id]")];
-    const duoButtons = [...document.querySelectorAll("[data-open-recipe]")];
+    const recipeButtons = [...document.querySelectorAll("[data-open-recipe]")];
     const filterButtons = [...document.querySelectorAll("[data-filter]")];
     const resultCount = document.querySelector("#recipe-result-count");
     const dialog = document.querySelector("#recipe-dialog");
@@ -386,23 +386,8 @@
         dialog.removeAttribute("open");
       }
     }
-
-    cards.forEach((card) => {
-      card.addEventListener("click", () => {
-        openRecipe(card);
-      });
-
-      card.addEventListener("keydown", (event) => {
-        if (event.key !== "Enter" && event.key !== " ") {
-          return;
-        }
-
-        event.preventDefault();
-        openRecipe(card);
-      });
-    });
-
-    duoButtons.forEach((button) => {
+    
+    recipeButtons.forEach((button) => {
       button.addEventListener("click", () => {
           openRecipe(button);
       });

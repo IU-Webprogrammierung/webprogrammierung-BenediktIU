@@ -914,33 +914,51 @@
 
 .recipe-card {
   position: relative;
-  cursor: pointer;
-  outline: none;
 }
 
 .recipe-card:hover,
-.recipe-card:focus-visible {
+.recipe-card:focus-within {
   border-color: var(--color-green);
   box-shadow: 0 22px 48px rgba(13, 47, 36, 0.13);
 }
 
-.recipe-card:focus-visible {
+.recipe-card:focus-within {
   outline: 3px solid var(--color-green);
   outline-offset: 4px;
 }
 
 .recipe-card.recipes-reveal.is-visible:hover,
-.recipe-card.recipes-reveal.is-visible:focus-visible {
+.recipe-card.recipes-reveal.is-visible:focus-within {
   transform: translateY(-5px);
 }
 
 .recipe-card-link {
+  width: fit-content;
   display: inline-flex;
   align-items: center;
   margin-top: 1.25rem;
+  padding: 0;
+
+  border: 0;
+  border-radius: 0.25rem;
+
   color: var(--color-green);
+  background-color: transparent;
+
+  font: inherit;
   font-size: 0.9rem;
   font-weight: 900;
+  cursor: pointer;
+}
+
+.recipe-card-link:hover {
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+
+.recipe-card-link:focus-visible {
+  outline: 3px solid currentColor;
+  outline-offset: 4px;
 }
 
 .recipe-card-featured .recipe-card-link {
@@ -1170,8 +1188,8 @@ body:has(.recipe-dialog[open]) {
   }
 
   .recipe-card.recipes-reveal.is-visible:hover,
-  .recipe-card.recipes-reveal.is-visible:focus-visible {
-    transform: none;
+    .recipe-card.recipes-reveal.is-visible:focus-within {
+  transform: none;
   }
 
     .recipes-duo-menu {
