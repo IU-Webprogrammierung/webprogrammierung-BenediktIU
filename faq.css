@@ -396,8 +396,8 @@
   list-style: none;
 }
 
-.faq-item summary::-webkit-details-marker {
-  display: none;
+.faq-item summary::marker {
+  content: "";
 }
 
 .faq-item summary::after {
