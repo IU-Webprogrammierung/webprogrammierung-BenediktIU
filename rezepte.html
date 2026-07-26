@@ -36,7 +36,7 @@
 
   <main class="recipes-page">
     <section class="recipes-hero" aria-labelledby="recipes-title">
-      <article class="recipes-intro">
+      <div class="recipes-intro">
         <p class="recipes-kicker">
           <span aria-hidden="true">●</span>
           Rezepte
@@ -67,7 +67,7 @@
             für ein vollständiges Essen ohne zusätzlichen Backofen.
           </p>
 
-          <div class="recipes-duo-meta" aria-label="Informationen zum Duo-Menü">
+          <div class="recipes-duo-meta" role="group" aria-label="Informationen zum Duo-Menü">
             <span>
               <span aria-hidden="true">▣</span>
               2 Garzonen
@@ -126,7 +126,7 @@
             </p>
           </div>
         </section>
-      </article>
+      </div>
 
       <figure class="recipes-image">
         <div class="recipes-image-panel">
@@ -221,21 +221,19 @@
           12 Rezepte angezeigt
         </p>
       </div>
-
       <div class="recipe-grid">
         <article
           class="recipe-card recipe-card-featured"
           data-recipe-id="haehnchenstreifen"
           data-category="hauptgericht"
-          tabindex="0"
-          role="button"
-          aria-haspopup="dialog"
-          aria-controls="recipe-dialog"
-          aria-label="Rezept Knusprige Hähnchenstreifen öffnen"
         >
           <p class="recipe-card-kicker">Hauptgericht</p>
+
           <h3>Knusprige Hähnchenstreifen</h3>
-          <p>Saftiges Hähnchen mit würziger, knuspriger Panade.</p>
+
+          <p>
+            Saftiges Hähnchen mit würziger, knuspriger Panade.
+          </p>
 
           <p class="recipe-card-meta">
             <span>20 Minuten</span>
@@ -243,24 +241,30 @@
             <span>Einfach</span>
           </p>
 
-          <span class="recipe-card-link" aria-hidden="true">
+          <button
+            class="recipe-card-link"
+            type="button"
+            data-open-recipe="haehnchenstreifen"
+            aria-haspopup="dialog"
+            aria-controls="recipe-dialog"
+            aria-label="Rezept Knusprige Hähnchenstreifen ansehen"
+          >
             Rezept ansehen →
-          </span>
+          </button>
         </article>
 
         <article
           class="recipe-card"
           data-recipe-id="gefuellte-paprika"
           data-category="hauptgericht"
-          tabindex="0"
-          role="button"
-          aria-haspopup="dialog"
-          aria-controls="recipe-dialog"
-          aria-label="Rezept Gefüllte Paprika öffnen"
         >
           <p class="recipe-card-kicker">Hauptgericht</p>
+
           <h3>Gefüllte Paprika</h3>
-          <p>Herzhafte Paprika mit Reis-Hackfleisch-Füllung und Käse.</p>
+
+          <p>
+            Herzhafte Paprika mit Reis-Hackfleisch-Füllung und Käse.
+          </p>
 
           <p class="recipe-card-meta">
             <span>30 Minuten</span>
@@ -268,24 +272,30 @@
             <span>Mittel</span>
           </p>
 
-          <span class="recipe-card-link" aria-hidden="true">
+          <button
+            class="recipe-card-link"
+            type="button"
+            data-open-recipe="gefuellte-paprika"
+            aria-haspopup="dialog"
+            aria-controls="recipe-dialog"
+            aria-label="Rezept Gefüllte Paprika ansehen"
+          >
             Rezept ansehen →
-          </span>
+          </button>
         </article>
 
         <article
           class="recipe-card"
           data-recipe-id="gemuese-mix"
           data-category="hauptgericht"
-          tabindex="0"
-          role="button"
-          aria-haspopup="dialog"
-          aria-controls="recipe-dialog"
-          aria-label="Rezept Bunter Gemüse-Mix öffnen"
         >
           <p class="recipe-card-kicker">Hauptgericht</p>
+
           <h3>Bunter Gemüse-Mix</h3>
-          <p>Zucchini, Paprika und Brokkoli als leichte Mahlzeit oder Beilage.</p>
+
+          <p>
+            Zucchini, Paprika und Brokkoli als leichte Mahlzeit oder Beilage.
+          </p>
 
           <p class="recipe-card-meta">
             <span>20 Minuten</span>
@@ -293,24 +303,30 @@
             <span>Einfach</span>
           </p>
 
-          <span class="recipe-card-link" aria-hidden="true">
+          <button
+            class="recipe-card-link"
+            type="button"
+            data-open-recipe="gemuese-mix"
+            aria-haspopup="dialog"
+            aria-controls="recipe-dialog"
+            aria-label="Rezept Bunter Gemüse-Mix ansehen"
+          >
             Rezept ansehen →
-          </span>
+          </button>
         </article>
 
         <article
           class="recipe-card"
           data-recipe-id="lachsfilet"
           data-category="hauptgericht"
-          tabindex="0"
-          role="button"
-          aria-haspopup="dialog"
-          aria-controls="recipe-dialog"
-          aria-label="Rezept Zitronen-Lachsfilet öffnen"
         >
           <p class="recipe-card-kicker">Hauptgericht</p>
+
           <h3>Zitronen-Lachsfilet</h3>
-          <p>Zartes Lachsfilet mit Zitrone, Kräutern und wenig Öl.</p>
+
+          <p>
+            Zartes Lachsfilet mit Zitrone, Kräutern und wenig Öl.
+          </p>
 
           <p class="recipe-card-meta">
             <span>15 Minuten</span>
@@ -318,24 +334,30 @@
             <span>Einfach</span>
           </p>
 
-          <span class="recipe-card-link" aria-hidden="true">
+          <button
+            class="recipe-card-link"
+            type="button"
+            data-open-recipe="lachsfilet"
+            aria-haspopup="dialog"
+            aria-controls="recipe-dialog"
+            aria-label="Rezept Zitronen-Lachsfilet ansehen"
+          >
             Rezept ansehen →
-          </span>
+          </button>
         </article>
 
         <article
           class="recipe-card"
           data-recipe-id="pommes"
           data-category="snack"
-          tabindex="0"
-          role="button"
-          aria-haspopup="dialog"
-          aria-controls="recipe-dialog"
-          aria-label="Rezept Air-Fryer-Pommes öffnen"
         >
           <p class="recipe-card-kicker">Snack</p>
+
           <h3>Air-Fryer-Pommes</h3>
-          <p>Klassische Kartoffel-Pommes mit wenig Öl und knusprigem Rand.</p>
+
+          <p>
+            Klassische Kartoffel-Pommes mit wenig Öl und knusprigem Rand.
+          </p>
 
           <p class="recipe-card-meta">
             <span>30 Minuten</span>
@@ -343,24 +365,30 @@
             <span>Einfach</span>
           </p>
 
-          <span class="recipe-card-link" aria-hidden="true">
+          <button
+            class="recipe-card-link"
+            type="button"
+            data-open-recipe="pommes"
+            aria-haspopup="dialog"
+            aria-controls="recipe-dialog"
+            aria-label="Rezept Air-Fryer-Pommes ansehen"
+          >
             Rezept ansehen →
-          </span>
+          </button>
         </article>
 
         <article
           class="recipe-card"
           data-recipe-id="mozzarella-sticks"
           data-category="snack"
-          tabindex="0"
-          role="button"
-          aria-haspopup="dialog"
-          aria-controls="recipe-dialog"
-          aria-label="Rezept Mozzarella-Sticks öffnen"
         >
           <p class="recipe-card-kicker">Snack</p>
+
           <h3>Mozzarella-Sticks</h3>
-          <p>Knusprige Hülle und weicher Käsekern für einen schnellen Snack.</p>
+
+          <p>
+            Knusprige Hülle und weicher Käsekern für einen schnellen Snack.
+          </p>
 
           <p class="recipe-card-meta">
             <span>10 Minuten</span>
@@ -368,24 +396,30 @@
             <span>Einfach</span>
           </p>
 
-          <span class="recipe-card-link" aria-hidden="true">
+          <button
+            class="recipe-card-link"
+            type="button"
+            data-open-recipe="mozzarella-sticks"
+            aria-haspopup="dialog"
+            aria-controls="recipe-dialog"
+            aria-label="Rezept Mozzarella-Sticks ansehen"
+          >
             Rezept ansehen →
-          </span>
+          </button>
         </article>
 
         <article
           class="recipe-card"
           data-recipe-id="kartoffelecken"
           data-category="snack"
-          tabindex="0"
-          role="button"
-          aria-haspopup="dialog"
-          aria-controls="recipe-dialog"
-          aria-label="Rezept Knusprige Kartoffelecken öffnen"
         >
           <p class="recipe-card-kicker">Snack</p>
+
           <h3>Knusprige Kartoffelecken</h3>
-          <p>Würzige Wedges mit Paprika, Knoblauch und Rosmarin.</p>
+
+          <p>
+            Würzige Wedges mit Paprika, Knoblauch und Rosmarin.
+          </p>
 
           <p class="recipe-card-meta">
             <span>30 Minuten</span>
@@ -393,24 +427,30 @@
             <span>Einfach</span>
           </p>
 
-          <span class="recipe-card-link" aria-hidden="true">
+          <button
+            class="recipe-card-link"
+            type="button"
+            data-open-recipe="kartoffelecken"
+            aria-haspopup="dialog"
+            aria-controls="recipe-dialog"
+            aria-label="Rezept Knusprige Kartoffelecken ansehen"
+          >
             Rezept ansehen →
-          </span>
+          </button>
         </article>
 
         <article
           class="recipe-card"
           data-recipe-id="falafel"
           data-category="snack"
-          tabindex="0"
-          role="button"
-          aria-haspopup="dialog"
-          aria-controls="recipe-dialog"
-          aria-label="Rezept Kräuter-Falafel öffnen"
         >
           <p class="recipe-card-kicker">Snack</p>
+
           <h3>Kräuter-Falafel</h3>
-          <p>Würzige Kichererbsenbällchen mit Petersilie und Kreuzkümmel.</p>
+
+          <p>
+            Würzige Kichererbsenbällchen mit Petersilie und Kreuzkümmel.
+          </p>
 
           <p class="recipe-card-meta">
             <span>25 Minuten</span>
@@ -418,24 +458,30 @@
             <span>Mittel</span>
           </p>
 
-          <span class="recipe-card-link" aria-hidden="true">
+          <button
+            class="recipe-card-link"
+            type="button"
+            data-open-recipe="falafel"
+            aria-haspopup="dialog"
+            aria-controls="recipe-dialog"
+            aria-label="Rezept Kräuter-Falafel ansehen"
+          >
             Rezept ansehen →
-          </span>
+          </button>
         </article>
 
         <article
           class="recipe-card"
           data-recipe-id="apfel-zimt"
           data-category="dessert"
-          tabindex="0"
-          role="button"
-          aria-haspopup="dialog"
-          aria-controls="recipe-dialog"
-          aria-label="Rezept Apfel-Zimt-Stücke öffnen"
         >
           <p class="recipe-card-kicker">Dessert</p>
+
           <h3>Apfel-Zimt-Stücke</h3>
-          <p>Warme Apfelstücke mit Zimt und einer leicht karamellisierten Note.</p>
+
+          <p>
+            Warme Apfelstücke mit Zimt und einer leicht karamellisierten Note.
+          </p>
 
           <p class="recipe-card-meta">
             <span>15 Minuten</span>
@@ -443,24 +489,30 @@
             <span>Einfach</span>
           </p>
 
-          <span class="recipe-card-link" aria-hidden="true">
+          <button
+            class="recipe-card-link"
+            type="button"
+            data-open-recipe="apfel-zimt"
+            aria-haspopup="dialog"
+            aria-controls="recipe-dialog"
+            aria-label="Rezept Apfel-Zimt-Stücke ansehen"
+          >
             Rezept ansehen →
-          </span>
+          </button>
         </article>
 
         <article
           class="recipe-card"
           data-recipe-id="mini-schokokuchen"
           data-category="dessert"
-          tabindex="0"
-          role="button"
-          aria-haspopup="dialog"
-          aria-controls="recipe-dialog"
-          aria-label="Rezept Mini-Schokokuchen öffnen"
         >
           <p class="recipe-card-kicker">Dessert</p>
+
           <h3>Mini-Schokokuchen</h3>
-          <p>Kleine Schokoladenküchlein mit weichem Kern aus dem Air Fryer.</p>
+
+          <p>
+            Kleine Schokoladenküchlein mit weichem Kern aus dem Air Fryer.
+          </p>
 
           <p class="recipe-card-meta">
             <span>18 Minuten</span>
@@ -468,24 +520,30 @@
             <span>Mittel</span>
           </p>
 
-          <span class="recipe-card-link" aria-hidden="true">
+          <button
+            class="recipe-card-link"
+            type="button"
+            data-open-recipe="mini-schokokuchen"
+            aria-haspopup="dialog"
+            aria-controls="recipe-dialog"
+            aria-label="Rezept Mini-Schokokuchen ansehen"
+          >
             Rezept ansehen →
-          </span>
+          </button>
         </article>
 
         <article
           class="recipe-card"
           data-recipe-id="bananen-muffins"
           data-category="dessert"
-          tabindex="0"
-          role="button"
-          aria-haspopup="dialog"
-          aria-controls="recipe-dialog"
-          aria-label="Rezept Bananen-Hafer-Muffins öffnen"
         >
           <p class="recipe-card-kicker">Dessert</p>
+
           <h3>Bananen-Hafer-Muffins</h3>
-          <p>Saftige Mini-Muffins mit Banane, Haferflocken und Zimt.</p>
+
+          <p>
+            Saftige Mini-Muffins mit Banane, Haferflocken und Zimt.
+          </p>
 
           <p class="recipe-card-meta">
             <span>20 Minuten</span>
@@ -493,24 +551,30 @@
             <span>Einfach</span>
           </p>
 
-          <span class="recipe-card-link" aria-hidden="true">
+          <button
+            class="recipe-card-link"
+            type="button"
+            data-open-recipe="bananen-muffins"
+            aria-haspopup="dialog"
+            aria-controls="recipe-dialog"
+            aria-label="Rezept Bananen-Hafer-Muffins ansehen"
+          >
             Rezept ansehen →
-          </span>
+          </button>
         </article>
 
         <article
           class="recipe-card"
           data-recipe-id="zimtschnecken"
           data-category="dessert"
-          tabindex="0"
-          role="button"
-          aria-haspopup="dialog"
-          aria-controls="recipe-dialog"
-          aria-label="Rezept Blätterteig-Zimtschnecken öffnen"
         >
           <p class="recipe-card-kicker">Dessert</p>
+
           <h3>Blätterteig-Zimtschnecken</h3>
-          <p>Schnelle Zimtschnecken aus Blätterteig mit knusprigen Rändern.</p>
+
+          <p>
+            Schnelle Zimtschnecken aus Blätterteig mit knusprigen Rändern.
+          </p>
 
           <p class="recipe-card-meta">
             <span>17 Minuten</span>
@@ -518,11 +582,59 @@
             <span>Einfach</span>
           </p>
 
-          <span class="recipe-card-link" aria-hidden="true">
+          <button
+            class="recipe-card-link"
+            type="button"
+            data-open-recipe="zimtschnecken"
+            aria-haspopup="dialog"
+            aria-controls="recipe-dialog"
+            aria-label="Rezept Blätterteig-Zimtschnecken ansehen"
+          >
             Rezept ansehen →
-          </span>
+          </button>
         </article>
       </div>
+    </section>
+
+    <div class="recipes-practice">
+      <article class="recipes-practice-card">
+        <p class="recipes-practice-kicker">
+          Alltagstipp
+        </p>
+
+        <h2>
+          Vorbereitung spart Zeit
+        </h2>
+
+        <p>
+          Viele Rezepte gelingen besonders zuverlässig, wenn die Zutaten
+          gleichmäßig geschnitten und locker im Korb verteilt werden.
+        </p>
+
+        <ul>
+          <li>Zutaten möglichst gleich groß schneiden</li>
+          <li>Den Korb nicht vollständig überfüllen</li>
+          <li>Speisen nach der Hälfte der Zeit wenden oder schütteln</li>
+          <li>Bei neuen Rezepten einige Minuten früher kontrollieren</li>
+        </ul>
+      </article>
+
+      <article class="recipes-zone-card">
+        <p class="recipes-practice-kicker">
+          Zwei Garzonen
+        </p>
+
+        <h2>
+          Hauptgericht und Beilage gleichzeitig
+        </h2>
+
+        <p>
+          Bereite beispielsweise Lachs oder Hähnchen in einer Garzone und
+          Kartoffelecken oder Gemüse in der zweiten Zone zu. Starte die
+          längere Garzeit zuerst oder nutze eine Synchronisierungsfunktion.
+        </p>
+      </article>
+    </div>
     </section>
 
     <section class="recipes-practice" aria-labelledby="practice-title">
