@@ -116,7 +116,7 @@
 
 .review-insight-tab:hover {
   color: var(--color-white);
-  border-color: var(--color-green);
+  border-color: var(--color-green-dark);
   background-color: var(--color-green);
   transform: translateY(-1px);
 }
@@ -124,7 +124,7 @@
 .review-insight-tab.is-active,
 .review-insight-tab[aria-selected="true"] {
   color: var(--color-white);
-  border-color: var(--color-green-900);
+  border-color: var(--color-green);
   background-color: var(--color-green-900);
 }
 
