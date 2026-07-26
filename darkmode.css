@@ -48,14 +48,14 @@ html[data-theme="dark"] .cons-card {
 
 html[data-theme="dark"] .review-insight-tab:hover {
   color: #0d2f24;
-  border-color: var(--color-green);
+  border-color: var(--color-green-dark);
   background-color: var(--color-green);
 }
 
 html[data-theme="dark"] .review-insight-tab.is-active,
 html[data-theme="dark"] .review-insight-tab[aria-selected="true"] {
   color: #ffffff;
-  border-color: #245f42;
+  border-color: var(--color-green);
   background-color: #245f42;
 }
 
@@ -126,7 +126,7 @@ html[data-theme="dark"] .tech-tab:hover {
 html[data-theme="dark"] .tech-tab.is-active,
 html[data-theme="dark"] .tech-tab[aria-selected="true"] {
   color: #ffffff;
-  border-color: #245f42;
+  border-color: var(--color-green);
   background-color: #245f42;
 }
 
@@ -300,13 +300,13 @@ html[data-theme="dark"] .filter-button {
 
 html[data-theme="dark"] .filter-button:hover {
   color: #0d2f24;
-  border-color: var(--color-green);
+  border-color: var(--color-green-dark);
   background-color: var(--color-green);
 }
 
 html[data-theme="dark"] .filter-button-active {
   color: #ffffff;
-  border-color: #245f42;
+  border-color: var(--color-green);
   background-color: #245f42;
 }
 
@@ -400,13 +400,13 @@ html[data-theme="dark"] .faq-category {
 
 html[data-theme="dark"] .faq-category:hover {
   color: #0d2f24;
-  border-color: var(--color-green);
+  border-color: var(--color-green-dark);
   background-color: var(--color-green);
 }
 
 html[data-theme="dark"] .faq-category-active {
   color: #ffffff;
-  border-color: #245f42;
+  border-color: var(--color-green);
   background-color: #245f42;
 }
 
