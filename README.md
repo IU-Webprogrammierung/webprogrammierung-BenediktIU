@@ -221,9 +221,6 @@ keine CSS-Fehler festgestellt. Die verbleibenden Hinweise betreffen
 ausschließlich CSS Custom Properties, deren dynamische Werte vom
 Validator nicht vollständig statisch geprüft werden können.
 
-
-## Projektstruktur
-
 ## Projektstruktur
 
 ```text
