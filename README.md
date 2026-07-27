@@ -70,15 +70,12 @@ In der ersten Phase war es entscheidend, die Website als zusammenhängendes Proj
 Folgende Leistungen sollten berücksichtigt werden:
 
 - umfangreicher, konsistenter Webauftritt mit elf HTML-Seiten
-- nachvollziehbare Aufteilung der Inhalte nach Seitenzweck
 - responsive Layouts mit Grid, Flexbox und mehreren Breakpoints
 - eigenständiges Design ohne CSS-Framework
-- zentrale CSS-Variablen und seitenbezogene Stylesheets
 - wiederverwendbare HTMX-Komponenten
 - persistenter Dark Mode
 - Rezeptfilter und dynamisch befüllte Dialoge
 - Scroll-Reveal-Animationen
-- individuelle 404-Seite und eigenes Favicon
 - umfangreiche Git-Historie und schrittweise Weiterentwicklung
 - Berücksichtigung von Barrierefreiheit
 
