@@ -224,7 +224,10 @@ Validator nicht vollständig statisch geprüft werden können.
 
 ## Projektstruktur
 
-.
+## Projektstruktur
+
+```text
+webprogrammierung-BenediktIU/
 ├── bilder/
 │   └── cosori-turbo-tower.png
 ├── komponenten/
@@ -266,3 +269,4 @@ Validator nicht vollständig statisch geprüft werden können.
 ├── scroll-animation-faq.js
 ├── favicon.svg
 └── README.md
+```
